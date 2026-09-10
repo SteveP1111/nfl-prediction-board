@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "model_version": "4.12",
+  "history": {
+    "encoding": "base64+gzip",
+    "parts": [
+      "data/history/part-01.txt",
+      "data/history/part-02.txt",
+      "data/history/part-03.txt",
+      "data/history/part-04.txt",
+      "data/history/part-05.txt",
+      "data/history/part-06.txt",
+      "data/history/part-07.txt",
+      "data/history/part-08.txt"
+    ]
+  },
+  "timezone": "Europe/London",
+  "refresh_times": [
+    "05:00",
+    "15:00"
+  ],
+  "market_policy": "Sportsbook lines are comparison-only and do not influence model projections."
+}
