@@ -4,14 +4,8 @@
   "history": {
     "encoding": "base64+gzip",
     "parts": [
-      "data/history/part-01.txt",
-      "data/history/part-02.txt",
-      "data/history/part-03.txt",
-      "data/history/part-04.txt",
-      "data/history/part-05.txt",
-      "data/history/part-06.txt",
-      "data/history/part-07.txt",
-      "data/history/part-08.txt"
+      "data/live/part-01.txt",
+      "data/live/part-02.txt"
     ]
   },
   "timezone": "Europe/London",
@@ -19,5 +13,6 @@
     "05:00",
     "15:00"
   ],
-  "market_policy": "Sportsbook lines are comparison-only and do not influence model projections."
+  "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
+  "publication_filter": "All games; top 50 rated player props plus any market-lined prop; top 25 TD candidates per snapshot. Full unfiltered history retained privately in Library."
 }
