@@ -1,0 +1,24 @@
+{
+  "model_version": "4.12",
+  "name": "Balanced Scoring + Kickers",
+  "margin_only": [
+    "home field",
+    "rest",
+    "venue",
+    "strength of schedule"
+  ],
+  "total_capable_centered": [
+    "efficiency",
+    "expected TD regression",
+    "OL/front",
+    "injuries",
+    "weather",
+    "kicking"
+  ],
+  "home_field": "1.5 margin shift (+0.75/-0.75)",
+  "efficiency_cap": 1.6,
+  "expected_td_cap": 1.0,
+  "kicking_cap": 0.6,
+  "defensive_injuries": "increase opponent scoring expectation",
+  "market_policy": "Sportsbook lines are comparison-only and do not influence model projections."
+}
