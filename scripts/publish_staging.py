@@ -25,6 +25,7 @@ NFL_TEAMS = {
     "LA", "LAC", "LV", "MIA", "MIN", "NE", "NO", "NYG",
     "NYJ", "PHI", "PIT", "SEA", "SF", "TB", "TEN", "WAS",
 }
+FINAL_RESULTS = {"Correct", "Miss", "Push"}
 
 
 def fail(message: str) -> None:
@@ -52,6 +53,56 @@ def valid_rating(value, label: str) -> None:
     if isinstance(value, str) and value.strip():
         return
     finite_number(value, label)
+
+
+def require_outcome(outcomes: dict, key: str, label: str) -> None:
+    outcome = outcomes.get(key)
+    if not isinstance(outcome, dict):
+        fail(f"{label} is missing outcome {key}")
+    if outcome.get("result") not in FINAL_RESULTS:
+        fail(f"{label} outcome {key} must be Correct, Miss or Push")
+    actual = outcome.get("actual")
+    if actual is None or actual == "":
+        fail(f"{label} outcome {key} is missing its actual result")
+    if isinstance(actual, float) and not math.isfinite(actual):
+        fail(f"{label} outcome {key} has a non-finite actual result")
+
+
+def validate_completed_game_grading(snapshot: dict, prefix: str) -> None:
+    """Refuse publication when any marked-final game has partial grading."""
+    outcomes = snapshot.get("outcomes", {})
+    if not isinstance(outcomes, dict):
+        fail(f"{prefix}.outcomes must be an object")
+    games = snapshot["games"]
+    completed = {
+        game["game_id"]
+        for game in games
+        if f"win:{game['game_id']}" in outcomes
+        or f"spread:{game['game_id']}" in outcomes
+        or f"total:{game['game_id']}" in outcomes
+    }
+    for game in games:
+        game_id = game["game_id"]
+        if game_id not in completed:
+            continue
+        label = f"{prefix} completed game {game_id}"
+        require_outcome(outcomes, f"win:{game_id}", label)
+        if game.get("spread_side") and game.get("spread_line") is not None:
+            require_outcome(outcomes, f"spread:{game_id}", label)
+        if game.get("total_side") and game.get("total_line") is not None:
+            require_outcome(outcomes, f"total:{game_id}", label)
+        for prop in snapshot["props"]:
+            if prop.get("game_id") != game_id:
+                continue
+            if not prop.get("pick_side") or prop.get("line") is None:
+                continue
+            player = prop.get("player_id") or prop.get("name")
+            require_outcome(outcomes, f"prop:{game_id}:{player}:{prop.get('type')}", label)
+        for td in snapshot["tds"]:
+            if td.get("game_id") != game_id:
+                continue
+            player = td.get("player_id") or td.get("name")
+            require_outcome(outcomes, f"td:{game_id}:{player}", label)
 
 
 def validate_payload(payload: object) -> list[dict]:
@@ -122,6 +173,7 @@ def validate_payload(payload: object) -> list[dict]:
                 else:
                     for field in ("prob", "rating"):
                         finite_number(record.get(field), f"{label}.{field}")
+        validate_completed_game_grading(snapshot, prefix)
     return snapshots
 
 
