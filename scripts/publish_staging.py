@@ -173,8 +173,56 @@ def validate_payload(payload: object) -> list[dict]:
                 else:
                     for field in ("prob", "rating"):
                         finite_number(record.get(field), f"{label}.{field}")
+
+        tackle_counts = {team: 0 for team in NFL_TEAMS}
+        for prop_index, prop in enumerate(props):
+            if prop.get("type") != "tackles":
+                continue
+            label = f"{prefix}.props[{prop_index}]"
+            if prop.get("label") != "Tackles + assists":
+                fail(f"{label} must use the Tackles + assists label")
+            tackle_counts[prop["team"]] += 1
+        thin_teams = sorted(team for team, count in tackle_counts.items() if count < 8)
+        if thin_teams:
+            fail(
+                f"{prefix} must contain at least eight tackle projections for every team; "
+                f"missing/thin coverage: {', '.join(thin_teams)}"
+            )
         validate_completed_game_grading(snapshot, prefix)
     return snapshots
+
+
+def load_staged_payload(ready: dict) -> tuple[dict, bytes]:
+    """Load either the legacy single file or safe per-snapshot staging files."""
+    payload_path = STAGING / "public.json"
+    snapshot_parts = ready.get("snapshot_parts")
+    if snapshot_parts is None:
+        try:
+            raw = payload_path.read_bytes()
+        except OSError as exc:
+            fail(f"cannot read {payload_path}: {exc}")
+        return load_json(payload_path), raw
+
+    if not isinstance(snapshot_parts, list) or not snapshot_parts:
+        fail("READY.snapshot_parts must be a non-empty list")
+    payload = load_json(payload_path)
+    if not isinstance(payload, dict) or payload.get("snapshots") not in (None, []):
+        fail("split staging public.json must contain metadata only")
+    snapshots = []
+    seen_parts: set[str] = set()
+    for part in snapshot_parts:
+        if not isinstance(part, str) or not re.fullmatch(r"snapshot-[0-9]{3}\.json", part):
+            fail(f"invalid snapshot staging part {part!r}")
+        if part in seen_parts:
+            fail(f"duplicate snapshot staging part {part}")
+        seen_parts.add(part)
+        snapshot = load_json(STAGING / part)
+        if not isinstance(snapshot, dict):
+            fail(f"snapshot staging part {part} must contain an object")
+        snapshots.append(snapshot)
+    payload["snapshots"] = snapshots
+    raw = json.dumps(payload, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+    return payload, raw
 
 
 def main() -> None:
@@ -191,16 +239,11 @@ def main() -> None:
     if not isinstance(model_version, str) or not model_version.strip():
         fail("READY.model_version is missing")
 
-    payload_path = STAGING / "public.json"
-    try:
-        raw = payload_path.read_bytes()
-    except OSError as exc:
-        fail(f"cannot read {payload_path}: {exc}")
+    payload, raw = load_staged_payload(ready)
     actual_sha = hashlib.sha256(raw).hexdigest()
     if actual_sha != expected_sha:
         fail(f"staged SHA256 {actual_sha} does not match READY {expected_sha}")
 
-    payload = load_json(payload_path)
     snapshots = validate_payload(payload)
 
     compressed = gzip.compress(raw, compresslevel=9, mtime=0)
