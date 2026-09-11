@@ -1,0 +1,40 @@
+name: Publish staged prediction board
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/staging/READY
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-prediction-board
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate, package and switch manifest
+        run: python3 scripts/publish_staging.py
+
+      - name: Commit validated publication
+        run: |
+          if git diff --quiet -- data/manifest.json data/live-*; then
+            echo "No publication changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/manifest.json data/live-*
+          git commit -m "Publish validated prediction board data"
+          git push
