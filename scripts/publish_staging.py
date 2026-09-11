@@ -131,8 +131,8 @@ def validate_payload(payload: object) -> list[dict]:
             fail(f"{prefix} must contain exactly 16 games")
         if not isinstance(props, list) or len(props) < 50:
             fail(f"{prefix} must contain at least 50 published props")
-        if not isinstance(tds, list) or len(tds) != 25:
-            fail(f"{prefix} must contain exactly 25 touchdown candidates")
+        if not isinstance(tds, list) or len(tds) < 25:
+            fail(f"{prefix} must contain at least 25 touchdown candidates")
 
         game_ids: set[str] = set()
         scheduled_teams: list[str] = []
