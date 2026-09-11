@@ -48,6 +48,12 @@ def finite_number(value, label: str) -> None:
         fail(f"{label} must be finite")
 
 
+def valid_rating(value, label: str) -> None:
+    if isinstance(value, str) and value.strip():
+        return
+    finite_number(value, label)
+
+
 def validate_payload(payload: object) -> list[dict]:
     if not isinstance(payload, dict):
         fail("public.json must contain a JSON object")
@@ -94,11 +100,10 @@ def validate_payload(payload: object) -> list[dict]:
                 if team not in NFL_TEAMS:
                     fail(f"{label}.{side} has invalid team id {team!r}")
                 scheduled_teams.append(team)
-            for field in (
-                "away_projection", "home_projection", "total_projection",
-                "winner_rating", "spread_rating", "total_rating",
-            ):
+            for field in ("away_projection", "home_projection", "total_projection"):
                 finite_number(game.get(field), f"{label}.{field}")
+            for field in ("winner_rating", "spread_rating", "total_rating"):
+                valid_rating(game.get(field), f"{label}.{field}")
         if len(set(scheduled_teams)) != 32:
             fail(f"{prefix} must schedule each of the 32 teams exactly once")
 
