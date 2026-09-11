@@ -3,7 +3,7 @@
   "model_version": "4.12",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "source_sha256": "a5020b842c2b4e2514741062634cb674d3ac45661d513d0e7bcb3105d02c5551",
+    "last_staging_sha256": "a5020b842c2b4e2514741062634cb674d3ac45661d513d0e7bcb3105d02c5551",
     "snapshot_count": 4,
     "snapshots": [
       {
@@ -71,7 +71,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "20260911-per-snapshot-v412",
+  "published_version": "20260911-per-snapshot-clean-v412",
   "weekly_reviews": [
     {
       "season": 2026,
