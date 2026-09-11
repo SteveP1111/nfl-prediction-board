@@ -1,1 +1,1 @@
-{"version":"20260911-per-snapshot-clean-v412","payload_sha256":"a5020b842c2b4e2514741062634cb674d3ac45661d513d0e7bcb3105d02c5551","model_version":"4.12","snapshot_parts":["snapshot-001.json","snapshot-002.json","snapshot-003.json","snapshot-004.json"],"mode":"upsert"}
+{"version":"20260911-tackle-results-market-v412","model_version":"4.12","mode":"upsert","payload_sha256":"554359016344d3190de9236e68f58ed1356f8fb47f8932cfb776d0a3c9c268cd","snapshot_parts":["snapshot-001.json","snapshot-002.json","snapshot-003.json","snapshot-004.json"]}
