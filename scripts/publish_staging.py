@@ -267,12 +267,15 @@ def main() -> None:
     version = ready.get("version")
     expected_sha = ready.get("payload_sha256")
     model_version = ready.get("model_version")
+    mode = ready.get("mode", "replace_all")
     if not isinstance(version, str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{5,79}", version):
         fail("READY.version is invalid")
     if not isinstance(expected_sha, str) or not re.fullmatch(r"[0-9a-f]{64}", expected_sha):
         fail("READY.payload_sha256 must be a lowercase SHA256")
     if not isinstance(model_version, str) or not model_version.strip():
         fail("READY.model_version is missing")
+    if mode not in {"replace_all", "upsert"}:
+        fail("READY.mode must be replace_all or upsert")
 
     payload, raw = load_staged_payload(ready)
     actual_sha = hashlib.sha256(raw).hexdigest()
@@ -282,20 +285,29 @@ def main() -> None:
     snapshots = validate_payload(payload)
 
     SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
-    catalogue = [publish_snapshot(snapshot) for snapshot in snapshots]
+    staged_catalogue = [publish_snapshot(snapshot) for snapshot in snapshots]
+    manifest = load_json(MANIFEST_PATH)
+    if not isinstance(manifest, dict):
+        fail("manifest.json must contain an object")
+    existing_catalogue = manifest.get("history", {}).get("snapshots", [])
+    if mode == "upsert":
+        if not isinstance(existing_catalogue, list):
+            fail("upsert requires an existing per-snapshot catalogue")
+        catalogue_by_id = {entry["id"]: entry for entry in existing_catalogue}
+        catalogue_by_id.update({entry["id"]: entry for entry in staged_catalogue})
+        catalogue = sorted(catalogue_by_id.values(), key=lambda entry: entry["capturedAt"])
+    else:
+        catalogue = staged_catalogue
     referenced = {Path(entry["path"]).name for entry in catalogue}
     for path in SNAPSHOT_DIR.glob("*.txt"):
         if path.name not in referenced:
             path.unlink()
 
-    manifest = load_json(MANIFEST_PATH)
-    if not isinstance(manifest, dict):
-        fail("manifest.json must contain an object")
     manifest["schema_version"] = 2
     manifest["model_version"] = model_version
     manifest["history"] = {
         "encoding": "per-snapshot-base64+gzip",
-        "source_sha256": expected_sha,
+        "last_staging_sha256": expected_sha,
         "snapshot_count": len(catalogue),
         "snapshots": catalogue,
     }
@@ -311,8 +323,10 @@ def main() -> None:
     for legacy_dir in (ROOT / "data").glob("live-*"):
         if legacy_dir.is_dir():
             shutil.rmtree(legacy_dir)
+    for part in ready.get("snapshot_parts", []):
+        (STAGING / part).unlink(missing_ok=True)
     print(
-        f"Validated and published {len(snapshots)} independent snapshots; "
+        f"Validated {len(snapshots)} staged snapshots and published {len(catalogue)} total; "
         f"SHA256 {expected_sha}"
     )
 
