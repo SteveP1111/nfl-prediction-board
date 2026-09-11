@@ -1,35 +1,68 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "model_version": "4.12",
   "history": {
-    "encoding": "base64+gzip",
-    "parts": [
-      "data/live-20260911-all-tackles-v412/part-001.txt",
-      "data/live-20260911-all-tackles-v412/part-002.txt",
-      "data/live-20260911-all-tackles-v412/part-003.txt",
-      "data/live-20260911-all-tackles-v412/part-004.txt",
-      "data/live-20260911-all-tackles-v412/part-005.txt",
-      "data/live-20260911-all-tackles-v412/part-006.txt",
-      "data/live-20260911-all-tackles-v412/part-007.txt",
-      "data/live-20260911-all-tackles-v412/part-008.txt",
-      "data/live-20260911-all-tackles-v412/part-009.txt",
-      "data/live-20260911-all-tackles-v412/part-010.txt",
-      "data/live-20260911-all-tackles-v412/part-011.txt",
-      "data/live-20260911-all-tackles-v412/part-012.txt",
-      "data/live-20260911-all-tackles-v412/part-013.txt",
-      "data/live-20260911-all-tackles-v412/part-014.txt",
-      "data/live-20260911-all-tackles-v412/part-015.txt",
-      "data/live-20260911-all-tackles-v412/part-016.txt",
-      "data/live-20260911-all-tackles-v412/part-017.txt",
-      "data/live-20260911-all-tackles-v412/part-018.txt",
-      "data/live-20260911-all-tackles-v412/part-019.txt",
-      "data/live-20260911-all-tackles-v412/part-020.txt",
-      "data/live-20260911-all-tackles-v412/part-021.txt",
-      "data/live-20260911-all-tackles-v412/part-022.txt"
-    ],
-    "sha256": "a5020b842c2b4e2514741062634cb674d3ac45661d513d0e7bcb3105d02c5551",
-    "uncompressed_bytes": 1583463,
-    "snapshots": 4
+    "encoding": "per-snapshot-base64+gzip",
+    "source_sha256": "a5020b842c2b4e2514741062634cb674d3ac45661d513d0e7bcb3105d02c5551",
+    "snapshot_count": 4,
+    "snapshots": [
+      {
+        "id": "2026-W1-05:00-2026-09-10T05:00:00+01:00",
+        "season": 2026,
+        "week": 1,
+        "slot": "05:00",
+        "capturedAt": "2026-09-10T05:00:00+01:00",
+        "path": "data/snapshots/8c77ebe9c06e01b4827be21b59d8f6ec7971653d878427e930fe13fa99799c1f.txt",
+        "sha256": "8c77ebe9c06e01b4827be21b59d8f6ec7971653d878427e930fe13fa99799c1f",
+        "uncompressed_bytes": 393783,
+        "encoded_bytes": 40148,
+        "games": 16,
+        "props": 651,
+        "tds": 100
+      },
+      {
+        "id": "2026-W1-15:00-2026-09-10T15:00:00+01:00",
+        "season": 2026,
+        "week": 1,
+        "slot": "15:00",
+        "capturedAt": "2026-09-10T15:00:00+01:00",
+        "path": "data/snapshots/6883db203e32432f9dee92ad9f6c3e8eeeffc27b32c89d8a39f0c97fc57081d1.txt",
+        "sha256": "6883db203e32432f9dee92ad9f6c3e8eeeffc27b32c89d8a39f0c97fc57081d1",
+        "uncompressed_bytes": 394480,
+        "encoded_bytes": 40416,
+        "games": 16,
+        "props": 652,
+        "tds": 99
+      },
+      {
+        "id": "2026-wk1-20260911-0500",
+        "season": 2026,
+        "week": 1,
+        "slot": "05:00",
+        "capturedAt": "2026-09-11T05:00:00+01:00",
+        "path": "data/snapshots/088ca423006293f8f5510838b186641e1adced3fc50a8cb3dd8d8cb165920e9b.txt",
+        "sha256": "088ca423006293f8f5510838b186641e1adced3fc50a8cb3dd8d8cb165920e9b",
+        "uncompressed_bytes": 397048,
+        "encoded_bytes": 40528,
+        "games": 16,
+        "props": 652,
+        "tds": 99
+      },
+      {
+        "id": "2026-W1-15:00-2026-09-11T15:00:00+01:00",
+        "season": 2026,
+        "week": 1,
+        "slot": "15:00",
+        "capturedAt": "2026-09-11T15:00:00+01:00",
+        "path": "data/snapshots/fed1615cc1883ac0de211829b69e86a3a5452277d785542d0e92f059245b21b8.txt",
+        "sha256": "fed1615cc1883ac0de211829b69e86a3a5452277d785542d0e92f059245b21b8",
+        "uncompressed_bytes": 397000,
+        "encoded_bytes": 40480,
+        "games": 16,
+        "props": 652,
+        "tds": 99
+      }
+    ]
   },
   "timezone": "Europe/London",
   "refresh_times": [
@@ -38,5 +71,13 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "20260911-all-tackles-v412"
+  "published_version": "20260911-per-snapshot-v412",
+  "weekly_reviews": [
+    {
+      "season": 2026,
+      "week": 1,
+      "as_of": "2026-09-10T15:00:00+01:00",
+      "summary": "Week 1 15:00 BST snapshot. NE @ SEA remains locked and graded from the original pregame forecast. Remaining games were recalculated from the existing football model with newly verified availability changes applied independently of sportsbook lines. Brock Bowers is treated as out, Ashton Jeanty and Malik Nabers as cleared/full participants, and George Kittle as having no game designation but with workload caution. Current accessible game spreads were refreshed from FOX Sports; where a newer total was not available, the last verified Sep 9 total was retained. Current SF-LA player comparison lines were refreshed from accessible public aggregators. League-wide defensive fallback remains enabled with reduced confidence where current depth verification is incomplete."
+    }
+  ]
 }
