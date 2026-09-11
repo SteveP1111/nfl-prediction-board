@@ -4,8 +4,11 @@
   "history": {
     "encoding": "base64+gzip",
     "parts": [
-      "data/live/part-01.txt",
-      "data/live/part-02.txt"
+      "data/live2/part-01.txt",
+      "data/live2/part-02.txt",
+      "data/live2/part-03.txt",
+      "data/live2/part-04.txt",
+      "data/live2/part-05.txt"
     ]
   },
   "timezone": "Europe/London",
