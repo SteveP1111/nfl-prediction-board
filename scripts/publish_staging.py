@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate staged public board data and publish deterministic hosted chunks."""
+"""Validate staged board data and publish one deterministic file per snapshot."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 STAGING = ROOT / "data" / "staging"
 READY_PATH = STAGING / "READY"
 MANIFEST_PATH = ROOT / "data" / "manifest.json"
-CHUNK_SIZE = 7_400
+SNAPSHOT_DIR = ROOT / "data" / "snapshots"
 NFL_TEAMS = {
     "ARI", "ATL", "BAL", "BUF", "CAR", "CHI", "CIN", "CLE",
     "DAL", "DEN", "DET", "GB", "HOU", "IND", "JAX", "KC",
@@ -225,6 +225,41 @@ def load_staged_payload(ready: dict) -> tuple[dict, bytes]:
     return payload, raw
 
 
+def publish_snapshot(snapshot: dict) -> dict:
+    """Write and read back one content-addressed compressed snapshot."""
+    raw = json.dumps(snapshot, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+    snapshot_sha = hashlib.sha256(raw).hexdigest()
+    encoded = base64.b64encode(gzip.compress(raw, compresslevel=9, mtime=0)).decode("ascii")
+    path = SNAPSHOT_DIR / f"{snapshot_sha}.txt"
+    if path.exists():
+        if path.read_text(encoding="ascii") != encoded:
+            fail(f"existing snapshot file does not match its content hash: {path.name}")
+    else:
+        path.write_text(encoded, encoding="ascii")
+
+    try:
+        rebuilt = gzip.decompress(base64.b64decode(path.read_text(encoding="ascii"), validate=True))
+    except Exception as exc:
+        fail(f"snapshot read-back reconstruction failed for {snapshot['id']}: {exc}")
+    if rebuilt != raw or hashlib.sha256(rebuilt).hexdigest() != snapshot_sha:
+        fail(f"snapshot read-back checksum mismatch for {snapshot['id']}")
+
+    return {
+        "id": snapshot["id"],
+        "season": snapshot["season"],
+        "week": snapshot["week"],
+        "slot": snapshot["slot"],
+        "capturedAt": snapshot["capturedAt"],
+        "path": path.relative_to(ROOT).as_posix(),
+        "sha256": snapshot_sha,
+        "uncompressed_bytes": len(raw),
+        "encoded_bytes": len(encoded),
+        "games": len(snapshot["games"]),
+        "props": len(snapshot["props"]),
+        "tds": len(snapshot["tds"]),
+    }
+
+
 def main() -> None:
     ready = load_json(READY_PATH)
     if not isinstance(ready, dict):
@@ -246,51 +281,38 @@ def main() -> None:
 
     snapshots = validate_payload(payload)
 
-    compressed = gzip.compress(raw, compresslevel=9, mtime=0)
-    encoded = base64.b64encode(compressed).decode("ascii")
-    parts = [encoded[i : i + CHUNK_SIZE] for i in range(0, len(encoded), CHUNK_SIZE)]
-    if not parts or any(len(part) > 7_500 for part in parts):
-        fail("chunk generation produced an invalid part size")
-
-    output_dir = ROOT / "data" / f"live-{version}"
-    if output_dir.exists():
-        fail(f"output directory already exists: {output_dir.relative_to(ROOT)}")
-    output_dir.mkdir(parents=True)
-    part_paths: list[str] = []
-    for index, part in enumerate(parts, start=1):
-        path = output_dir / f"part-{index:03d}.txt"
-        path.write_text(part, encoding="ascii")
-        part_paths.append(path.relative_to(ROOT).as_posix())
-
-    try:
-        rebuilt_b64 = "".join((ROOT / path).read_text(encoding="ascii") for path in part_paths)
-        rebuilt = gzip.decompress(base64.b64decode(rebuilt_b64, validate=True))
-    except Exception as exc:
-        shutil.rmtree(output_dir, ignore_errors=True)
-        fail(f"read-back reconstruction failed: {exc}")
-    if rebuilt != raw or hashlib.sha256(rebuilt).hexdigest() != expected_sha:
-        shutil.rmtree(output_dir, ignore_errors=True)
-        fail("read-back payload or SHA256 mismatch")
+    SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+    catalogue = [publish_snapshot(snapshot) for snapshot in snapshots]
+    referenced = {Path(entry["path"]).name for entry in catalogue}
+    for path in SNAPSHOT_DIR.glob("*.txt"):
+        if path.name not in referenced:
+            path.unlink()
 
     manifest = load_json(MANIFEST_PATH)
     if not isinstance(manifest, dict):
         fail("manifest.json must contain an object")
-    manifest["schema_version"] = 1
+    manifest["schema_version"] = 2
     manifest["model_version"] = model_version
     manifest["history"] = {
-        "encoding": "base64+gzip",
-        "parts": part_paths,
-        "sha256": expected_sha,
-        "uncompressed_bytes": len(raw),
-        "snapshots": len(snapshots),
+        "encoding": "per-snapshot-base64+gzip",
+        "source_sha256": expected_sha,
+        "snapshot_count": len(catalogue),
+        "snapshots": catalogue,
     }
+    manifest["weekly_reviews"] = payload.get("weekly_reviews", [])
     manifest["published_version"] = version
 
     temp_manifest = MANIFEST_PATH.with_suffix(".json.tmp")
     temp_manifest.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     os.replace(temp_manifest, MANIFEST_PATH)
+
+    # These cumulative legacy directories are no longer referenced. Removing
+    # them in the same commit as the manifest switch keeps Pages compact.
+    for legacy_dir in (ROOT / "data").glob("live-*"):
+        if legacy_dir.is_dir():
+            shutil.rmtree(legacy_dir)
     print(
-        f"Validated and published {len(snapshots)} snapshots as {len(parts)} parts; "
+        f"Validated and published {len(snapshots)} independent snapshots; "
         f"SHA256 {expected_sha}"
     )
 
