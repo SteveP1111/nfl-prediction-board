@@ -1,0 +1,1 @@
+NFL board publisher staging notes. The publisher should package only the compact public snapshots, validate them, write versioned chunks first, and update data/manifest.json only after successful reconstruction.
