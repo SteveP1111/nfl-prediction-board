@@ -26,6 +26,7 @@ NFL_TEAMS = {
     "NYJ", "PHI", "PIT", "SEA", "SF", "TB", "TEN", "WAS",
 }
 FINAL_RESULTS = {"Correct", "Miss", "Push"}
+DISPLAY_RESULTS = FINAL_RESULTS | {"Final"}
 
 
 def fail(message: str) -> None:
@@ -55,12 +56,12 @@ def valid_rating(value, label: str) -> None:
     finite_number(value, label)
 
 
-def require_outcome(outcomes: dict, key: str, label: str) -> None:
+def require_outcome(outcomes: dict, key: str, label: str, allowed=FINAL_RESULTS) -> None:
     outcome = outcomes.get(key)
     if not isinstance(outcome, dict):
         fail(f"{label} is missing outcome {key}")
-    if outcome.get("result") not in FINAL_RESULTS:
-        fail(f"{label} outcome {key} must be Correct, Miss or Push")
+    if outcome.get("result") not in allowed:
+        fail(f"{label} outcome {key} has an invalid settlement state")
     actual = outcome.get("actual")
     if actual is None or actual == "":
         fail(f"{label} outcome {key} is missing its actual result")
@@ -94,9 +95,17 @@ def validate_completed_game_grading(snapshot: dict, prefix: str) -> None:
         for prop in snapshot["props"]:
             if prop.get("game_id") != game_id:
                 continue
+            player = prop.get("player_id") or prop.get("name")
+            if prop.get("type") == "tackles":
+                require_outcome(
+                    outcomes,
+                    f"prop:{game_id}:{player}:tackles",
+                    label,
+                    DISPLAY_RESULTS,
+                )
+                continue
             if not prop.get("pick_side") or prop.get("line") is None:
                 continue
-            player = prop.get("player_id") or prop.get("name")
             require_outcome(outcomes, f"prop:{game_id}:{player}:{prop.get('type')}", label)
         for td in snapshot["tds"]:
             if td.get("game_id") != game_id:
