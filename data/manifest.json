@@ -26,6 +26,6 @@
     "15:00"
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
-  "publication_filter": "All games; top 50 rated player props plus any market-lined prop; top 25 TD candidates per snapshot. Full unfiltered history retained privately in Library.",
+  "publication_filter": "All games; top 50 rated player props plus any market-lined prop; all touchdown candidates per snapshot. Full unfiltered non-TD history retained privately in Library.",
   "published_version": "20260911-completed-results-v412"
 }
