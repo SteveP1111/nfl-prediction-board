@@ -1,1 +1,9 @@
-{"version":"20260911-tackle-results-market-v412","model_version":"4.12","mode":"upsert","payload_sha256":"554359016344d3190de9236e68f58ed1356f8fb47f8932cfb776d0a3c9c268cd","snapshot_parts":["snapshot-001.json","snapshot-002.json","snapshot-003.json","snapshot-004.json"]}
+{
+  "version": "20260912-1500-final-injuries-kickers-v412",
+  "model_version": "4.12",
+  "mode": "upsert",
+  "payload_sha256": "eb73f0fd257332a698b21754d44ab53726856acab130c884930bab9d725ba2af",
+  "snapshot_parts": [
+    "snapshot-001.json"
+  ]
+}
