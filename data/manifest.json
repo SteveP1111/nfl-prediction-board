@@ -3,8 +3,8 @@
   "model_version": "4.12",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "554359016344d3190de9236e68f58ed1356f8fb47f8932cfb776d0a3c9c268cd",
-    "snapshot_count": 4,
+    "last_staging_sha256": "eb73f0fd257332a698b21754d44ab53726856acab130c884930bab9d725ba2af",
+    "snapshot_count": 5,
     "snapshots": [
       {
         "id": "2026-W1-05:00-2026-09-10T05:00:00+01:00",
@@ -61,6 +61,20 @@
         "games": 16,
         "props": 652,
         "tds": 99
+      },
+      {
+        "id": "2026-W1-15:00-2026-09-12T15:00:00+01:00",
+        "season": 2026,
+        "week": 1,
+        "slot": "15:00",
+        "capturedAt": "2026-09-12T15:00:00+01:00",
+        "path": "data/snapshots/db0b01a4b24089297edb4073fb56c81464cced407e3ef1512940031a1457c064.txt",
+        "sha256": "db0b01a4b24089297edb4073fb56c81464cced407e3ef1512940031a1457c064",
+        "uncompressed_bytes": 529691,
+        "encoded_bytes": 52016,
+        "games": 16,
+        "props": 712,
+        "tds": 101
       }
     ]
   },
@@ -71,13 +85,19 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "20260911-tackle-results-market-v412",
+  "published_version": "20260912-1500-final-injuries-kickers-v412",
   "weekly_reviews": [
     {
       "season": 2026,
       "week": 1,
       "as_of": "2026-09-10T15:00:00+01:00",
       "summary": "Week 1 15:00 BST snapshot. NE @ SEA remains locked and graded from the original pregame forecast. Remaining games were recalculated from the existing football model with newly verified availability changes applied independently of sportsbook lines. Brock Bowers is treated as out, Ashton Jeanty and Malik Nabers as cleared/full participants, and George Kittle as having no game designation but with workload caution. Current accessible game spreads were refreshed from FOX Sports; where a newer total was not available, the last verified Sep 9 total was retained. Current SF-LA player comparison lines were refreshed from accessible public aggregators. League-wide defensive fallback remains enabled with reduced confidence where current depth verification is incomplete."
+    },
+    {
+      "season": 2026,
+      "week": 1,
+      "as_of": "2026-09-12T15:00:00+01:00",
+      "summary": "15:00 refresh: v4.12 projections recalculated from current permitted inputs. Completed NE-SEA and SF-LA forecasts and grades remain frozen. The final injury report is applied, including Tua Tagovailoa out with Cooper Rush starting, Brock Bowers out and defensive absences across all teams. Public Week 1 game comparisons were refreshed from FanDuel Research; TB-CIN and player markets retain their last verified snapshots where a complete newer permitted feed was unavailable. Fresh nflverse weekly kicker data is loaded with 0-39, 40-49, 50-59 and 60+ buckets and the approved sample-shrunk v4.12 adjustment. No severe-weather scoring threshold is triggered and no model weights changed."
     }
   ]
 }
