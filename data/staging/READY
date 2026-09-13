@@ -1,8 +1,8 @@
 {
-  "version": "20260913-0500-gameday-injuries-weather-v412",
+  "version": "20260913-1500-final-pregame-v412",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "ea89b3e7f34f25778763c0b45b12fc8130612be44de43df52f303002f0a8b2ac",
+  "payload_sha256": "f5822e97f71e8239c3efa3d690058676121d8110d4fed55fe3d3660299d2722e",
   "snapshot_parts": [
     "snapshot-001.json"
   ]
