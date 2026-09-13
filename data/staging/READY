@@ -1,8 +1,8 @@
 {
-  "version": "20260912-1500-final-injuries-kickers-v412",
+  "version": "20260913-0500-gameday-injuries-weather-v412",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "eb73f0fd257332a698b21754d44ab53726856acab130c884930bab9d725ba2af",
+  "payload_sha256": "ea89b3e7f34f25778763c0b45b12fc8130612be44de43df52f303002f0a8b2ac",
   "snapshot_parts": [
     "snapshot-001.json"
   ]
