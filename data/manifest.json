@@ -3,8 +3,8 @@
   "model_version": "4.12",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "eb73f0fd257332a698b21754d44ab53726856acab130c884930bab9d725ba2af",
-    "snapshot_count": 5,
+    "last_staging_sha256": "ea89b3e7f34f25778763c0b45b12fc8130612be44de43df52f303002f0a8b2ac",
+    "snapshot_count": 6,
     "snapshots": [
       {
         "id": "2026-W1-05:00-2026-09-10T05:00:00+01:00",
@@ -75,6 +75,20 @@
         "games": 16,
         "props": 712,
         "tds": 101
+      },
+      {
+        "id": "2026-W1-05:00-2026-09-13T05:00:00+01:00",
+        "season": 2026,
+        "week": 1,
+        "slot": "05:00",
+        "capturedAt": "2026-09-13T05:00:00+01:00",
+        "path": "data/snapshots/cc1d274f2881da021749c12304ffb50dc50259896cbde79943806f79973b212d.txt",
+        "sha256": "cc1d274f2881da021749c12304ffb50dc50259896cbde79943806f79973b212d",
+        "uncompressed_bytes": 528662,
+        "encoded_bytes": 51960,
+        "games": 16,
+        "props": 711,
+        "tds": 100
       }
     ]
   },
@@ -85,7 +99,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "20260912-1500-final-injuries-kickers-v412",
+  "published_version": "20260913-0500-gameday-injuries-weather-v412",
   "weekly_reviews": [
     {
       "season": 2026,
@@ -98,6 +112,12 @@
       "week": 1,
       "as_of": "2026-09-12T15:00:00+01:00",
       "summary": "15:00 refresh: v4.12 projections recalculated from current permitted inputs. Completed NE-SEA and SF-LA forecasts and grades remain frozen. The final injury report is applied, including Tua Tagovailoa out with Cooper Rush starting, Brock Bowers out and defensive absences across all teams. Public Week 1 game comparisons were refreshed from FanDuel Research; TB-CIN and player markets retain their last verified snapshots where a complete newer permitted feed was unavailable. Fresh nflverse weekly kicker data is loaded with 0-39, 40-49, 50-59 and 60+ buckets and the approved sample-shrunk v4.12 adjustment. No severe-weather scoring threshold is triggered and no model weights changed."
+    },
+    {
+      "season": 2026,
+      "week": 1,
+      "as_of": "2026-09-13T05:00:00+01:00",
+      "summary": "05:00 game-day refresh: v4.12 projections recalculated from current permitted inputs. Completed NE-SEA and SF-LA forecasts and grades remain frozen. The final injury report is applied, including Tua Tagovailoa out with Cooper Rush starting, Brock Bowers out, plus Chiefs left tackle Josh Simmons and safety Chamarri Conner ruled out for Monday. Public Week 1 game comparisons were refreshed from FanDuel Research; TB-CIN and player markets retain their last verified snapshots where a complete newer permitted feed was unavailable. Fresh nflverse weekly kicker data is loaded with 0-39, 40-49, 50-59 and 60+ buckets and the approved sample-shrunk v4.12 adjustment. No severe-weather scoring threshold is triggered and no model weights changed."
     }
   ]
 }
