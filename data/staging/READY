@@ -1,8 +1,8 @@
 {
-  "version": "20260913-1500-final-pregame-v412",
+  "version": "20260914-0500-sunday-graded-mnf-v412",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "f5822e97f71e8239c3efa3d690058676121d8110d4fed55fe3d3660299d2722e",
+  "payload_sha256": "a8874b0c6dfcaf7952bd76a42320cf799b5ea386c6d116438d47df787b6e9807",
   "snapshot_parts": [
     "snapshot-001.json"
   ]
