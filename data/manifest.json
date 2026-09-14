@@ -3,8 +3,8 @@
   "model_version": "4.12",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "f5822e97f71e8239c3efa3d690058676121d8110d4fed55fe3d3660299d2722e",
-    "snapshot_count": 7,
+    "last_staging_sha256": "a8874b0c6dfcaf7952bd76a42320cf799b5ea386c6d116438d47df787b6e9807",
+    "snapshot_count": 8,
     "snapshots": [
       {
         "id": "2026-W1-05:00-2026-09-10T05:00:00+01:00",
@@ -103,6 +103,20 @@
         "games": 16,
         "props": 711,
         "tds": 100
+      },
+      {
+        "id": "2026-W1-05:00-2026-09-14T05:00:00+01:00",
+        "season": 2026,
+        "week": 1,
+        "slot": "05:00",
+        "capturedAt": "2026-09-14T05:00:00+01:00",
+        "path": "data/snapshots/bc6da4dfe78bfb9882ffd84f675e627bed7e5f57356d977fbeced907b1589bec.txt",
+        "sha256": "bc6da4dfe78bfb9882ffd84f675e627bed7e5f57356d977fbeced907b1589bec",
+        "uncompressed_bytes": 614070,
+        "encoded_bytes": 58840,
+        "games": 16,
+        "props": 711,
+        "tds": 100
       }
     ]
   },
@@ -113,7 +127,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "20260913-1500-final-pregame-v412",
+  "published_version": "20260914-0500-sunday-graded-mnf-v412",
   "weekly_reviews": [
     {
       "season": 2026,
@@ -138,6 +152,12 @@
       "week": 1,
       "as_of": "2026-09-13T15:00:00+01:00",
       "summary": "15:00 final pregame refresh: v4.12 projections recalculated from current permitted inputs. Completed NE-SEA and SF-LA forecasts and grades remain frozen. The final injury report is applied, including Tua Tagovailoa out with Cooper Rush starting, Brock Bowers out, plus Chiefs left tackle Josh Simmons and safety Chamarri Conner ruled out for Monday. A credible late report that Pittsburgh cornerback Joey Porter Jr. is unlikely to play is represented as doubtful rather than inactive pending the official list. Public Week 1 game comparisons were refreshed from FanDuel Research; TB-CIN and player markets retain their last verified snapshots where a complete newer permitted feed was unavailable. Fresh nflverse weekly kicker data is loaded with 0-39, 40-49, 50-59 and 60+ buckets and the approved sample-shrunk v4.12 adjustment. No severe-weather scoring threshold is triggered and no model weights changed."
+    },
+    {
+      "season": 2026,
+      "week": 1,
+      "as_of": "2026-09-14T05:00:00+01:00",
+      "summary": "05:00 post-Sunday refresh: all 15 completed Week 1 games are graded against their frozen forecasts, including winner, spread, total, every market-lined prop, every touchdown candidate and complete Tackles + assists coverage from final defensive box scores. Quarterback touchdown grades include only the quarterback's own rushing or receiving scores. The remaining Denver-Kansas City projection is recalculated independently under v4.12 with Josh Simmons and Chamarri Conner out for Kansas City. FanDuel still lists Denver +2.5 and 43.5; retained player markets remain comparison-only. Available nflverse data is evaluated with 0-39, 40-49, 50-59 and 60+ kicking buckets and the approved sample-shrunk adjustment. No severe-weather threshold is triggered and no model weights changed."
     }
   ]
 }
