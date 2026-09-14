@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "created_at": "2026-09-13T15:00:00+01:00",
+  "created_at": "2026-09-14T05:00:00+01:00",
   "timezone": "Europe/London",
   "description": "Persistent frozen prediction history for the NFL Weekly Prediction Board. Append timestamped pregame snapshots; never overwrite historical predictions after kickoff.",
   "weekly_reviews": [
@@ -27,6 +27,12 @@
       "week": 1,
       "as_of": "2026-09-13T15:00:00+01:00",
       "summary": "15:00 final pregame refresh: v4.12 projections recalculated from current permitted inputs. Completed NE-SEA and SF-LA forecasts and grades remain frozen. The final injury report is applied, including Tua Tagovailoa out with Cooper Rush starting, Brock Bowers out, plus Chiefs left tackle Josh Simmons and safety Chamarri Conner ruled out for Monday. A credible late report that Pittsburgh cornerback Joey Porter Jr. is unlikely to play is represented as doubtful rather than inactive pending the official list. Public Week 1 game comparisons were refreshed from FanDuel Research; TB-CIN and player markets retain their last verified snapshots where a complete newer permitted feed was unavailable. Fresh nflverse weekly kicker data is loaded with 0-39, 40-49, 50-59 and 60+ buckets and the approved sample-shrunk v4.12 adjustment. No severe-weather scoring threshold is triggered and no model weights changed."
+    },
+    {
+      "season": 2026,
+      "week": 1,
+      "as_of": "2026-09-14T05:00:00+01:00",
+      "summary": "05:00 post-Sunday refresh: all 15 completed Week 1 games are graded against their frozen forecasts, including winner, spread, total, every market-lined prop, every touchdown candidate and complete Tackles + assists coverage from final defensive box scores. Quarterback touchdown grades include only the quarterback's own rushing or receiving scores. The remaining Denver-Kansas City projection is recalculated independently under v4.12 with Josh Simmons and Chamarri Conner out for Kansas City. FanDuel still lists Denver +2.5 and 43.5; retained player markets remain comparison-only. Available nflverse data is evaluated with 0-39, 40-49, 50-59 and 60+ kicking buckets and the approved sample-shrunk adjustment. No severe-weather threshold is triggered and no model weights changed."
     }
   ]
 }
