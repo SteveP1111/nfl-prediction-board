@@ -1,8 +1,8 @@
 {
-  "version": "20260915-0500-week1-final-v412",
+  "version": "20260915-0800-week1-review-v412",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "0d312964a263fef0f3ee64d58a6724c5a500f878cfe0425bb4a486b0eebc000c",
+  "payload_sha256": "eab6e62e086c2d762f38588f13a909b68f1aba9729170bda381e1eb79bb902f7",
   "snapshot_parts": [
     "snapshot-001.json"
   ]
