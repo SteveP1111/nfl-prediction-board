@@ -3,8 +3,8 @@
   "model_version": "4.12",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "a8874b0c6dfcaf7952bd76a42320cf799b5ea386c6d116438d47df787b6e9807",
-    "snapshot_count": 8,
+    "last_staging_sha256": "0d312964a263fef0f3ee64d58a6724c5a500f878cfe0425bb4a486b0eebc000c",
+    "snapshot_count": 9,
     "snapshots": [
       {
         "id": "2026-W1-05:00-2026-09-10T05:00:00+01:00",
@@ -117,6 +117,20 @@
         "games": 16,
         "props": 711,
         "tds": 100
+      },
+      {
+        "id": "2026-W1-05:00-2026-09-15T05:00:00+01:00",
+        "season": 2026,
+        "week": 1,
+        "slot": "05:00",
+        "capturedAt": "2026-09-15T05:00:00+01:00",
+        "path": "data/snapshots/8aacf475d8098c484e60559389c0ade619016c8d4fb8b1e71bcba36a71e25fd7.txt",
+        "sha256": "8aacf475d8098c484e60559389c0ade619016c8d4fb8b1e71bcba36a71e25fd7",
+        "uncompressed_bytes": 619883,
+        "encoded_bytes": 59220,
+        "games": 16,
+        "props": 711,
+        "tds": 100
       }
     ]
   },
@@ -127,7 +141,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "20260914-0500-sunday-graded-mnf-v412",
+  "published_version": "20260915-0500-week1-final-v412",
   "weekly_reviews": [
     {
       "season": 2026,
@@ -158,6 +172,12 @@
       "week": 1,
       "as_of": "2026-09-14T05:00:00+01:00",
       "summary": "05:00 post-Sunday refresh: all 15 completed Week 1 games are graded against their frozen forecasts, including winner, spread, total, every market-lined prop, every touchdown candidate and complete Tackles + assists coverage from final defensive box scores. Quarterback touchdown grades include only the quarterback's own rushing or receiving scores. The remaining Denver-Kansas City projection is recalculated independently under v4.12 with Josh Simmons and Chamarri Conner out for Kansas City. FanDuel still lists Denver +2.5 and 43.5; retained player markets remain comparison-only. Available nflverse data is evaluated with 0-39, 40-49, 50-59 and 60+ kicking buckets and the approved sample-shrunk adjustment. No severe-weather threshold is triggered and no model weights changed."
+    },
+    {
+      "season": 2026,
+      "week": 1,
+      "as_of": "2026-09-15T05:00:00+01:00",
+      "summary": "05:00 Week 1 final refresh: all 16 completed games are graded against their frozen forecasts, including winner, spread, total, every market-lined prop, every touchdown candidate and complete Tackles + assists coverage from final defensive box scores. Quarterback touchdown grades include only the quarterback's own rushing or receiving scores. Denver-Kansas City is settled against the last valid frozen pregame projection and its Denver +2.5 and 43.5 market comparison. Available nflverse data is evaluated with 0-39, 40-49, 50-59 and 60+ kicking buckets and the approved sample-shrunk adjustment. No severe-weather threshold is triggered and no model weights changed."
     }
   ]
 }
