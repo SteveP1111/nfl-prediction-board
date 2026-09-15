@@ -1,8 +1,8 @@
 {
-  "version": "20260914-0500-sunday-graded-mnf-v412",
+  "version": "20260915-0500-week1-final-v412",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "a8874b0c6dfcaf7952bd76a42320cf799b5ea386c6d116438d47df787b6e9807",
+  "payload_sha256": "0d312964a263fef0f3ee64d58a6724c5a500f878cfe0425bb4a486b0eebc000c",
   "snapshot_parts": [
     "snapshot-001.json"
   ]
