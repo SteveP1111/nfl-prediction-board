@@ -1,9 +1,12 @@
 {
-  "version": "20260915-1500-week2-v412",
+  "version": "20260916-0833-week2-v412-corrected",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "180310e58860ffd934f542ace4fcd934bd0b824c50bb3eb61da3063482ca4ab7",
+  "payload_sha256": "6f4db8064e99b9445e60e808667f264e4fee9019222923b507370ee7ea58a306",
   "snapshot_parts": [
-    "snapshot-001.json"
+    "snapshot-001-part-001.json",
+    "snapshot-001-part-002.json",
+    "snapshot-001-part-003.json",
+    "snapshot-001-part-004.json"
   ]
 }
