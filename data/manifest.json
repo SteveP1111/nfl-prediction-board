@@ -3,8 +3,8 @@
   "model_version": "4.12",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "9bb36f56db9c63d7ba5c4f12c0216f33d5830d21bd879ae2a6b86d464a670a5c",
-    "snapshot_count": 11,
+    "last_staging_sha256": "193352100424f92ef5ab7ee1ee0a92220410cf730156e62c2efb7c838b0b9c00",
+    "snapshot_count": 12,
     "snapshots": [
       {
         "id": "2026-W1-05:00-2026-09-10T05:00:00+01:00",
@@ -159,6 +159,20 @@
         "games": 16,
         "props": 722,
         "tds": 100
+      },
+      {
+        "id": "2026-W2-current-2026-09-17T23:06:00+01:00",
+        "season": 2026,
+        "week": 2,
+        "slot": "current",
+        "capturedAt": "2026-09-17T23:06:00+01:00",
+        "path": "data/snapshots/d31897c0438654bb776baaed7cc37389493d721740e7e934a212b9f89c2611b9.txt",
+        "sha256": "d31897c0438654bb776baaed7cc37389493d721740e7e934a212b9f89c2611b9",
+        "uncompressed_bytes": 562571,
+        "encoded_bytes": 57228,
+        "games": 16,
+        "props": 722,
+        "tds": 100
       }
     ]
   },
@@ -169,7 +183,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "20260916-0833-week2-v412-corrected",
+  "published_version": "20260917-2312-week2-v412-current-retry",
   "weekly_reviews": [
     {
       "as_of": "2026-09-10T15:00:00+01:00",
