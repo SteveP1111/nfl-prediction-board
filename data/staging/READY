@@ -1,9 +1,9 @@
 {
-  "version": "20260916-0833-week2-v412-corrected",
+  "version": "20260917-2306-week2-v412-current",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "9bb36f56db9c63d7ba5c4f12c0216f33d5830d21bd879ae2a6b86d464a670a5c",
+  "payload_sha256": "6ba4829763d6424177238ac415b84c49adc7ab82dd55eba4c49688d00d1ee7da",
   "snapshot_parts": [
-    "snapshot-001.json"
+    "snapshot-001-part-001.json"
   ]
 }
