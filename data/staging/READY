@@ -1,8 +1,8 @@
 {
-  "version": "20260917-2312-week2-v412-current-retry",
+  "version": "20260920-0010-github-cutover-v412",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "193352100424f92ef5ab7ee1ee0a92220410cf730156e62c2efb7c838b0b9c00",
+  "payload_sha256": "99fb9c12a3fb4caf5c355db3df590225d5bfdd653cbc54cc1fddcfddc22b0f96",
   "snapshot_parts": [
     "snapshot-001.json"
   ]
