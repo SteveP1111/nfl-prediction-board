@@ -1,9 +1,6 @@
 {
-  "version": "20260920-0010-github-cutover-v412",
+  "version": "20260920-0010-v412-github-cutover",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "99fb9c12a3fb4caf5c355db3df590225d5bfdd653cbc54cc1fddcfddc22b0f96",
-  "snapshot_parts": [
-    "snapshot-001.json"
-  ]
+  "payload_sha256": "99fb9c12a3fb4caf5c355db3df590225d5bfdd653cbc54cc1fddcfddc22b0f96"
 }
