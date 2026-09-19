@@ -197,7 +197,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "20260920-0010-github-cutover-v412",
+  "published_version": "20260920-0010-v412-github-cutover",
   "weekly_reviews": [
     {
       "as_of": "2026-09-10T15:00:00+01:00",
