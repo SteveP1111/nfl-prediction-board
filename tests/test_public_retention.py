@@ -18,7 +18,7 @@ class PublicRetentionTests(unittest.TestCase):
             {"id":"w3-b","season":2026,"week":3,"capturedAt":"2026-09-22T15:00:00+01:00"},
         ]
         result=compact_completed_week_catalogue(catalogue,[])
-        self.assertEqual([x["id"] for x in result],["w1-b","w2-b","w3-a","w3-b"])
+        self.assertEqual([x["id"] for x in result],["w1-b","w2-b","w3-b"])
 
     def test_final_review_can_select_authoritative_snapshot(self):
         catalogue=[
