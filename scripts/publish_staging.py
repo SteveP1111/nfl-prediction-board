@@ -29,6 +29,49 @@ FINAL_RESULTS = {"Correct", "Miss", "Push"}
 DISPLAY_RESULTS = FINAL_RESULTS | {"Final"}
 
 
+def compact_completed_week_catalogue(catalogue: list[dict], weekly_reviews: list[dict] | None = None) -> list[dict]:
+    """Keep one public snapshot for each completed week and all snapshots for the active week."""
+    if not catalogue:
+        return []
+    reviews = weekly_reviews or []
+    latest_week_by_season: dict[int, int] = {}
+    for entry in catalogue:
+        season = int(entry.get("season") or 0)
+        week = int(entry.get("week") or 0)
+        latest_week_by_season[season] = max(latest_week_by_season.get(season, 0), week)
+
+    preferred_ids: dict[tuple[int, int], str] = {}
+    for review in reviews:
+        try:
+            season = int(review.get("season") or 0)
+            week = int(review.get("week") or 0)
+        except (TypeError, ValueError):
+            continue
+        if review.get("review_scope") == "game_lines_final" or str(review.get("status") or "").strip().lower() == "final":
+            preferred = str(review.get("authoritative_snapshot_id") or "")
+            if preferred:
+                preferred_ids[(season, week)] = preferred
+
+    groups: dict[tuple[int, int], list[dict]] = {}
+    for entry in catalogue:
+        key = (int(entry.get("season") or 0), int(entry.get("week") or 0))
+        groups.setdefault(key, []).append(entry)
+
+    compacted: list[dict] = []
+    for key, entries in groups.items():
+        season, week = key
+        if week >= latest_week_by_season.get(season, week):
+            compacted.extend(entries)
+            continue
+        preferred = preferred_ids.get(key)
+        chosen = next((entry for entry in entries if entry.get("id") == preferred), None)
+        if chosen is None:
+            chosen = max(entries, key=lambda entry: str(entry.get("capturedAt") or ""))
+        compacted.append(chosen)
+
+    return sorted(compacted, key=lambda entry: str(entry.get("capturedAt") or ""))
+
+
 def fail(message: str) -> None:
     raise SystemExit(f"Publication refused: {message}")
 
@@ -307,6 +350,7 @@ def main() -> None:
         catalogue = sorted(catalogue_by_id.values(), key=lambda entry: entry["capturedAt"])
     else:
         catalogue = staged_catalogue
+    catalogue = compact_completed_week_catalogue(catalogue, payload.get("weekly_reviews", []))
     referenced = {Path(entry["path"]).name for entry in catalogue}
     for path in SNAPSHOT_DIR.glob("*.txt"):
         if path.name not in referenced:
