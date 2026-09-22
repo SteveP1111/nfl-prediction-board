@@ -5229,6 +5229,53 @@
       ],
       "type": "weekly_model_review",
       "week": 1
+    },
+    {
+      "type": "weekly_model_review",
+      "review_scope": "game_lines_final",
+      "season": 2026,
+      "week": 2,
+      "as_of": "2026-09-22T07:37:00+01:00",
+      "model_version": "4.12",
+      "authoritative_snapshot_id": "2026-W2-05:00-2026-09-20T04:59:37.690972+01:00",
+      "forecast_policy": "Frozen pregame projections graded without revision. Week 3 weather and total-selection refinements are prospective only.",
+      "summary": "Final Week 2 game-line review: winners 9-7 (56.3%), spreads 9-7 (56.3%), totals 7-9 (43.8%). The model projected 47.47 points per game versus 40.44 actually scored, an average +7.03 point scoring bias. Weather handling and small total-edge presentation are refined prospectively for Week 3.",
+      "authoritative_metrics": {
+        "winner": {
+          "correct": 9,
+          "miss": 7,
+          "decisions": 16,
+          "hit_rate_pct": 56.3
+        },
+        "spread": {
+          "correct": 9,
+          "miss": 7,
+          "push": 0,
+          "decisions": 16,
+          "hit_rate_pct": 56.3
+        },
+        "total": {
+          "correct": 7,
+          "miss": 9,
+          "push": 0,
+          "decisions": 16,
+          "hit_rate_pct": 43.8
+        },
+        "game_total_mae": 12.25,
+        "game_total_signed_bias": 7.03,
+        "projected_points_per_game": 47.47,
+        "actual_points_per_game": 40.44,
+        "team_score_mae": 8.77,
+        "team_score_signed_bias": 3.52
+      },
+      "weather_review": {
+        "finding": "Four clearly weather-sensitive games averaged a +15.26 point projection-minus-actual total bias and 18.00 point total MAE, versus +4.29 bias and 10.33 MAE in the other 12 games. This supports better weather handling, not a global scoring reweight from one week.",
+        "week3_change": "Use kickoff-hour weather including precipitation probability, precipitation amount, sustained wind and gusts, with graduated penalties rather than a single 60% precipitation threshold."
+      },
+      "totals_review": {
+        "finding": "Eight of 16 total selections had model edges below 2 points and went 3-5; edges of at least 2 points went 4-4.",
+        "week3_change": "Below a 2.0 point total edge, show No meaningful edge rather than an Over/Under recommendation."
+      }
     }
   ]
 }
