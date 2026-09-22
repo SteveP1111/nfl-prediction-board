@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 import publish_staging
-from weekly_review_contract import normalise_weekly_reviews
+from weekly_review_contract import normalise_weekly_reviews, review_identity
 
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'data'/'manifest.json'
@@ -17,9 +17,10 @@ def main():
     publish_staging.main()
     after=json.loads(MANIFEST.read_text(encoding='utf-8'))
     if staged:
-        replacements={(item.get('season'),item.get('week')) for item in staged}
-        merged=[item for item in existing if (item.get('season'),item.get('week')) not in replacements]
-        merged.extend(staged)
+        merged_by_id={review_identity(item):item for item in existing}
+        for item in staged:
+            merged_by_id[review_identity(item)]=item
+        merged=list(merged_by_id.values())
         merged.sort(key=lambda item:(item.get('season',0),item.get('week',0),item.get('as_of','')))
         after['weekly_reviews']=merged
     else:
