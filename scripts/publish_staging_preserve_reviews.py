@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 import publish_staging
+from weekly_review_contract import normalise_weekly_reviews
 
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'data'/'manifest.json'
@@ -10,9 +11,9 @@ STAGING=ROOT/'data'/'staging'
 
 def main():
     before=json.loads(MANIFEST.read_text(encoding='utf-8'))
-    existing=before.get('weekly_reviews',[])
+    existing=normalise_weekly_reviews(before.get('weekly_reviews',[]))
     staged_meta=json.loads((STAGING/'public.json').read_text(encoding='utf-8'))
-    staged=staged_meta.get('weekly_reviews',[])
+    staged=normalise_weekly_reviews(staged_meta.get('weekly_reviews',[]))
     publish_staging.main()
     after=json.loads(MANIFEST.read_text(encoding='utf-8'))
     if staged:
