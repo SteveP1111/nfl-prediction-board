@@ -1,6 +1,16 @@
 {
-  "version": "20260920-0010-v412-github-cutover",
+  "version": "2026-09-22T075301-239242-0100",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "99fb9c12a3fb4caf5c355db3df590225d5bfdd653cbc54cc1fddcfddc22b0f96"
+  "payload_sha256": "8a1712f47102e1132dd70a5d33bb4009428f0e5eeb4be5101af4d2243f7481df",
+  "snapshot_parts": [
+    "snapshot-001-part-001.json",
+    "snapshot-001-part-002.json",
+    "snapshot-001-part-003.json",
+    "snapshot-001-part-004.json",
+    "snapshot-001-part-005.json",
+    "snapshot-001-part-006.json",
+    "snapshot-001-part-007.json",
+    "snapshot-001-part-008.json"
+  ]
 }
