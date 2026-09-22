@@ -52,6 +52,13 @@ class WeeklyReviewContractTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             normalise_weekly_review(review)
 
+    def test_refuses_missing_single_market_outcome(self):
+        review=normalise_weekly_review(final_review())
+        review["games"]=None
+        review["game_outcomes"].pop("total:2026_02_A15_B15")
+        with self.assertRaises(ValueError):
+            normalise_weekly_review(review)
+
 
 if __name__ == "__main__":
     unittest.main()
