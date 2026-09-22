@@ -207,6 +207,12 @@ def validate_payload(payload: object) -> list[dict]:
                 finite_number(game.get(field), f"{label}.{field}")
             for field in ("winner_rating", "spread_rating", "total_rating"):
                 valid_rating(game.get(field), f"{label}.{field}")
+            for field in ("spread_line", "total_line"):
+                finite_number(game.get(field), f"{label}.{field}")
+            if game.get("spread_pick") in (None, "", "—"):
+                fail(f"{label}.spread_pick is missing")
+            if game.get("total_pick") in (None, "", "—"):
+                fail(f"{label}.total_pick is missing")
         if len(set(scheduled_teams)) != 32:
             fail(f"{prefix} must schedule each of the 32 teams exactly once")
 
