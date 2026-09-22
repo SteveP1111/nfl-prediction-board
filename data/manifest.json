@@ -5341,7 +5341,7 @@
             "miss": 3,
             "push": 0,
             "decisions": 4,
-            "hit_rate_pct": 25.0
+            "hit_rate_pct": 25
           },
           "neutral_final": 521,
           "no_tackle_recorded": 184
@@ -5359,14 +5359,14 @@
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "70+": {
               "correct": 9,
               "miss": 6,
               "push": 0,
               "decisions": 15,
-              "hit_rate_pct": 60.0
+              "hit_rate_pct": 60
             }
           },
           "spread_rating": {
@@ -5382,21 +5382,21 @@
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "70+": {
               "correct": 3,
               "miss": 1,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 75.0
+              "hit_rate_pct": 75
             },
             "<55": {
               "correct": 4,
               "miss": 4,
               "push": 0,
               "decisions": 8,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             }
           },
           "total_rating": {
@@ -5421,21 +5421,21 @@
               "miss": 4,
               "push": 0,
               "decisions": 10,
-              "hit_rate_pct": 60.0
+              "hit_rate_pct": 60
             },
             "65-69": {
               "correct": 1,
               "miss": 0,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 100.0
+              "hit_rate_pct": 100
             },
             "70+": {
               "correct": 2,
               "miss": 2,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             },
             "<55": {
               "correct": 63,
@@ -5458,7 +5458,7 @@
               "miss": 13,
               "push": 0,
               "decisions": 26,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             }
           },
           "td_probability": {
@@ -5506,21 +5506,21 @@
               "miss": 1,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 75.0
+              "hit_rate_pct": 75
             },
             "5-6.9": {
               "correct": 0,
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "7+": {
               "correct": 0,
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "<1": {
               "correct": 4,
@@ -5543,21 +5543,21 @@
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             },
             "5-6.9": {
               "correct": 1,
               "miss": 0,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 100.0
+              "hit_rate_pct": 100
             },
             "7+": {
               "correct": 0,
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "<1": {
               "correct": 1,
@@ -5594,7 +5594,7 @@
               "miss": 34,
               "push": 2,
               "decisions": 63,
-              "hit_rate_pct": 46.0
+              "hit_rate_pct": 46
             },
             "<1": {
               "correct": 40,
@@ -5611,14 +5611,14 @@
             "miss": 5,
             "push": 0,
             "decisions": 25,
-            "hit_rate_pct": 80.0
+            "hit_rate_pct": 80
           },
           "passing_yards": {
             "correct": 12,
             "miss": 13,
             "push": 0,
             "decisions": 25,
-            "hit_rate_pct": 48.0
+            "hit_rate_pct": 48
           },
           "receiving_yards": {
             "correct": 15,
@@ -5646,14 +5646,14 @@
             "miss": 0,
             "push": 0,
             "decisions": 1,
-            "hit_rate_pct": 100.0
+            "hit_rate_pct": 100
           },
           "tackles": {
             "correct": 1,
             "miss": 3,
             "push": 0,
             "decisions": 4,
-            "hit_rate_pct": 25.0
+            "hit_rate_pct": 25
           }
         },
         "position_splits": {
@@ -5662,14 +5662,14 @@
             "miss": 1,
             "push": 0,
             "decisions": 1,
-            "hit_rate_pct": 0.0
+            "hit_rate_pct": 0
           },
           "DB": {
             "correct": 0,
             "miss": 1,
             "push": 0,
             "decisions": 1,
-            "hit_rate_pct": 0.0
+            "hit_rate_pct": 0
           },
           "LB": {
             "correct": 2,
@@ -5683,7 +5683,7 @@
             "miss": 18,
             "push": 0,
             "decisions": 50,
-            "hit_rate_pct": 64.0
+            "hit_rate_pct": 64
           },
           "RB": {
             "correct": 19,
@@ -5729,7 +5729,7 @@
               "miss": 13,
               "push": 0,
               "decisions": 26,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             }
           },
           "matchup_type": {
@@ -5740,7 +5740,7 @@
             },
             "projected_close_<4": {
               "games": 5,
-              "winner_hit_rate_pct": 40.0,
+              "winner_hit_rate_pct": 40,
               "total_mae": 19.97
             },
             "projected_strong_7+": {
@@ -5752,7 +5752,7 @@
           "game_script": {
             "actual_two_score_8-13": {
               "games": 2,
-              "winner_hit_rate_pct": 50.0,
+              "winner_hit_rate_pct": 50,
               "total_mae": 9.07
             },
             "actual_blowout_14+": {
@@ -5816,7 +5816,7 @@
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             },
             "neutral_final": 493,
             "no_tackle_recorded": 193
@@ -5834,7 +5834,7 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 9,
@@ -5848,7 +5848,7 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               }
             },
             "spread_rating": {
@@ -5857,28 +5857,28 @@
                 "miss": 3,
                 "push": 0,
                 "decisions": 5,
-                "hit_rate_pct": 40.0
+                "hit_rate_pct": 40
               },
               "60-64": {
                 "correct": 1,
                 "miss": 1,
                 "push": 0,
                 "decisions": 2,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               },
               "70+": {
                 "correct": 3,
                 "miss": 0,
                 "push": 0,
                 "decisions": 3,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "<55": {
                 "correct": 3,
                 "miss": 3,
                 "push": 0,
                 "decisions": 6,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "total_rating": {
@@ -5910,14 +5910,14 @@
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "70+": {
                 "correct": 3,
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "<55": {
                 "correct": 71,
@@ -5940,7 +5940,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "td_probability": {
@@ -5963,7 +5963,7 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "<40%": {
                 "correct": 22,
@@ -5988,14 +5988,14 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 5,
-                "hit_rate_pct": 80.0
+                "hit_rate_pct": 80
               },
               "7+": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<1": {
                 "correct": 2,
@@ -6018,7 +6018,7 @@
                 "miss": 4,
                 "push": 0,
                 "decisions": 10,
-                "hit_rate_pct": 60.0
+                "hit_rate_pct": 60
               }
             },
             "props": {
@@ -6034,7 +6034,7 @@
                 "miss": 7,
                 "push": 1,
                 "decisions": 14,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               },
               "5-6.9": {
                 "correct": 5,
@@ -6065,14 +6065,14 @@
               "miss": 5,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 80.0
+              "hit_rate_pct": 80
             },
             "passing_yards": {
               "correct": 12,
               "miss": 13,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 48.0
+              "hit_rate_pct": 48
             },
             "receiving_yards": {
               "correct": 17,
@@ -6100,14 +6100,14 @@
               "miss": 0,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 100.0
+              "hit_rate_pct": 100
             },
             "tackles": {
               "correct": 1,
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             }
           },
           "position_splits": {
@@ -6116,14 +6116,14 @@
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "DB": {
               "correct": 0,
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "LB": {
               "correct": 2,
@@ -6137,14 +6137,14 @@
               "miss": 18,
               "push": 0,
               "decisions": 50,
-              "hit_rate_pct": 64.0
+              "hit_rate_pct": 64
             },
             "RB": {
               "correct": 21,
               "miss": 21,
               "push": 1,
               "decisions": 42,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             },
             "TE": {
               "correct": 8,
@@ -6158,7 +6158,7 @@
               "miss": 31,
               "push": 6,
               "decisions": 62,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             }
           },
           "patterns": {
@@ -6182,7 +6182,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "matchup_type": {
@@ -6193,19 +6193,19 @@
               },
               "projected_close_<4": {
                 "games": 5,
-                "winner_hit_rate_pct": 40.0,
+                "winner_hit_rate_pct": 40,
                 "total_mae": 14.86
               },
               "projected_strong_7+": {
                 "games": 4,
-                "winner_hit_rate_pct": 75.0,
+                "winner_hit_rate_pct": 75,
                 "total_mae": 8.53
               }
             },
             "game_script": {
               "actual_two_score_8-13": {
                 "games": 2,
-                "winner_hit_rate_pct": 50.0,
+                "winner_hit_rate_pct": 50,
                 "total_mae": 20.24
               },
               "actual_blowout_14+": {
@@ -6245,7 +6245,7 @@
               "miss": 8,
               "push": 0,
               "decisions": 16,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             }
           },
           "market_lined_props": {
@@ -6268,13 +6268,13 @@
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             },
             "neutral_final": 493,
             "no_tackle_recorded": 193
           },
           "errors": {
-            "team_score_mae": 9.0,
+            "team_score_mae": 9,
             "team_score_bias_actual_minus_projection": -2.12,
             "game_total_mae": 12.18,
             "game_total_bias_actual_minus_projection": -4.24
@@ -6286,7 +6286,7 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 10,
@@ -6300,7 +6300,7 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               }
             },
             "spread_rating": {
@@ -6316,14 +6316,14 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 0,
                 "miss": 2,
                 "push": 0,
                 "decisions": 2,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<55": {
                 "correct": 1,
@@ -6339,7 +6339,7 @@
                 "miss": 8,
                 "push": 0,
                 "decisions": 16,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "prop_rating": {
@@ -6362,14 +6362,14 @@
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "70+": {
                 "correct": 3,
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "<55": {
                 "correct": 71,
@@ -6392,7 +6392,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "td_probability": {
@@ -6415,7 +6415,7 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "<40%": {
                 "correct": 22,
@@ -6440,21 +6440,21 @@
                 "miss": 3,
                 "push": 0,
                 "decisions": 3,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "7+": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<1": {
                 "correct": 1,
                 "miss": 4,
                 "push": 0,
                 "decisions": 5,
-                "hit_rate_pct": 20.0
+                "hit_rate_pct": 20
               }
             },
             "total": {
@@ -6470,28 +6470,28 @@
                 "miss": 2,
                 "push": 0,
                 "decisions": 2,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "5-6.9": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "7+": {
                 "correct": 1,
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "<1": {
                 "correct": 3,
                 "miss": 0,
                 "push": 0,
                 "decisions": 3,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               }
             },
             "props": {
@@ -6507,7 +6507,7 @@
                 "miss": 7,
                 "push": 1,
                 "decisions": 14,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               },
               "5-6.9": {
                 "correct": 5,
@@ -6538,14 +6538,14 @@
               "miss": 5,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 80.0
+              "hit_rate_pct": 80
             },
             "passing_yards": {
               "correct": 12,
               "miss": 13,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 48.0
+              "hit_rate_pct": 48
             },
             "receiving_yards": {
               "correct": 17,
@@ -6573,14 +6573,14 @@
               "miss": 0,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 100.0
+              "hit_rate_pct": 100
             },
             "tackles": {
               "correct": 1,
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             }
           },
           "position_splits": {
@@ -6589,14 +6589,14 @@
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "DB": {
               "correct": 0,
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "LB": {
               "correct": 2,
@@ -6610,14 +6610,14 @@
               "miss": 18,
               "push": 0,
               "decisions": 50,
-              "hit_rate_pct": 64.0
+              "hit_rate_pct": 64
             },
             "RB": {
               "correct": 21,
               "miss": 21,
               "push": 1,
               "decisions": 42,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             },
             "TE": {
               "correct": 8,
@@ -6631,7 +6631,7 @@
               "miss": 31,
               "push": 6,
               "decisions": 62,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             }
           },
           "patterns": {
@@ -6655,7 +6655,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "matchup_type": {
@@ -6666,19 +6666,19 @@
               },
               "projected_close_<4": {
                 "games": 6,
-                "winner_hit_rate_pct": 100.0,
+                "winner_hit_rate_pct": 100,
                 "total_mae": 11.49
               },
               "projected_strong_7+": {
                 "games": 4,
-                "winner_hit_rate_pct": 50.0,
+                "winner_hit_rate_pct": 50,
                 "total_mae": 6.85
               }
             },
             "game_script": {
               "actual_two_score_8-13": {
                 "games": 2,
-                "winner_hit_rate_pct": 50.0,
+                "winner_hit_rate_pct": 50,
                 "total_mae": 10.52
               },
               "actual_blowout_14+": {
@@ -6718,7 +6718,7 @@
               "miss": 8,
               "push": 0,
               "decisions": 16,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             }
           },
           "market_lined_props": {
@@ -6741,13 +6741,13 @@
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             },
             "neutral_final": 493,
             "no_tackle_recorded": 193
           },
           "errors": {
-            "team_score_mae": 9.0,
+            "team_score_mae": 9,
             "team_score_bias_actual_minus_projection": -2.12,
             "game_total_mae": 12.18,
             "game_total_bias_actual_minus_projection": -4.24
@@ -6759,7 +6759,7 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 10,
@@ -6773,7 +6773,7 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               }
             },
             "spread_rating": {
@@ -6789,14 +6789,14 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 0,
                 "miss": 2,
                 "push": 0,
                 "decisions": 2,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<55": {
                 "correct": 1,
@@ -6812,7 +6812,7 @@
                 "miss": 8,
                 "push": 0,
                 "decisions": 16,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "prop_rating": {
@@ -6835,14 +6835,14 @@
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "70+": {
                 "correct": 3,
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "<55": {
                 "correct": 71,
@@ -6865,7 +6865,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "td_probability": {
@@ -6888,7 +6888,7 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "<40%": {
                 "correct": 22,
@@ -6906,21 +6906,21 @@
                 "miss": 3,
                 "push": 0,
                 "decisions": 6,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               },
               "3-4.9": {
                 "correct": 0,
                 "miss": 3,
                 "push": 0,
                 "decisions": 3,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "7+": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<1": {
                 "correct": 2,
@@ -6943,28 +6943,28 @@
                 "miss": 2,
                 "push": 0,
                 "decisions": 2,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "5-6.9": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "7+": {
                 "correct": 1,
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "<1": {
                 "correct": 3,
                 "miss": 0,
                 "push": 0,
                 "decisions": 3,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               }
             },
             "props": {
@@ -6980,7 +6980,7 @@
                 "miss": 7,
                 "push": 1,
                 "decisions": 14,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               },
               "5-6.9": {
                 "correct": 5,
@@ -7011,14 +7011,14 @@
               "miss": 5,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 80.0
+              "hit_rate_pct": 80
             },
             "passing_yards": {
               "correct": 12,
               "miss": 13,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 48.0
+              "hit_rate_pct": 48
             },
             "receiving_yards": {
               "correct": 17,
@@ -7046,14 +7046,14 @@
               "miss": 0,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 100.0
+              "hit_rate_pct": 100
             },
             "tackles": {
               "correct": 1,
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             }
           },
           "position_splits": {
@@ -7062,14 +7062,14 @@
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "DB": {
               "correct": 0,
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "LB": {
               "correct": 2,
@@ -7083,14 +7083,14 @@
               "miss": 18,
               "push": 0,
               "decisions": 50,
-              "hit_rate_pct": 64.0
+              "hit_rate_pct": 64
             },
             "RB": {
               "correct": 21,
               "miss": 21,
               "push": 1,
               "decisions": 42,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             },
             "TE": {
               "correct": 8,
@@ -7104,7 +7104,7 @@
               "miss": 31,
               "push": 6,
               "decisions": 62,
-              "hit_rate_pct": 50.0
+              "hit_rate_pct": 50
             }
           },
           "patterns": {
@@ -7128,7 +7128,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "matchup_type": {
@@ -7139,19 +7139,19 @@
               },
               "projected_close_<4": {
                 "games": 6,
-                "winner_hit_rate_pct": 100.0,
+                "winner_hit_rate_pct": 100,
                 "total_mae": 11.49
               },
               "projected_strong_7+": {
                 "games": 4,
-                "winner_hit_rate_pct": 50.0,
+                "winner_hit_rate_pct": 50,
                 "total_mae": 6.85
               }
             },
             "game_script": {
               "actual_two_score_8-13": {
                 "games": 2,
-                "winner_hit_rate_pct": 50.0,
+                "winner_hit_rate_pct": 50,
                 "total_mae": 10.52
               },
               "actual_blowout_14+": {
@@ -7214,7 +7214,7 @@
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             },
             "neutral_final": 521,
             "no_tackle_recorded": 184
@@ -7232,14 +7232,14 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 9,
                 "miss": 6,
                 "push": 0,
                 "decisions": 15,
-                "hit_rate_pct": 60.0
+                "hit_rate_pct": 60
               }
             },
             "spread_rating": {
@@ -7255,21 +7255,21 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 3,
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "<55": {
                 "correct": 4,
                 "miss": 4,
                 "push": 0,
                 "decisions": 8,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "total_rating": {
@@ -7294,21 +7294,21 @@
                 "miss": 4,
                 "push": 0,
                 "decisions": 10,
-                "hit_rate_pct": 60.0
+                "hit_rate_pct": 60
               },
               "65-69": {
                 "correct": 1,
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "70+": {
                 "correct": 2,
                 "miss": 2,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               },
               "<55": {
                 "correct": 63,
@@ -7331,7 +7331,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "td_probability": {
@@ -7379,21 +7379,21 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "5-6.9": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "7+": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<1": {
                 "correct": 4,
@@ -7409,35 +7409,35 @@
                 "miss": 3,
                 "push": 0,
                 "decisions": 6,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               },
               "3-4.9": {
                 "correct": 2,
                 "miss": 3,
                 "push": 0,
                 "decisions": 5,
-                "hit_rate_pct": 40.0
+                "hit_rate_pct": 40
               },
               "5-6.9": {
                 "correct": 1,
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "7+": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<1": {
                 "correct": 0,
                 "miss": 3,
                 "push": 0,
                 "decisions": 3,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               }
             },
             "props": {
@@ -7467,7 +7467,7 @@
                 "miss": 34,
                 "push": 2,
                 "decisions": 63,
-                "hit_rate_pct": 46.0
+                "hit_rate_pct": 46
               },
               "<1": {
                 "correct": 40,
@@ -7484,14 +7484,14 @@
               "miss": 5,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 80.0
+              "hit_rate_pct": 80
             },
             "passing_yards": {
               "correct": 12,
               "miss": 13,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 48.0
+              "hit_rate_pct": 48
             },
             "receiving_yards": {
               "correct": 15,
@@ -7519,14 +7519,14 @@
               "miss": 0,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 100.0
+              "hit_rate_pct": 100
             },
             "tackles": {
               "correct": 1,
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             }
           },
           "position_splits": {
@@ -7535,14 +7535,14 @@
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "DB": {
               "correct": 0,
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "LB": {
               "correct": 2,
@@ -7556,7 +7556,7 @@
               "miss": 18,
               "push": 0,
               "decisions": 50,
-              "hit_rate_pct": 64.0
+              "hit_rate_pct": 64
             },
             "RB": {
               "correct": 19,
@@ -7602,18 +7602,18 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "matchup_type": {
               "projected_medium_4-6.9": {
                 "games": 8,
                 "winner_hit_rate_pct": 62.5,
-                "total_mae": 10.0
+                "total_mae": 10
               },
               "projected_close_<4": {
                 "games": 5,
-                "winner_hit_rate_pct": 40.0,
+                "winner_hit_rate_pct": 40,
                 "total_mae": 19.77
               },
               "projected_strong_7+": {
@@ -7625,7 +7625,7 @@
             "game_script": {
               "actual_two_score_8-13": {
                 "games": 2,
-                "winner_hit_rate_pct": 50.0,
+                "winner_hit_rate_pct": 50,
                 "total_mae": 9.07
               },
               "actual_blowout_14+": {
@@ -7688,7 +7688,7 @@
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             },
             "neutral_final": 521,
             "no_tackle_recorded": 184
@@ -7706,14 +7706,14 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 9,
                 "miss": 6,
                 "push": 0,
                 "decisions": 15,
-                "hit_rate_pct": 60.0
+                "hit_rate_pct": 60
               }
             },
             "spread_rating": {
@@ -7729,21 +7729,21 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 3,
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "<55": {
                 "correct": 4,
                 "miss": 4,
                 "push": 0,
                 "decisions": 8,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "total_rating": {
@@ -7768,21 +7768,21 @@
                 "miss": 4,
                 "push": 0,
                 "decisions": 10,
-                "hit_rate_pct": 60.0
+                "hit_rate_pct": 60
               },
               "65-69": {
                 "correct": 1,
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "70+": {
                 "correct": 2,
                 "miss": 2,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               },
               "<55": {
                 "correct": 63,
@@ -7805,7 +7805,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "td_probability": {
@@ -7853,21 +7853,21 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "5-6.9": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "7+": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<1": {
                 "correct": 4,
@@ -7883,35 +7883,35 @@
                 "miss": 3,
                 "push": 0,
                 "decisions": 6,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               },
               "3-4.9": {
                 "correct": 2,
                 "miss": 3,
                 "push": 0,
                 "decisions": 5,
-                "hit_rate_pct": 40.0
+                "hit_rate_pct": 40
               },
               "5-6.9": {
                 "correct": 1,
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "7+": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<1": {
                 "correct": 0,
                 "miss": 3,
                 "push": 0,
                 "decisions": 3,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               }
             },
             "props": {
@@ -7941,7 +7941,7 @@
                 "miss": 34,
                 "push": 2,
                 "decisions": 63,
-                "hit_rate_pct": 46.0
+                "hit_rate_pct": 46
               },
               "<1": {
                 "correct": 40,
@@ -7958,14 +7958,14 @@
               "miss": 5,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 80.0
+              "hit_rate_pct": 80
             },
             "passing_yards": {
               "correct": 12,
               "miss": 13,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 48.0
+              "hit_rate_pct": 48
             },
             "receiving_yards": {
               "correct": 15,
@@ -7993,14 +7993,14 @@
               "miss": 0,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 100.0
+              "hit_rate_pct": 100
             },
             "tackles": {
               "correct": 1,
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             }
           },
           "position_splits": {
@@ -8009,14 +8009,14 @@
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "DB": {
               "correct": 0,
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "LB": {
               "correct": 2,
@@ -8030,7 +8030,7 @@
               "miss": 18,
               "push": 0,
               "decisions": 50,
-              "hit_rate_pct": 64.0
+              "hit_rate_pct": 64
             },
             "RB": {
               "correct": 19,
@@ -8076,18 +8076,18 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "matchup_type": {
               "projected_medium_4-6.9": {
                 "games": 8,
                 "winner_hit_rate_pct": 62.5,
-                "total_mae": 10.0
+                "total_mae": 10
               },
               "projected_close_<4": {
                 "games": 5,
-                "winner_hit_rate_pct": 40.0,
+                "winner_hit_rate_pct": 40,
                 "total_mae": 19.77
               },
               "projected_strong_7+": {
@@ -8099,7 +8099,7 @@
             "game_script": {
               "actual_two_score_8-13": {
                 "games": 2,
-                "winner_hit_rate_pct": 50.0,
+                "winner_hit_rate_pct": 50,
                 "total_mae": 9.07
               },
               "actual_blowout_14+": {
@@ -8162,7 +8162,7 @@
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             },
             "neutral_final": 521,
             "no_tackle_recorded": 184
@@ -8180,14 +8180,14 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 9,
                 "miss": 6,
                 "push": 0,
                 "decisions": 15,
-                "hit_rate_pct": 60.0
+                "hit_rate_pct": 60
               }
             },
             "spread_rating": {
@@ -8203,21 +8203,21 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 3,
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "<55": {
                 "correct": 4,
                 "miss": 4,
                 "push": 0,
                 "decisions": 8,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "total_rating": {
@@ -8242,21 +8242,21 @@
                 "miss": 4,
                 "push": 0,
                 "decisions": 10,
-                "hit_rate_pct": 60.0
+                "hit_rate_pct": 60
               },
               "65-69": {
                 "correct": 1,
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "70+": {
                 "correct": 2,
                 "miss": 2,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               },
               "<55": {
                 "correct": 63,
@@ -8279,7 +8279,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "td_probability": {
@@ -8327,21 +8327,21 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "5-6.9": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "7+": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<1": {
                 "correct": 4,
@@ -8364,21 +8364,21 @@
                 "miss": 3,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 25.0
+                "hit_rate_pct": 25
               },
               "5-6.9": {
                 "correct": 1,
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "7+": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<1": {
                 "correct": 1,
@@ -8415,7 +8415,7 @@
                 "miss": 34,
                 "push": 2,
                 "decisions": 63,
-                "hit_rate_pct": 46.0
+                "hit_rate_pct": 46
               },
               "<1": {
                 "correct": 40,
@@ -8432,14 +8432,14 @@
               "miss": 5,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 80.0
+              "hit_rate_pct": 80
             },
             "passing_yards": {
               "correct": 12,
               "miss": 13,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 48.0
+              "hit_rate_pct": 48
             },
             "receiving_yards": {
               "correct": 15,
@@ -8467,14 +8467,14 @@
               "miss": 0,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 100.0
+              "hit_rate_pct": 100
             },
             "tackles": {
               "correct": 1,
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             }
           },
           "position_splits": {
@@ -8483,14 +8483,14 @@
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "DB": {
               "correct": 0,
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "LB": {
               "correct": 2,
@@ -8504,7 +8504,7 @@
               "miss": 18,
               "push": 0,
               "decisions": 50,
-              "hit_rate_pct": 64.0
+              "hit_rate_pct": 64
             },
             "RB": {
               "correct": 19,
@@ -8550,7 +8550,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "matchup_type": {
@@ -8561,7 +8561,7 @@
               },
               "projected_close_<4": {
                 "games": 5,
-                "winner_hit_rate_pct": 40.0,
+                "winner_hit_rate_pct": 40,
                 "total_mae": 19.97
               },
               "projected_strong_7+": {
@@ -8573,7 +8573,7 @@
             "game_script": {
               "actual_two_score_8-13": {
                 "games": 2,
-                "winner_hit_rate_pct": 50.0,
+                "winner_hit_rate_pct": 50,
                 "total_mae": 9.07
               },
               "actual_blowout_14+": {
@@ -8636,7 +8636,7 @@
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             },
             "neutral_final": 521,
             "no_tackle_recorded": 184
@@ -8654,14 +8654,14 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 9,
                 "miss": 6,
                 "push": 0,
                 "decisions": 15,
-                "hit_rate_pct": 60.0
+                "hit_rate_pct": 60
               }
             },
             "spread_rating": {
@@ -8677,21 +8677,21 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "70+": {
                 "correct": 3,
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "<55": {
                 "correct": 4,
                 "miss": 4,
                 "push": 0,
                 "decisions": 8,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "total_rating": {
@@ -8716,21 +8716,21 @@
                 "miss": 4,
                 "push": 0,
                 "decisions": 10,
-                "hit_rate_pct": 60.0
+                "hit_rate_pct": 60
               },
               "65-69": {
                 "correct": 1,
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "70+": {
                 "correct": 2,
                 "miss": 2,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               },
               "<55": {
                 "correct": 63,
@@ -8753,7 +8753,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "td_probability": {
@@ -8801,21 +8801,21 @@
                 "miss": 1,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 75.0
+                "hit_rate_pct": 75
               },
               "5-6.9": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "7+": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<1": {
                 "correct": 4,
@@ -8838,21 +8838,21 @@
                 "miss": 3,
                 "push": 0,
                 "decisions": 4,
-                "hit_rate_pct": 25.0
+                "hit_rate_pct": 25
               },
               "5-6.9": {
                 "correct": 1,
                 "miss": 0,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 100.0
+                "hit_rate_pct": 100
               },
               "7+": {
                 "correct": 0,
                 "miss": 1,
                 "push": 0,
                 "decisions": 1,
-                "hit_rate_pct": 0.0
+                "hit_rate_pct": 0
               },
               "<1": {
                 "correct": 1,
@@ -8889,7 +8889,7 @@
                 "miss": 34,
                 "push": 2,
                 "decisions": 63,
-                "hit_rate_pct": 46.0
+                "hit_rate_pct": 46
               },
               "<1": {
                 "correct": 40,
@@ -8906,14 +8906,14 @@
               "miss": 5,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 80.0
+              "hit_rate_pct": 80
             },
             "passing_yards": {
               "correct": 12,
               "miss": 13,
               "push": 0,
               "decisions": 25,
-              "hit_rate_pct": 48.0
+              "hit_rate_pct": 48
             },
             "receiving_yards": {
               "correct": 15,
@@ -8941,14 +8941,14 @@
               "miss": 0,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 100.0
+              "hit_rate_pct": 100
             },
             "tackles": {
               "correct": 1,
               "miss": 3,
               "push": 0,
               "decisions": 4,
-              "hit_rate_pct": 25.0
+              "hit_rate_pct": 25
             }
           },
           "position_splits": {
@@ -8957,14 +8957,14 @@
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "DB": {
               "correct": 0,
               "miss": 1,
               "push": 0,
               "decisions": 1,
-              "hit_rate_pct": 0.0
+              "hit_rate_pct": 0
             },
             "LB": {
               "correct": 2,
@@ -8978,7 +8978,7 @@
               "miss": 18,
               "push": 0,
               "decisions": 50,
-              "hit_rate_pct": 64.0
+              "hit_rate_pct": 64
             },
             "RB": {
               "correct": 19,
@@ -9024,7 +9024,7 @@
                 "miss": 13,
                 "push": 0,
                 "decisions": 26,
-                "hit_rate_pct": 50.0
+                "hit_rate_pct": 50
               }
             },
             "matchup_type": {
@@ -9035,7 +9035,7 @@
               },
               "projected_close_<4": {
                 "games": 5,
-                "winner_hit_rate_pct": 40.0,
+                "winner_hit_rate_pct": 40,
                 "total_mae": 19.97
               },
               "projected_strong_7+": {
@@ -9047,7 +9047,7 @@
             "game_script": {
               "actual_two_score_8-13": {
                 "games": 2,
-                "winner_hit_rate_pct": 50.0,
+                "winner_hit_rate_pct": 50,
                 "total_mae": 9.07
               },
               "actual_blowout_14+": {
@@ -9094,7 +9094,201 @@
           "name": "Rams official Monday inactive list",
           "url": "https://www.therams.com/news/puka-nacua-among-rams-inactives-for-monday-night-football-vs-giants-week-2-2026"
         }
-      ]
+      ],
+      "game_outcomes": {
+        "win:2026_02_DET_BUF": {
+          "result": "Correct",
+          "actual": "DET 31 · BUF 41"
+        },
+        "spread:2026_02_DET_BUF": {
+          "result": "Correct",
+          "actual": "DET 31 · BUF 41"
+        },
+        "total:2026_02_DET_BUF": {
+          "result": "Correct",
+          "actual": "72 points"
+        },
+        "win:2026_02_CAR_ATL": {
+          "result": "Miss",
+          "actual": "CAR 34 · ATL 3"
+        },
+        "spread:2026_02_CAR_ATL": {
+          "result": "Miss",
+          "actual": "CAR 34 · ATL 3"
+        },
+        "total:2026_02_CAR_ATL": {
+          "result": "Miss",
+          "actual": "37 points"
+        },
+        "win:2026_02_CIN_HOU": {
+          "result": "Miss",
+          "actual": "CIN 20 · HOU 6"
+        },
+        "spread:2026_02_CIN_HOU": {
+          "result": "Miss",
+          "actual": "CIN 20 · HOU 6"
+        },
+        "total:2026_02_CIN_HOU": {
+          "result": "Miss",
+          "actual": "26 points"
+        },
+        "win:2026_02_CLE_TB": {
+          "result": "Miss",
+          "actual": "CLE 23 · TB 19"
+        },
+        "spread:2026_02_CLE_TB": {
+          "result": "Correct",
+          "actual": "CLE 23 · TB 19"
+        },
+        "total:2026_02_CLE_TB": {
+          "result": "Correct",
+          "actual": "42 points"
+        },
+        "win:2026_02_GB_NYJ": {
+          "result": "Correct",
+          "actual": "GB 20 · NYJ 17"
+        },
+        "spread:2026_02_GB_NYJ": {
+          "result": "Correct",
+          "actual": "GB 20 · NYJ 17"
+        },
+        "total:2026_02_GB_NYJ": {
+          "result": "Miss",
+          "actual": "37 points"
+        },
+        "win:2026_02_MIN_CHI": {
+          "result": "Miss",
+          "actual": "MIN 9 · CHI 3"
+        },
+        "spread:2026_02_MIN_CHI": {
+          "result": "Correct",
+          "actual": "MIN 9 · CHI 3"
+        },
+        "total:2026_02_MIN_CHI": {
+          "result": "Correct",
+          "actual": "12 points"
+        },
+        "win:2026_02_NO_BAL": {
+          "result": "Miss",
+          "actual": "NO 24 · BAL 17"
+        },
+        "spread:2026_02_NO_BAL": {
+          "result": "Correct",
+          "actual": "NO 24 · BAL 17"
+        },
+        "total:2026_02_NO_BAL": {
+          "result": "Miss",
+          "actual": "41 points"
+        },
+        "win:2026_02_PHI_TEN": {
+          "result": "Correct",
+          "actual": "PHI 24 · TEN 20"
+        },
+        "spread:2026_02_PHI_TEN": {
+          "result": "Miss",
+          "actual": "PHI 24 · TEN 20"
+        },
+        "total:2026_02_PHI_TEN": {
+          "result": "Correct",
+          "actual": "44 points"
+        },
+        "win:2026_02_PIT_NE": {
+          "result": "Correct",
+          "actual": "PIT 3 · NE 20"
+        },
+        "spread:2026_02_PIT_NE": {
+          "result": "Miss",
+          "actual": "PIT 3 · NE 20"
+        },
+        "total:2026_02_PIT_NE": {
+          "result": "Miss",
+          "actual": "23 points"
+        },
+        "win:2026_02_JAX_DEN": {
+          "result": "Miss",
+          "actual": "JAX 13 · DEN 20"
+        },
+        "spread:2026_02_JAX_DEN": {
+          "result": "Miss",
+          "actual": "JAX 13 · DEN 20"
+        },
+        "total:2026_02_JAX_DEN": {
+          "result": "Miss",
+          "actual": "33 points"
+        },
+        "win:2026_02_LV_LAC": {
+          "result": "Miss",
+          "actual": "LV 26 · LAC 14"
+        },
+        "spread:2026_02_LV_LAC": {
+          "result": "Correct",
+          "actual": "LV 26 · LAC 14"
+        },
+        "total:2026_02_LV_LAC": {
+          "result": "Correct",
+          "actual": "40 points"
+        },
+        "win:2026_02_MIA_SF": {
+          "result": "Correct",
+          "actual": "MIA 13 · SF 35"
+        },
+        "spread:2026_02_MIA_SF": {
+          "result": "Correct",
+          "actual": "MIA 13 · SF 35"
+        },
+        "total:2026_02_MIA_SF": {
+          "result": "Correct",
+          "actual": "48 points"
+        },
+        "win:2026_02_SEA_ARI": {
+          "result": "Correct",
+          "actual": "SEA 31 · ARI 7"
+        },
+        "spread:2026_02_SEA_ARI": {
+          "result": "Correct",
+          "actual": "SEA 31 · ARI 7"
+        },
+        "total:2026_02_SEA_ARI": {
+          "result": "Miss",
+          "actual": "38 points"
+        },
+        "win:2026_02_WAS_DAL": {
+          "result": "Correct",
+          "actual": "WAS 20 · DAL 37"
+        },
+        "spread:2026_02_WAS_DAL": {
+          "result": "Miss",
+          "actual": "WAS 20 · DAL 37"
+        },
+        "total:2026_02_WAS_DAL": {
+          "result": "Correct",
+          "actual": "57 points"
+        },
+        "win:2026_02_IND_KC": {
+          "result": "Correct",
+          "actual": "IND 30 · KC 33"
+        },
+        "spread:2026_02_IND_KC": {
+          "result": "Correct",
+          "actual": "IND 30 · KC 33"
+        },
+        "total:2026_02_IND_KC": {
+          "result": "Miss",
+          "actual": "63 points"
+        },
+        "win:2026_02_NYG_LA": {
+          "result": "Correct",
+          "actual": "NYG 6 · LA 28"
+        },
+        "spread:2026_02_NYG_LA": {
+          "result": "Miss",
+          "actual": "NYG 6 · LA 28"
+        },
+        "total:2026_02_NYG_LA": {
+          "result": "Miss",
+          "actual": "34 points"
+        }
+      }
     }
   ]
 }
