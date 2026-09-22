@@ -4,7 +4,7 @@
   "history": {
     "encoding": "per-snapshot-base64+gzip",
     "last_staging_sha256": "e8f967ce2052347cd53be356fa9510daf3d196b5258cb32ae048f7b21ed64dad",
-    "snapshot_count": 4,
+    "snapshot_count": 3,
     "snapshots": [
       {
         "id": "2026-W1-05:00-2026-09-15T05:00:00+01:00",
@@ -32,20 +32,6 @@
         "encoded_bytes": 63124,
         "games": 16,
         "props": 747,
-        "tds": 100
-      },
-      {
-        "id": "2026-W3-dry-run-2026-09-22T08:00:51.761972+01:00",
-        "season": 2026,
-        "week": 3,
-        "slot": "dry-run",
-        "capturedAt": "2026-09-22T08:00:51.761972+01:00",
-        "path": "data/snapshots/04ac10b8cf5526a1f1083fbdaeaa4f3f06f71aeac26eaedad0c8a9bb35fbf294.txt",
-        "sha256": "04ac10b8cf5526a1f1083fbdaeaa4f3f06f71aeac26eaedad0c8a9bb35fbf294",
-        "uncompressed_bytes": 428207,
-        "encoded_bytes": 54936,
-        "games": 16,
-        "props": 757,
         "tds": 100
       },
       {
