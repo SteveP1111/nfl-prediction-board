@@ -27,8 +27,14 @@ jobs:
       - name: Reassemble readable multipart staging
         run: python3 scripts/reassemble_staging.py
 
+      - name: Run weekly review regression tests
+        run: python3 -m unittest discover -s tests -v
+
       - name: Validate, package and switch manifest
         run: python3 scripts/publish_staging_preserve_reviews.py
+
+      - name: Validate final review coverage
+        run: python3 scripts/validate_manifest_reviews.py
 
       - name: Commit validated publication
         run: |
