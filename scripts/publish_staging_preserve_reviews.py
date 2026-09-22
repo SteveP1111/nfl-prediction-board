@@ -6,13 +6,24 @@ import publish_staging
 
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'data'/'manifest.json'
+STAGING=ROOT/'data'/'staging'
 
 def main():
     before=json.loads(MANIFEST.read_text(encoding='utf-8'))
-    reviews=before.get('weekly_reviews',[])
+    existing=before.get('weekly_reviews',[])
+    staged_meta=json.loads((STAGING/'public.json').read_text(encoding='utf-8'))
+    staged=staged_meta.get('weekly_reviews',[])
     publish_staging.main()
     after=json.loads(MANIFEST.read_text(encoding='utf-8'))
-    after['weekly_reviews']=reviews
+    if staged:
+        replacements={(item.get('season'),item.get('week')) for item in staged}
+        merged=[item for item in existing if (item.get('season'),item.get('week')) not in replacements]
+        merged.extend(staged)
+        merged.sort(key=lambda item:(item.get('season',0),item.get('week',0),item.get('as_of','')))
+        after['weekly_reviews']=merged
+    else:
+        after['weekly_reviews']=existing
     MANIFEST.write_text(json.dumps(after,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-    print(f'Preserved {len(reviews)} existing weekly review entries')
-if __name__=='__main__': main()
+    print(f'Published {len(after.get("weekly_reviews",[]))} weekly review entries')
+if __name__=='__main__':
+    main()
