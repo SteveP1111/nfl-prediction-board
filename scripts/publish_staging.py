@@ -61,7 +61,7 @@ def compact_completed_week_catalogue(catalogue: list[dict], weekly_reviews: list
     for key, entries in groups.items():
         season, week = key
         if week >= latest_week_by_season.get(season, week):
-            compacted.extend(entries)
+            compacted.append(max(entries, key=lambda entry: str(entry.get("capturedAt") or "")))
             continue
         preferred = preferred_ids.get(key)
         chosen = next((entry for entry in entries if entry.get("id") == preferred), None)
