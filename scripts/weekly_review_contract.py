@@ -22,12 +22,30 @@ def _grade_counts(outcomes: dict, prefix: str, game_ids: set[str]) -> tuple[int,
     )
 
 
+def is_final_review(review: dict) -> bool:
+    return (
+        review.get("review_scope") == "game_lines_final"
+        or str(review.get("status") or "").strip().lower() == "final"
+    )
+
+
+def review_identity(review: dict) -> tuple:
+    return (
+        review.get("season"),
+        review.get("week"),
+        review.get("type"),
+        review.get("review_scope"),
+        review.get("status"),
+        review.get("as_of"),
+    )
+
+
 def normalise_weekly_review(review: dict) -> dict:
-    """Make final game-line reviews self-sufficient for historical board grading."""
+    """Make final weekly reviews self-sufficient for historical board grading."""
     if not isinstance(review, dict):
         raise ValueError("weekly review must be an object")
     out = dict(review)
-    if out.get("review_scope") != "game_lines_final":
+    if not is_final_review(out):
         return out
 
     label = f"final review {out.get('season')} W{out.get('week')}"
@@ -77,9 +95,10 @@ def normalise_weekly_review(review: dict) -> dict:
         raise ValueError(f"{label} winner/spread/total game sets do not match")
 
     metrics = out.get("authoritative_metrics") or {}
+    game_metrics = metrics.get("games") if isinstance(metrics.get("games"), dict) else metrics
     game_ids = ids_by_prefix["win"]
     for market, prefix in (("winner", "win"), ("spread", "spread"), ("total", "total")):
-        metric = metrics.get(market)
+        metric = game_metrics.get(market) if isinstance(game_metrics, dict) else None
         if not isinstance(metric, dict):
             continue
         correct, miss, push = _grade_counts(outcomes, prefix, game_ids)
