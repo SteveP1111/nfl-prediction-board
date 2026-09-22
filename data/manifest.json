@@ -5289,7 +5289,395 @@
       "totals_review": {
         "finding": "Eight of 16 total selections had model edges below 2 points and went 3-5; edges of at least 2 points went 4-4.",
         "week3_change": "Below a 2.0 point total edge, show No meaningful edge rather than an Over/Under recommendation."
-      }
+      },
+      "game_outcomes": {
+        "win:2026_02_DET_BUF": {
+          "result": "Correct",
+          "actual": "DET 31 · BUF 41"
+        },
+        "spread:2026_02_DET_BUF": {
+          "result": "Correct",
+          "actual": "DET 31 · BUF 41"
+        },
+        "total:2026_02_DET_BUF": {
+          "result": "Correct",
+          "actual": "72 points"
+        },
+        "win:2026_02_CAR_ATL": {
+          "result": "Miss",
+          "actual": "CAR 34 · ATL 3"
+        },
+        "spread:2026_02_CAR_ATL": {
+          "result": "Miss",
+          "actual": "CAR 34 · ATL 3"
+        },
+        "total:2026_02_CAR_ATL": {
+          "result": "Miss",
+          "actual": "37 points"
+        },
+        "win:2026_02_CIN_HOU": {
+          "result": "Miss",
+          "actual": "CIN 20 · HOU 6"
+        },
+        "spread:2026_02_CIN_HOU": {
+          "result": "Miss",
+          "actual": "CIN 20 · HOU 6"
+        },
+        "total:2026_02_CIN_HOU": {
+          "result": "Miss",
+          "actual": "26 points"
+        },
+        "win:2026_02_CLE_TB": {
+          "result": "Miss",
+          "actual": "CLE 23 · TB 19"
+        },
+        "spread:2026_02_CLE_TB": {
+          "result": "Correct",
+          "actual": "CLE 23 · TB 19"
+        },
+        "total:2026_02_CLE_TB": {
+          "result": "Correct",
+          "actual": "42 points"
+        },
+        "win:2026_02_GB_NYJ": {
+          "result": "Correct",
+          "actual": "GB 20 · NYJ 17"
+        },
+        "spread:2026_02_GB_NYJ": {
+          "result": "Correct",
+          "actual": "GB 20 · NYJ 17"
+        },
+        "total:2026_02_GB_NYJ": {
+          "result": "Miss",
+          "actual": "37 points"
+        },
+        "win:2026_02_MIN_CHI": {
+          "result": "Miss",
+          "actual": "MIN 9 · CHI 3"
+        },
+        "spread:2026_02_MIN_CHI": {
+          "result": "Correct",
+          "actual": "MIN 9 · CHI 3"
+        },
+        "total:2026_02_MIN_CHI": {
+          "result": "Correct",
+          "actual": "12 points"
+        },
+        "win:2026_02_NO_BAL": {
+          "result": "Miss",
+          "actual": "NO 24 · BAL 17"
+        },
+        "spread:2026_02_NO_BAL": {
+          "result": "Correct",
+          "actual": "NO 24 · BAL 17"
+        },
+        "total:2026_02_NO_BAL": {
+          "result": "Miss",
+          "actual": "41 points"
+        },
+        "win:2026_02_PHI_TEN": {
+          "result": "Correct",
+          "actual": "PHI 24 · TEN 20"
+        },
+        "spread:2026_02_PHI_TEN": {
+          "result": "Miss",
+          "actual": "PHI 24 · TEN 20"
+        },
+        "total:2026_02_PHI_TEN": {
+          "result": "Correct",
+          "actual": "44 points"
+        },
+        "win:2026_02_PIT_NE": {
+          "result": "Correct",
+          "actual": "PIT 3 · NE 20"
+        },
+        "spread:2026_02_PIT_NE": {
+          "result": "Miss",
+          "actual": "PIT 3 · NE 20"
+        },
+        "total:2026_02_PIT_NE": {
+          "result": "Miss",
+          "actual": "23 points"
+        },
+        "win:2026_02_JAX_DEN": {
+          "result": "Miss",
+          "actual": "JAX 13 · DEN 20"
+        },
+        "spread:2026_02_JAX_DEN": {
+          "result": "Miss",
+          "actual": "JAX 13 · DEN 20"
+        },
+        "total:2026_02_JAX_DEN": {
+          "result": "Miss",
+          "actual": "33 points"
+        },
+        "win:2026_02_LV_LAC": {
+          "result": "Miss",
+          "actual": "LV 26 · LAC 14"
+        },
+        "spread:2026_02_LV_LAC": {
+          "result": "Correct",
+          "actual": "LV 26 · LAC 14"
+        },
+        "total:2026_02_LV_LAC": {
+          "result": "Correct",
+          "actual": "40 points"
+        },
+        "win:2026_02_MIA_SF": {
+          "result": "Correct",
+          "actual": "MIA 13 · SF 35"
+        },
+        "spread:2026_02_MIA_SF": {
+          "result": "Correct",
+          "actual": "MIA 13 · SF 35"
+        },
+        "total:2026_02_MIA_SF": {
+          "result": "Correct",
+          "actual": "48 points"
+        },
+        "win:2026_02_SEA_ARI": {
+          "result": "Correct",
+          "actual": "SEA 31 · ARI 7"
+        },
+        "spread:2026_02_SEA_ARI": {
+          "result": "Correct",
+          "actual": "SEA 31 · ARI 7"
+        },
+        "total:2026_02_SEA_ARI": {
+          "result": "Miss",
+          "actual": "38 points"
+        },
+        "win:2026_02_WAS_DAL": {
+          "result": "Correct",
+          "actual": "WAS 20 · DAL 37"
+        },
+        "spread:2026_02_WAS_DAL": {
+          "result": "Miss",
+          "actual": "WAS 20 · DAL 37"
+        },
+        "total:2026_02_WAS_DAL": {
+          "result": "Correct",
+          "actual": "57 points"
+        },
+        "win:2026_02_IND_KC": {
+          "result": "Correct",
+          "actual": "IND 30 · KC 33"
+        },
+        "spread:2026_02_IND_KC": {
+          "result": "Correct",
+          "actual": "IND 30 · KC 33"
+        },
+        "total:2026_02_IND_KC": {
+          "result": "Miss",
+          "actual": "63 points"
+        },
+        "win:2026_02_NYG_LA": {
+          "result": "Correct",
+          "actual": "NYG 6 · LA 28"
+        },
+        "spread:2026_02_NYG_LA": {
+          "result": "Miss",
+          "actual": "NYG 6 · LA 28"
+        },
+        "total:2026_02_NYG_LA": {
+          "result": "Miss",
+          "actual": "34 points"
+        }
+      },
+      "games": [
+        {
+          "game_id": "2026_02_DET_BUF",
+          "final": "DET 31 · BUF 41",
+          "winner_pick": "BUF",
+          "winner_result": "Correct",
+          "spread_pick": "BUF -5.5",
+          "spread_result": "Correct",
+          "total_pick": "OVER 54.5",
+          "total_result": "Correct",
+          "projected_total": 56.4,
+          "actual_total": 72
+        },
+        {
+          "game_id": "2026_02_CAR_ATL",
+          "final": "CAR 34 · ATL 3",
+          "winner_pick": "ATL",
+          "winner_result": "Miss",
+          "spread_pick": "ATL +1.5",
+          "spread_result": "Miss",
+          "total_pick": "OVER 44.5",
+          "total_result": "Miss",
+          "projected_total": 47.7,
+          "actual_total": 37
+        },
+        {
+          "game_id": "2026_02_CIN_HOU",
+          "final": "CIN 20 · HOU 6",
+          "winner_pick": "HOU",
+          "winner_result": "Miss",
+          "spread_pick": "HOU -3.0",
+          "spread_result": "Miss",
+          "total_pick": "OVER 46.5",
+          "total_result": "Miss",
+          "projected_total": 55.1,
+          "actual_total": 26
+        },
+        {
+          "game_id": "2026_02_CLE_TB",
+          "final": "CLE 23 · TB 19",
+          "winner_pick": "TB",
+          "winner_result": "Miss",
+          "spread_pick": "CLE +8.5",
+          "spread_result": "Correct",
+          "total_pick": "OVER 40.5",
+          "total_result": "Correct",
+          "projected_total": 44,
+          "actual_total": 42
+        },
+        {
+          "game_id": "2026_02_GB_NYJ",
+          "final": "GB 20 · NYJ 17",
+          "winner_pick": "GB",
+          "winner_result": "Correct",
+          "spread_pick": "NYJ +4.5",
+          "spread_result": "Correct",
+          "total_pick": "OVER 44.5",
+          "total_result": "Miss",
+          "projected_total": 45.5,
+          "actual_total": 37
+        },
+        {
+          "game_id": "2026_02_MIN_CHI",
+          "final": "MIN 9 · CHI 3",
+          "winner_pick": "CHI",
+          "winner_result": "Miss",
+          "spread_pick": "MIN +5.5",
+          "spread_result": "Correct",
+          "total_pick": "UNDER 49.5",
+          "total_result": "Correct",
+          "projected_total": 48.6,
+          "actual_total": 12
+        },
+        {
+          "game_id": "2026_02_NO_BAL",
+          "final": "NO 24 · BAL 17",
+          "winner_pick": "BAL",
+          "winner_result": "Miss",
+          "spread_pick": "NO +8.5",
+          "spread_result": "Correct",
+          "total_pick": "OVER 46.5",
+          "total_result": "Miss",
+          "projected_total": 50.6,
+          "actual_total": 41
+        },
+        {
+          "game_id": "2026_02_PHI_TEN",
+          "final": "PHI 24 · TEN 20",
+          "winner_pick": "PHI",
+          "winner_result": "Correct",
+          "spread_pick": "PHI -7.0",
+          "spread_result": "Miss",
+          "total_pick": "OVER 39.5",
+          "total_result": "Correct",
+          "projected_total": 42,
+          "actual_total": 44
+        },
+        {
+          "game_id": "2026_02_PIT_NE",
+          "final": "PIT 3 · NE 20",
+          "winner_pick": "NE",
+          "winner_result": "Correct",
+          "spread_pick": "PIT +5.5",
+          "spread_result": "Miss",
+          "total_pick": "OVER 42.5",
+          "total_result": "Miss",
+          "projected_total": 44.4,
+          "actual_total": 23
+        },
+        {
+          "game_id": "2026_02_JAX_DEN",
+          "final": "JAX 13 · DEN 20",
+          "winner_pick": "JAX",
+          "winner_result": "Miss",
+          "spread_pick": "JAX +2.5",
+          "spread_result": "Miss",
+          "total_pick": "OVER 44.5",
+          "total_result": "Miss",
+          "projected_total": 46.3,
+          "actual_total": 33
+        },
+        {
+          "game_id": "2026_02_LV_LAC",
+          "final": "LV 26 · LAC 14",
+          "winner_pick": "LAC",
+          "winner_result": "Miss",
+          "spread_pick": "LV +7.0",
+          "spread_result": "Correct",
+          "total_pick": "UNDER 43.5",
+          "total_result": "Correct",
+          "projected_total": 37.4,
+          "actual_total": 40
+        },
+        {
+          "game_id": "2026_02_MIA_SF",
+          "final": "MIA 13 · SF 35",
+          "winner_pick": "SF",
+          "winner_result": "Correct",
+          "spread_pick": "SF -12.5",
+          "spread_result": "Correct",
+          "total_pick": "OVER 45.5",
+          "total_result": "Correct",
+          "projected_total": 48,
+          "actual_total": 48
+        },
+        {
+          "game_id": "2026_02_SEA_ARI",
+          "final": "SEA 31 · ARI 7",
+          "winner_pick": "SEA",
+          "winner_result": "Correct",
+          "spread_pick": "SEA -4.5",
+          "spread_result": "Correct",
+          "total_pick": "OVER 41.5",
+          "total_result": "Miss",
+          "projected_total": 43.1,
+          "actual_total": 38
+        },
+        {
+          "game_id": "2026_02_WAS_DAL",
+          "final": "WAS 20 · DAL 37",
+          "winner_pick": "DAL",
+          "winner_result": "Correct",
+          "spread_pick": "WAS +3.5",
+          "spread_result": "Miss",
+          "total_pick": "OVER 50.5",
+          "total_result": "Correct",
+          "projected_total": 51.5,
+          "actual_total": 57
+        },
+        {
+          "game_id": "2026_02_IND_KC",
+          "final": "IND 30 · KC 33",
+          "winner_pick": "KC",
+          "winner_result": "Correct",
+          "spread_pick": "IND +6.5",
+          "spread_result": "Correct",
+          "total_pick": "UNDER 47.5",
+          "total_result": "Miss",
+          "projected_total": 46.9,
+          "actual_total": 63
+        },
+        {
+          "game_id": "2026_02_NYG_LA",
+          "final": "NYG 6 · LA 28",
+          "winner_pick": "LA",
+          "winner_result": "Correct",
+          "spread_pick": "NYG +7.0",
+          "spread_result": "Miss",
+          "total_pick": "OVER 48.5",
+          "total_result": "Miss",
+          "projected_total": 52,
+          "actual_total": 34
+        }
+      ]
     }
   ]
 }
