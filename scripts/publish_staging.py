@@ -232,20 +232,38 @@ def validate_payload(payload: object) -> list[dict]:
                     for field in ("prob", "rating"):
                         finite_number(record.get(field), f"{label}.{field}")
 
-        tackle_counts = {team: 0 for team in NFL_TEAMS}
-        for prop_index, prop in enumerate(props):
-            if prop.get("type") != "tackles":
-                continue
-            label = f"{prefix}.props[{prop_index}]"
-            if prop.get("label") != "Tackles + assists":
-                fail(f"{label} must use the Tackles + assists label")
-            tackle_counts[prop["team"]] += 1
-        thin_teams = sorted(team for team, count in tackle_counts.items() if count < 8)
-        if thin_teams:
-            fail(
-                f"{prefix} must contain at least eight tackle projections for every team; "
-                f"missing/thin coverage: {', '.join(thin_teams)}"
-            )
+        props_by_game = {game_id: [p for p in props if p.get("game_id") == game_id] for game_id in game_ids}
+        for game in games:
+            game_id = game["game_id"]
+            game_props = props_by_game[game_id]
+            if len(game_props) < 24:
+                fail(f"{prefix} game {game_id} must publish at least 24 balanced player props")
+            for team in (game["away"], game["home"]):
+                team_props = [p for p in game_props if p.get("team") == team]
+                required = {
+                    "QB passing yards": sum(p.get("position") == "QB" and p.get("type") == "passing_yards" for p in team_props),
+                    "QB passing TDs": sum(p.get("position") == "QB" and p.get("type") == "passing_tds" for p in team_props),
+                    "RB rushing": sum(p.get("position") == "RB" and p.get("type") == "rushing_yards" for p in team_props),
+                    "WR receiving yards": sum(p.get("position") == "WR" and p.get("type") == "receiving_yards" for p in team_props),
+                    "TE receiving yards": sum(p.get("position") == "TE" and p.get("type") == "receiving_yards" for p in team_props),
+                    "sacks": sum(p.get("type") == "sacks" for p in team_props),
+                    "tackles": sum(p.get("type") == "tackles" for p in team_props),
+                }
+                minimums = {
+                    "QB passing yards": 1,
+                    "QB passing TDs": 1,
+                    "RB rushing": 1,
+                    "WR receiving yards": 2,
+                    "TE receiving yards": 1,
+                    "sacks": 2,
+                    "tackles": 3,
+                }
+                missing = [name for name, minimum in minimums.items() if required[name] < minimum]
+                if missing:
+                    fail(f"{prefix} team {team} lacks balanced prop coverage: {', '.join(missing)}")
+                for prop_index, prop in enumerate(team_props):
+                    if prop.get("type") == "tackles" and prop.get("label") != "Tackles + assists":
+                        fail(f"{prefix} {team} tackle prop {prop_index} must use the Tackles + assists label")
         validate_completed_game_grading(snapshot, prefix)
     return snapshots
 
