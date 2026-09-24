@@ -30,17 +30,21 @@ def valid_snapshot():
         })
     props=[]
     for team in teams:
-        for n in range(8):
-            props.append({
-                "game_id":games[teams.index(team)//2]["game_id"],
-                "player_id":f"{team}-{n}",
-                "name":f"{team} Defender {n}",
-                "team":team,
-                "type":"tackles",
-                "label":"Tackles + assists",
-                "projection":4.0,
-                "rating":50.0,
-            })
+        game_id=games[teams.index(team)//2]["game_id"]
+        props.extend([
+            {"game_id":game_id,"player_id":f"{team}-qb-py","name":f"{team} QB","team":team,"position":"QB","type":"passing_yards","label":"Pass yards","projection":240.0,"rating":60.0},
+            {"game_id":game_id,"player_id":f"{team}-qb-td","name":f"{team} QB","team":team,"position":"QB","type":"passing_tds","label":"Pass TDs","projection":1.5,"rating":60.0},
+            {"game_id":game_id,"player_id":f"{team}-rb","name":f"{team} RB","team":team,"position":"RB","type":"rushing_yards","label":"Rush yards","projection":60.0,"rating":60.0},
+            {"game_id":game_id,"player_id":f"{team}-wr1","name":f"{team} WR1","team":team,"position":"WR","type":"receiving_yards","label":"Receiving yards","projection":70.0,"rating":60.0},
+            {"game_id":game_id,"player_id":f"{team}-wr2","name":f"{team} WR2","team":team,"position":"WR","type":"receiving_yards","label":"Receiving yards","projection":55.0,"rating":60.0},
+            {"game_id":game_id,"player_id":f"{team}-te","name":f"{team} TE","team":team,"position":"TE","type":"receiving_yards","label":"Receiving yards","projection":40.0,"rating":60.0},
+        ])
+        for n in range(2):
+            props.append({"game_id":game_id,"player_id":f"{team}-edge-{n}","name":f"{team} EDGE {n}","team":team,"position":"DE","type":"sacks","label":"Sacks","projection":0.5,"rating":55.0})
+        for n in range(3):
+            props.append({"game_id":game_id,"player_id":f"{team}-tkl-{n}","name":f"{team} Defender {n}","team":team,"position":"LB","type":"tackles","label":"Tackles + assists","projection":7.0,"rating":50.0})
+        for n in range(4):
+            props.append({"game_id":game_id,"player_id":f"{team}-extra-{n}","name":f"{team} Extra {n}","team":team,"position":"WR","type":"receptions","label":"Receptions","projection":4.0,"rating":50.0})
     tds=[]
     for i,team in enumerate(teams[:25]):
         tds.append({
