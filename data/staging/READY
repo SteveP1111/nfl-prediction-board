@@ -4,10 +4,6 @@
   "mode": "upsert",
   "payload_sha256": "f97392f98366b54225b6be24f4b88e3ca8d421d340b9ca4b7e9b808a973a6188",
   "snapshot_parts": [
-    "snapshot-001-part-001.json",
-    "snapshot-001-part-002.json",
-    "snapshot-001-part-003.json",
-    "snapshot-001-part-004.json",
-    "snapshot-001-part-005.json"
+    "snapshot-001.json"
   ]
 }
