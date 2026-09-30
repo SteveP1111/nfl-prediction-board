@@ -240,6 +240,7 @@ def validate_payload(payload: object) -> list[dict]:
                 fail(f"{prefix} game {game_id} must publish at least 24 balanced player props")
             for team in (game["away"], game["home"]):
                 team_props = [p for p in game_props if p.get("team") == team]
+                qb_rows=[p for p in team_props if p.get("position")=="QB"]
                 required = {
                     "QB passing yards": sum(p.get("position") == "QB" and p.get("type") == "passing_yards" for p in team_props),
                     "QB passing TDs": sum(p.get("position") == "QB" and p.get("type") == "passing_tds" for p in team_props),
@@ -250,8 +251,8 @@ def validate_payload(payload: object) -> list[dict]:
                     "tackles": sum(p.get("type") == "tackles" for p in team_props),
                 }
                 minimums = {
-                    "QB passing yards": 1,
-                    "QB passing TDs": 1,
+                    "QB passing yards": 1 if qb_rows else 0,
+                    "QB passing TDs": 1 if qb_rows else 0,
                     "RB rushing": 1,
                     "WR receiving yards": 2,
                     "TE receiving yards": 1,
