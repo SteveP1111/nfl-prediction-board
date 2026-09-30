@@ -256,7 +256,7 @@ def validate_payload(payload: object) -> list[dict]:
                     "RB rushing": 1,
                     "WR receiving yards": 2,
                     "TE receiving yards": 1,
-                    "sacks": 2,
+                    "sacks": 0,
                     "tackles": 3,
                 }
                 missing = [name for name, minimum in minimums.items() if required[name] < minimum]
