@@ -40,6 +40,15 @@ class WeeklyReviewContractTests(unittest.TestCase):
         self.assertEqual(review["game_outcomes"]["win:2026_02_A00_B00"]["result"],"Correct")
         self.assertEqual(review["game_outcomes"]["total:2026_02_A15_B15"]["actual"],"37 points")
 
+    def test_allows_no_pick_total(self):
+        review=final_review()
+        review["games"][15]["total_result"]=None
+        review["games"][15]["total_pick"]="No meaningful edge"
+        review["authoritative_metrics"]["total"]={"correct":7,"miss":8,"push":0,"decisions":15}
+        normalised=normalise_weekly_review(review)
+        self.assertEqual(len([k for k in normalised["game_outcomes"] if k.startswith("total:")]),15)
+        self.assertNotIn("total:2026_02_A15_B15",normalised["game_outcomes"])
+
     def test_refuses_partial_final_review(self):
         review=final_review()
         review["games"]=review["games"][:15]
