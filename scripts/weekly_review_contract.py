@@ -67,41 +67,48 @@ def normalise_weekly_review(review: dict) -> dict:
             actual_total = game.get("actual_total")
             if final in (None, "") or actual_total in (None, ""):
                 raise ValueError(f"{label} game {gid} is missing final score data")
-            for market, field, actual in (
-                ("win", "winner_result", final),
-                ("spread", "spread_result", final),
-                ("total", "total_result", f"{actual_total} points"),
-            ):
-                result = game.get(field)
-                if result not in FINAL_RESULTS:
-                    raise ValueError(f"{label} game {gid} has invalid {field}")
-                outcomes[f"{market}:{gid}"] = {"result": result, "actual": actual}
+            result = game.get("winner_result")
+            if result not in FINAL_RESULTS:
+                raise ValueError(f"{label} game {gid} has invalid winner_result")
+            outcomes[f"win:{gid}"] = {"result": result, "actual": final}
 
-    prefixes = ("win", "spread", "total")
+            spread_result = game.get("spread_result")
+            spread_pick = game.get("spread_pick")
+            if spread_result in FINAL_RESULTS:
+                outcomes[f"spread:{gid}"] = {"result": spread_result, "actual": final}
+            elif spread_pick not in (None, "", "—", "No edge"):
+                raise ValueError(f"{label} game {gid} has invalid spread_result")
+
+            total_result = game.get("total_result")
+            total_pick = game.get("total_pick")
+            if total_result in FINAL_RESULTS:
+                outcomes[f"total:{gid}"] = {"result": total_result, "actual": f"{actual_total} points"}
+            elif total_pick not in (None, "", "—", "No meaningful edge"):
+                raise ValueError(f"{label} game {gid} has invalid total_result")
+
     ids_by_prefix: dict[str, set[str]] = {}
-    for prefix in prefixes:
+    for prefix in ("win", "spread", "total"):
         ids = {
             key.split(":", 1)[1]
             for key in outcomes
             if isinstance(key, str) and key.startswith(prefix + ":")
         }
-        if len(ids) != 16:
-            raise ValueError(f"{label} must contain 16 {prefix} outcomes; found {len(ids)}")
+        if prefix == "win" and len(ids) != 16:
+            raise ValueError(f"{label} must contain 16 winner outcomes; found {len(ids)}")
         ids_by_prefix[prefix] = ids
         for gid in ids:
             _require_outcome(outcomes, f"{prefix}:{gid}", label)
 
-    if not (ids_by_prefix["win"] == ids_by_prefix["spread"] == ids_by_prefix["total"]):
-        raise ValueError(f"{label} winner/spread/total game sets do not match")
+    if not ids_by_prefix["spread"].issubset(ids_by_prefix["win"]) or not ids_by_prefix["total"].issubset(ids_by_prefix["win"]):
+        raise ValueError(f"{label} spread/total outcome sets must be subsets of winner games")
 
     metrics = out.get("authoritative_metrics") or {}
     game_metrics = metrics.get("games") if isinstance(metrics.get("games"), dict) else metrics
-    game_ids = ids_by_prefix["win"]
     for market, prefix in (("winner", "win"), ("spread", "spread"), ("total", "total")):
         metric = game_metrics.get(market) if isinstance(game_metrics, dict) else None
         if not isinstance(metric, dict):
             continue
-        correct, miss, push = _grade_counts(outcomes, prefix, game_ids)
+        correct, miss, push = _grade_counts(outcomes, prefix, ids_by_prefix[prefix])
         if metric.get("correct") not in (None, correct):
             raise ValueError(f"{label} {market} correct count disagrees with outcomes")
         if metric.get("miss") not in (None, miss):
