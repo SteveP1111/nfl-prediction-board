@@ -3,7 +3,7 @@
   "model_version": "4.12",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "a06ab0fe060325f5056ddc7a9bc359195a79a8d1b2d77623a4afc10b332a69f7",
+    "last_staging_sha256": "7ed7b4828d7c7c6e86bf2ace77db377b7cb6241c0d0da19df10e875b724ba8e5",
     "snapshot_count": 5,
     "snapshots": [
       {
@@ -49,29 +49,29 @@
         "tds": 100
       },
       {
-        "id": "2026-W4-dry-run-2026-10-03T21:50:48.054825+01:00",
+        "id": "2026-W4-05:00-2026-10-04T06:55:09.265639+01:00",
         "season": 2026,
         "week": 4,
-        "slot": "dry-run",
-        "capturedAt": "2026-10-03T21:50:48.054825+01:00",
-        "path": "data/snapshots/661bfd4221684beb718c65bdc2436c84e8b800141b4ee7e203d94fa32967b645.txt",
-        "sha256": "661bfd4221684beb718c65bdc2436c84e8b800141b4ee7e203d94fa32967b645",
-        "uncompressed_bytes": 470792,
-        "encoded_bytes": 68368,
+        "slot": "05:00",
+        "capturedAt": "2026-10-04T06:55:09.265639+01:00",
+        "path": "data/snapshots/b10a9168477b9728f51120bf08d378a7313c82260b804db9ae812801d1ba11eb.txt",
+        "sha256": "b10a9168477b9728f51120bf08d378a7313c82260b804db9ae812801d1ba11eb",
+        "uncompressed_bytes": 609745,
+        "encoded_bytes": 82272,
         "games": 16,
-        "props": 618,
+        "props": 619,
         "tds": 100
       },
       {
-        "id": "2026-W5-dry-run-2026-10-06T16:57:50.020405+01:00",
+        "id": "2026-W5-dry-run-2026-10-06T17:10:20.933238+01:00",
         "season": 2026,
         "week": 5,
         "slot": "dry-run",
-        "capturedAt": "2026-10-06T16:57:50.020405+01:00",
-        "path": "data/snapshots/35205f12ae316b61d85152d4f63ca0baf054b77d48cf4d6dbe90cc342989310e.txt",
-        "sha256": "35205f12ae316b61d85152d4f63ca0baf054b77d48cf4d6dbe90cc342989310e",
-        "uncompressed_bytes": 353064,
-        "encoded_bytes": 51276,
+        "capturedAt": "2026-10-06T17:10:20.933238+01:00",
+        "path": "data/snapshots/74a4ad5f13897a46f4b38a574b36d233126cd7f71af973c1712b1e130e933e5a.txt",
+        "sha256": "74a4ad5f13897a46f4b38a574b36d233126cd7f71af973c1712b1e130e933e5a",
+        "uncompressed_bytes": 353065,
+        "encoded_bytes": 51268,
         "games": 15,
         "props": 474,
         "tds": 100
@@ -85,7 +85,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "2026-10-06T165750-020405-0100-manualsync",
+  "published_version": "2026-10-06T171020-933238-0100-resultsfix2",
   "weekly_reviews": [
     {
       "as_of": "2026-09-10T15:00:00+01:00",
