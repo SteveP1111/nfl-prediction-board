@@ -3,8 +3,8 @@
   "model_version": "4.12",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "39b83da9c77aa661666ee16fac1682fe1fb774f7dadec87ff913ee7ed7a0b345",
-    "snapshot_count": 4,
+    "last_staging_sha256": "17610e82bed54c567b77eb630d7a3da5fa9869d240d71769ffb9a4c9cb8498ee",
+    "snapshot_count": 5,
     "snapshots": [
       {
         "id": "2026-W1-05:00-2026-09-15T05:00:00+01:00",
@@ -61,6 +61,20 @@
         "games": 16,
         "props": 618,
         "tds": 100
+      },
+      {
+        "id": "2026-W5-dry-run-2026-10-06T15:24:58.425343+01:00",
+        "season": 2026,
+        "week": 5,
+        "slot": "dry-run",
+        "capturedAt": "2026-10-06T15:24:58.425343+01:00",
+        "path": "data/snapshots/cacb5d0f305a49d47fa934767a56a0632b12d8744e431570c79f9dede5481bc3.txt",
+        "sha256": "cacb5d0f305a49d47fa934767a56a0632b12d8744e431570c79f9dede5481bc3",
+        "uncompressed_bytes": 352931,
+        "encoded_bytes": 50808,
+        "games": 15,
+        "props": 474,
+        "tds": 100
       }
     ]
   },
@@ -71,7 +85,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "2026-10-03T215048-054825-0100",
+  "published_version": "2026-10-06T152458-425343-0100-retry1",
   "weekly_reviews": [
     {
       "as_of": "2026-09-10T15:00:00+01:00",
@@ -9341,7 +9355,7 @@
           "spread_result": "Correct",
           "total_pick": "No meaningful edge",
           "total_result": null,
-          "projected_total": 43
+          "projected_total": 43.0
         },
         {
           "game_id": "2026_03_HOU_IND",
@@ -9355,7 +9369,7 @@
           "spread_result": "Correct",
           "total_pick": "OVER 43.5",
           "total_result": "Miss",
-          "projected_total": 53
+          "projected_total": 53.0
         },
         {
           "game_id": "2026_03_KC_MIA",
@@ -9369,7 +9383,7 @@
           "spread_result": "Miss",
           "total_pick": "No meaningful edge",
           "total_result": null,
-          "projected_total": 44
+          "projected_total": 44.0
         },
         {
           "game_id": "2026_03_LAC_BUF",
@@ -9425,7 +9439,7 @@
           "spread_result": "Miss",
           "total_pick": "OVER 40.5",
           "total_result": "Correct",
-          "projected_total": 43
+          "projected_total": 43.0
         },
         {
           "game_id": "2026_03_TEN_NYG",
