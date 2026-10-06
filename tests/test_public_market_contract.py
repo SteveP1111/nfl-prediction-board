@@ -84,7 +84,7 @@ class PublicMarketContractTests(unittest.TestCase):
 
     def test_accepts_standard_bye_week(self):
         snap=valid_snapshot()
-        removed={"KC","LA"}
+        removed={"SF","TB"}
         snap["games"]=[g for g in snap["games"] if g["away"] not in removed and g["home"] not in removed]
         game_ids={g["game_id"] for g in snap["games"]}
         snap["props"]=[p for p in snap["props"] if p["game_id"] in game_ids]
