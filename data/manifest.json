@@ -3,7 +3,7 @@
   "model_version": "4.12",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "17610e82bed54c567b77eb630d7a3da5fa9869d240d71769ffb9a4c9cb8498ee",
+    "last_staging_sha256": "a06ab0fe060325f5056ddc7a9bc359195a79a8d1b2d77623a4afc10b332a69f7",
     "snapshot_count": 5,
     "snapshots": [
       {
@@ -63,15 +63,15 @@
         "tds": 100
       },
       {
-        "id": "2026-W5-dry-run-2026-10-06T15:24:58.425343+01:00",
+        "id": "2026-W5-dry-run-2026-10-06T16:57:50.020405+01:00",
         "season": 2026,
         "week": 5,
         "slot": "dry-run",
-        "capturedAt": "2026-10-06T15:24:58.425343+01:00",
-        "path": "data/snapshots/cacb5d0f305a49d47fa934767a56a0632b12d8744e431570c79f9dede5481bc3.txt",
-        "sha256": "cacb5d0f305a49d47fa934767a56a0632b12d8744e431570c79f9dede5481bc3",
-        "uncompressed_bytes": 352931,
-        "encoded_bytes": 50808,
+        "capturedAt": "2026-10-06T16:57:50.020405+01:00",
+        "path": "data/snapshots/35205f12ae316b61d85152d4f63ca0baf054b77d48cf4d6dbe90cc342989310e.txt",
+        "sha256": "35205f12ae316b61d85152d4f63ca0baf054b77d48cf4d6dbe90cc342989310e",
+        "uncompressed_bytes": 353064,
+        "encoded_bytes": 51276,
         "games": 15,
         "props": 474,
         "tds": 100
@@ -85,7 +85,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "2026-10-06T152458-425343-0100-retry1",
+  "published_version": "2026-10-06T165750-020405-0100-manualsync",
   "weekly_reviews": [
     {
       "as_of": "2026-09-10T15:00:00+01:00",
@@ -9538,6 +9538,437 @@
           "total_pick": "No meaningful edge",
           "total_result": null,
           "projected_total": 46.5
+        }
+      ]
+    },
+    {
+      "type": "weekly_model_review",
+      "review_scope": "game_lines_final",
+      "status": "final",
+      "season": 2026,
+      "week": 4,
+      "as_of": "2026-10-04T06:55:09.265639+01:00",
+      "model_version": "4.12",
+      "authoritative_snapshot_id": "2026-W4-05:00-2026-10-04T06:55:09.265639+01:00",
+      "forecast_policy": "Frozen pregame projections graded without revision.",
+      "summary": "Automatic final game-line review for 2026 Week 4. Winner, spread and total outcomes are graded from the frozen predictions once all scheduled game scores are available.",
+      "authoritative_metrics": {
+        "winner": {
+          "correct": 13,
+          "miss": 3,
+          "push": 0,
+          "decisions": 16,
+          "hit_rate_pct": 81.2
+        },
+        "spread": {
+          "correct": 12,
+          "miss": 3,
+          "push": 1,
+          "decisions": 15,
+          "hit_rate_pct": 80.0
+        },
+        "total": {
+          "correct": 6,
+          "miss": 4,
+          "push": 0,
+          "decisions": 10,
+          "hit_rate_pct": 60.0
+        }
+      },
+      "game_outcomes": {
+        "win:2026_04_PIT_CLE": {
+          "result": "Correct",
+          "actual": "PIT 24 · CLE 27"
+        },
+        "spread:2026_04_PIT_CLE": {
+          "result": "Correct",
+          "actual": "PIT 24 · CLE 27"
+        },
+        "total:2026_04_PIT_CLE": {
+          "result": "Correct",
+          "actual": "51 points"
+        },
+        "win:2026_04_IND_WAS": {
+          "result": "Correct",
+          "actual": "IND 30 · WAS 13"
+        },
+        "spread:2026_04_IND_WAS": {
+          "result": "Correct",
+          "actual": "IND 30 · WAS 13"
+        },
+        "total:2026_04_IND_WAS": {
+          "result": "Miss",
+          "actual": "43 points"
+        },
+        "win:2026_04_ARI_NYG": {
+          "result": "Correct",
+          "actual": "ARI 24 · NYG 36"
+        },
+        "spread:2026_04_ARI_NYG": {
+          "result": "Correct",
+          "actual": "ARI 24 · NYG 36"
+        },
+        "win:2026_04_DAL_HOU": {
+          "result": "Miss",
+          "actual": "DAL 34 · HOU 30"
+        },
+        "spread:2026_04_DAL_HOU": {
+          "result": "Miss",
+          "actual": "DAL 34 · HOU 30"
+        },
+        "total:2026_04_DAL_HOU": {
+          "result": "Correct",
+          "actual": "64 points"
+        },
+        "win:2026_04_GB_TB": {
+          "result": "Correct",
+          "actual": "GB 17 · TB 14"
+        },
+        "spread:2026_04_GB_TB": {
+          "result": "Correct",
+          "actual": "GB 17 · TB 14"
+        },
+        "win:2026_04_JAX_CIN": {
+          "result": "Correct",
+          "actual": "JAX 22 · CIN 17"
+        },
+        "spread:2026_04_JAX_CIN": {
+          "result": "Correct",
+          "actual": "JAX 22 · CIN 17"
+        },
+        "total:2026_04_JAX_CIN": {
+          "result": "Correct",
+          "actual": "39 points"
+        },
+        "win:2026_04_LA_PHI": {
+          "result": "Correct",
+          "actual": "LA 24 · PHI 20"
+        },
+        "spread:2026_04_LA_PHI": {
+          "result": "Correct",
+          "actual": "LA 24 · PHI 20"
+        },
+        "total:2026_04_LA_PHI": {
+          "result": "Correct",
+          "actual": "44 points"
+        },
+        "win:2026_04_NE_BUF": {
+          "result": "Miss",
+          "actual": "NE 29 · BUF 26"
+        },
+        "spread:2026_04_NE_BUF": {
+          "result": "Miss",
+          "actual": "NE 29 · BUF 26"
+        },
+        "total:2026_04_NE_BUF": {
+          "result": "Correct",
+          "actual": "55 points"
+        },
+        "win:2026_04_NYJ_CHI": {
+          "result": "Correct",
+          "actual": "NYJ 12 · CHI 23"
+        },
+        "spread:2026_04_NYJ_CHI": {
+          "result": "Correct",
+          "actual": "NYJ 12 · CHI 23"
+        },
+        "win:2026_04_TEN_BAL": {
+          "result": "Correct",
+          "actual": "TEN 18 · BAL 24"
+        },
+        "spread:2026_04_TEN_BAL": {
+          "result": "Correct",
+          "actual": "TEN 18 · BAL 24"
+        },
+        "total:2026_04_TEN_BAL": {
+          "result": "Miss",
+          "actual": "42 points"
+        },
+        "win:2026_04_MIA_MIN": {
+          "result": "Correct",
+          "actual": "MIA 10 · MIN 15"
+        },
+        "spread:2026_04_MIA_MIN": {
+          "result": "Miss",
+          "actual": "MIA 10 · MIN 15"
+        },
+        "win:2026_04_DEN_SF": {
+          "result": "Correct",
+          "actual": "DEN 14 · SF 24"
+        },
+        "spread:2026_04_DEN_SF": {
+          "result": "Correct",
+          "actual": "DEN 14 · SF 24"
+        },
+        "total:2026_04_DEN_SF": {
+          "result": "Miss",
+          "actual": "38 points"
+        },
+        "win:2026_04_KC_LV": {
+          "result": "Correct",
+          "actual": "KC 30 · LV 27"
+        },
+        "spread:2026_04_KC_LV": {
+          "result": "Correct",
+          "actual": "KC 30 · LV 27"
+        },
+        "total:2026_04_KC_LV": {
+          "result": "Miss",
+          "actual": "57 points"
+        },
+        "win:2026_04_LAC_SEA": {
+          "result": "Correct",
+          "actual": "LAC 23 · SEA 30"
+        },
+        "spread:2026_04_LAC_SEA": {
+          "result": "Push",
+          "actual": "LAC 23 · SEA 30"
+        },
+        "win:2026_04_DET_CAR": {
+          "result": "Miss",
+          "actual": "DET 26 · CAR 32"
+        },
+        "spread:2026_04_DET_CAR": {
+          "result": "Correct",
+          "actual": "DET 26 · CAR 32"
+        },
+        "total:2026_04_DET_CAR": {
+          "result": "Correct",
+          "actual": "58 points"
+        },
+        "win:2026_04_ATL_NO": {
+          "result": "Correct",
+          "actual": "ATL 45 · NO 24"
+        },
+        "spread:2026_04_ATL_NO": {
+          "result": "Correct",
+          "actual": "ATL 45 · NO 24"
+        }
+      },
+      "games": [
+        {
+          "game_id": "2026_04_PIT_CLE",
+          "away": "PIT",
+          "home": "CLE",
+          "final": "PIT 24 · CLE 27",
+          "actual_total": 51,
+          "winner_pick": "CLE",
+          "winner_result": "Correct",
+          "spread_pick": "CLE +2.5",
+          "spread_result": "Correct",
+          "total_pick": "OVER 38.5",
+          "total_result": "Correct",
+          "projected_total": 41.1
+        },
+        {
+          "game_id": "2026_04_IND_WAS",
+          "away": "IND",
+          "home": "WAS",
+          "final": "IND 30 · WAS 13",
+          "actual_total": 43,
+          "winner_pick": "IND",
+          "winner_result": "Correct",
+          "spread_pick": "IND -3.5",
+          "spread_result": "Correct",
+          "total_pick": "OVER 47.5",
+          "total_result": "Miss",
+          "projected_total": 51.5
+        },
+        {
+          "game_id": "2026_04_ARI_NYG",
+          "away": "ARI",
+          "home": "NYG",
+          "final": "ARI 24 · NYG 36",
+          "actual_total": 60,
+          "winner_pick": "NYG",
+          "winner_result": "Correct",
+          "spread_pick": "NYG +1.5",
+          "spread_result": "Correct",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 46.1
+        },
+        {
+          "game_id": "2026_04_DAL_HOU",
+          "away": "DAL",
+          "home": "HOU",
+          "final": "DAL 34 · HOU 30",
+          "actual_total": 64,
+          "winner_pick": "HOU",
+          "winner_result": "Miss",
+          "spread_pick": "HOU -2.5",
+          "spread_result": "Miss",
+          "total_pick": "OVER 48.5",
+          "total_result": "Correct",
+          "projected_total": 59.5
+        },
+        {
+          "game_id": "2026_04_GB_TB",
+          "away": "GB",
+          "home": "TB",
+          "final": "GB 17 · TB 14",
+          "actual_total": 31,
+          "winner_pick": "GB",
+          "winner_result": "Correct",
+          "spread_pick": "TB +3.5",
+          "spread_result": "Correct",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 41.4
+        },
+        {
+          "game_id": "2026_04_JAX_CIN",
+          "away": "JAX",
+          "home": "CIN",
+          "final": "JAX 22 · CIN 17",
+          "actual_total": 39,
+          "winner_pick": "JAX",
+          "winner_result": "Correct",
+          "spread_pick": "JAX +2.5",
+          "spread_result": "Correct",
+          "total_pick": "UNDER 51.5",
+          "total_result": "Correct",
+          "projected_total": 49.5
+        },
+        {
+          "game_id": "2026_04_LA_PHI",
+          "away": "LA",
+          "home": "PHI",
+          "final": "LA 24 · PHI 20",
+          "actual_total": 44,
+          "winner_pick": "LA",
+          "winner_result": "Correct",
+          "spread_pick": "LA -3.0",
+          "spread_result": "Correct",
+          "total_pick": "OVER 43.5",
+          "total_result": "Correct",
+          "projected_total": 47.2
+        },
+        {
+          "game_id": "2026_04_NE_BUF",
+          "away": "NE",
+          "home": "BUF",
+          "final": "NE 29 · BUF 26",
+          "actual_total": 55,
+          "winner_pick": "BUF",
+          "winner_result": "Miss",
+          "spread_pick": "BUF -7.0",
+          "spread_result": "Miss",
+          "total_pick": "OVER 48.5",
+          "total_result": "Correct",
+          "projected_total": 50.6
+        },
+        {
+          "game_id": "2026_04_NYJ_CHI",
+          "away": "NYJ",
+          "home": "CHI",
+          "final": "NYJ 12 · CHI 23",
+          "actual_total": 35,
+          "winner_pick": "CHI",
+          "winner_result": "Correct",
+          "spread_pick": "CHI -3.5",
+          "spread_result": "Correct",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 45.0
+        },
+        {
+          "game_id": "2026_04_TEN_BAL",
+          "away": "TEN",
+          "home": "BAL",
+          "final": "TEN 18 · BAL 24",
+          "actual_total": 42,
+          "winner_pick": "BAL",
+          "winner_result": "Correct",
+          "spread_pick": "TEN +11.5",
+          "spread_result": "Correct",
+          "total_pick": "OVER 43.5",
+          "total_result": "Miss",
+          "projected_total": 47.0
+        },
+        {
+          "game_id": "2026_04_MIA_MIN",
+          "away": "MIA",
+          "home": "MIN",
+          "final": "MIA 10 · MIN 15",
+          "actual_total": 25,
+          "winner_pick": "MIN",
+          "winner_result": "Correct",
+          "spread_pick": "MIN -10.5",
+          "spread_result": "Miss",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 38.9
+        },
+        {
+          "game_id": "2026_04_DEN_SF",
+          "away": "DEN",
+          "home": "SF",
+          "final": "DEN 14 · SF 24",
+          "actual_total": 38,
+          "winner_pick": "SF",
+          "winner_result": "Correct",
+          "spread_pick": "SF -3.0",
+          "spread_result": "Correct",
+          "total_pick": "OVER 47.5",
+          "total_result": "Miss",
+          "projected_total": 52.3
+        },
+        {
+          "game_id": "2026_04_KC_LV",
+          "away": "KC",
+          "home": "LV",
+          "final": "KC 30 · LV 27",
+          "actual_total": 57,
+          "winner_pick": "KC",
+          "winner_result": "Correct",
+          "spread_pick": "LV +4.5",
+          "spread_result": "Correct",
+          "total_pick": "UNDER 47.5",
+          "total_result": "Miss",
+          "projected_total": 42.0
+        },
+        {
+          "game_id": "2026_04_LAC_SEA",
+          "away": "LAC",
+          "home": "SEA",
+          "final": "LAC 23 · SEA 30",
+          "actual_total": 53,
+          "winner_pick": "SEA",
+          "winner_result": "Correct",
+          "spread_pick": "SEA -7.0",
+          "spread_result": "Push",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 41.8
+        },
+        {
+          "game_id": "2026_04_DET_CAR",
+          "away": "DET",
+          "home": "CAR",
+          "final": "DET 26 · CAR 32",
+          "actual_total": 58,
+          "winner_pick": "DET",
+          "winner_result": "Miss",
+          "spread_pick": "CAR +3.5",
+          "spread_result": "Correct",
+          "total_pick": "OVER 50.5",
+          "total_result": "Correct",
+          "projected_total": 58.8
+        },
+        {
+          "game_id": "2026_04_ATL_NO",
+          "away": "ATL",
+          "home": "NO",
+          "final": "ATL 45 · NO 24",
+          "actual_total": 69,
+          "winner_pick": "ATL",
+          "winner_result": "Correct",
+          "spread_pick": "ATL +3.0",
+          "spread_result": "Correct",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 49.6
         }
       ]
     },
