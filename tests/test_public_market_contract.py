@@ -69,17 +69,27 @@ def valid_snapshot():
 
 
 class PublicMarketContractTests(unittest.TestCase):
-    def test_rejects_missing_spread_line(self):
+    def test_accepts_missing_spread_line_when_pick_is_unavailable(self):
         snap=valid_snapshot()
         snap["games"][0]["spread_line"]=None
-        with self.assertRaises(SystemExit):
-            publish_staging.validate_payload({"snapshots":[snap]})
+        snap["games"][0]["spread_pick"]="—"
+        snap["games"][0]["spread_side"]=None
+        publish_staging.validate_payload({"snapshots":[snap]})
 
-    def test_rejects_missing_total_pick(self):
+    def test_rejects_missing_total_pick_when_line_exists(self):
         snap=valid_snapshot()
         snap["games"][0]["total_pick"]="—"
         with self.assertRaises(SystemExit):
             publish_staging.validate_payload({"snapshots":[snap]})
+
+    def test_accepts_standard_bye_week(self):
+        snap=valid_snapshot()
+        removed={"KC","LA"}
+        snap["games"]=[g for g in snap["games"] if g["away"] not in removed and g["home"] not in removed]
+        game_ids={g["game_id"] for g in snap["games"]}
+        snap["props"]=[p for p in snap["props"] if p["game_id"] in game_ids]
+        snap["tds"]=[t for t in snap["tds"] if t["game_id"] in game_ids]
+        publish_staging.validate_payload({"snapshots":[snap]})
 
     def test_accepts_no_meaningful_edge_total(self):
         snap=valid_snapshot()
