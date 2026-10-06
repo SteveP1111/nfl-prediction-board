@@ -78,8 +78,9 @@ def main() -> None:
                 if not isinstance(chunk, list):
                     raise SystemExit("Publication refused: patch games must be an array")
                 games.extend(chunk)
-            if len(games) != 16 or len({g.get("game_id") for g in games}) != 16:
-                raise SystemExit("Publication refused: correction patch must provide all 16 unique games")
+            unique_ids={g.get("game_id") for g in games}
+            if not (13 <= len(games) <= 16) or len(unique_ids) != len(games):
+                raise SystemExit("Publication refused: correction patch must provide 13 to 16 unique games")
             snapshot["games"] = games
             if snapshot.get("id") != next(iter(new_ids)):
                 raise SystemExit("Publication refused: corrected snapshot id mismatch")
