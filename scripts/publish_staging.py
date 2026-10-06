@@ -149,7 +149,12 @@ def validate_completed_game_grading(snapshot: dict, prefix: str) -> None:
                 continue
             if not prop.get("pick_side") or prop.get("line") is None:
                 continue
-            require_outcome(outcomes, f"prop:{game_id}:{player}:{prop.get('type')}", label)
+            require_outcome(
+                outcomes,
+                f"prop:{game_id}:{player}:{prop.get('type')}",
+                label,
+                DISPLAY_RESULTS,
+            )
         for td in snapshot["tds"]:
             if td.get("game_id") != game_id:
                 continue
