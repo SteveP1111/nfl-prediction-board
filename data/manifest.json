@@ -9530,12 +9530,12 @@
     {
       "type": "live_results_update",
       "review_scope": "game_lines_live",
-      "status": "partial",
+      "status": "complete",
       "season": 2026,
       "week": 4,
-      "as_of": "2026-10-05T20:49:00+01:00",
+      "as_of": "2026-10-06T16:42:00+01:00",
       "model_version": "4.12",
-      "summary": "Week 4 results update through 5 October 2026. Fifteen games are final; Atlanta at New Orleans remains pending. Frozen pregame predictions have not been changed.",
+      "summary": "Week 4 results complete through 6 October 2026. All 16 games are final, including Atlanta 45 at New Orleans 24. Frozen pregame predictions have not been changed.",
       "game_outcomes": {
         "win:2026_04_PIT_CLE": {
           "actual": "PIT 24 · CLE 27",
@@ -9695,6 +9695,14 @@
         },
         "total:2026_04_DET_CAR": {
           "actual": "58 points",
+          "result": "Correct"
+        },
+        "win:2026_04_ATL_NO": {
+          "actual": "ATL 45 · NO 24",
+          "result": "Correct"
+        },
+        "spread:2026_04_ATL_NO": {
+          "actual": "ATL 45 · NO 24",
           "result": "Correct"
         }
       }
