@@ -179,8 +179,8 @@ def validate_payload(payload: object) -> list[dict]:
         games = snapshot.get("games")
         props = snapshot.get("props")
         tds = snapshot.get("tds")
-        if not isinstance(games, list) or len(games) != 16:
-            fail(f"{prefix} must contain exactly 16 games")
+        if not isinstance(games, list) or not (13 <= len(games) <= 16):
+            fail(f"{prefix} must contain 13 to 16 games")
         if not isinstance(props, list) or len(props) < 50:
             fail(f"{prefix} must contain at least 50 published props")
         if not isinstance(tds, list) or len(tds) < 25:
@@ -208,13 +208,17 @@ def validate_payload(payload: object) -> list[dict]:
             for field in ("winner_rating", "spread_rating", "total_rating"):
                 valid_rating(game.get(field), f"{label}.{field}")
             for field in ("spread_line", "total_line"):
-                finite_number(game.get(field), f"{label}.{field}")
-            if game.get("spread_pick") in (None, "", "—"):
-                fail(f"{label}.spread_pick is missing")
-            if game.get("total_pick") in (None, "", "—"):
-                fail(f"{label}.total_pick is missing")
-        if len(set(scheduled_teams)) != 32:
-            fail(f"{prefix} must schedule each of the 32 teams exactly once")
+                value = game.get(field)
+                if value is not None:
+                    finite_number(value, f"{label}.{field}")
+            if game.get("spread_line") is not None and game.get("spread_pick") in (None, "", "—"):
+                fail(f"{label}.spread_pick is missing despite a market line")
+            if game.get("total_line") is not None and game.get("total_pick") in (None, "", "—"):
+                fail(f"{label}.total_pick is missing despite a market line")
+        unique_teams=set(scheduled_teams)
+        bye_count=len(NFL_TEAMS)-len(unique_teams)
+        if len(unique_teams) != 2*len(games) or not unique_teams.issubset(NFL_TEAMS) or bye_count not in (0,2,4,6):
+            fail(f"{prefix} has implausible schedule coverage: {len(games)} games, {len(unique_teams)} active teams, {bye_count} byes")
 
         for collection_name, records in (("props", props), ("tds", tds)):
             for record_index, record in enumerate(records):
