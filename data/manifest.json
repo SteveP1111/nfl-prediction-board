@@ -3,7 +3,7 @@
   "model_version": "4.12",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "ca0677474c6615fb0eb44fd8bf4f59a9aa9f0dbf8cb1fbfe56eb54d3cc53c03f",
+    "last_staging_sha256": "fdd7b8f22148294bd0e7902c77e746dcba1eaf869512b188d24b484cfb2e2bfe",
     "snapshot_count": 5,
     "snapshots": [
       {
@@ -63,17 +63,17 @@
         "tds": 100
       },
       {
-        "id": "2026-W5-dry-run-2026-10-06T23:36:11.004294+01:00",
+        "id": "2026-W5-dry-run-2026-10-08T05:24:24.458995+01:00",
         "season": 2026,
         "week": 5,
         "slot": "dry-run",
-        "capturedAt": "2026-10-06T23:36:11.004294+01:00",
-        "path": "data/snapshots/bbb26df0fa5dd36a5a55c6618a20c2d749ffb60f6e53a51e115fb368b2718552.txt",
-        "sha256": "bbb26df0fa5dd36a5a55c6618a20c2d749ffb60f6e53a51e115fb368b2718552",
-        "uncompressed_bytes": 363513,
-        "encoded_bytes": 52244,
+        "capturedAt": "2026-10-08T05:24:24.458995+01:00",
+        "path": "data/snapshots/cfed454738ec170a047a63ca3d325809287f688541edfc94834dd15c772eddb2.txt",
+        "sha256": "cfed454738ec170a047a63ca3d325809287f688541edfc94834dd15c772eddb2",
+        "uncompressed_bytes": 410092,
+        "encoded_bytes": 57368,
         "games": 15,
-        "props": 474,
+        "props": 526,
         "tds": 100
       }
     ]
@@ -85,7 +85,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "2026-10-06T233611-004294-0100-historyfix",
+  "published_version": "2026-10-08T052424-458995-0100-manualsync",
   "weekly_reviews": [
     {
       "as_of": "2026-09-10T15:00:00+01:00",
