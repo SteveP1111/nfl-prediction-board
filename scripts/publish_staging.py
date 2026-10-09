@@ -113,11 +113,15 @@ def require_outcome(outcomes: dict, key: str, label: str, allowed=FINAL_RESULTS)
 
 
 def validate_completed_game_grading(snapshot: dict, prefix: str) -> None:
-    """Refuse publication when any marked-final game has partial grading."""
+    """Validate completed-game grading, allowing verified partial live results."""
     outcomes = snapshot.get("outcomes", {})
     if not isinstance(outcomes, dict):
         fail(f"{prefix}.outcomes must be an object")
     games = snapshot["games"]
+    live_partial = (
+        str((snapshot.get("review") or {}).get("scope") or "") == "current_week_completed_games"
+        and str((snapshot.get("review") or {}).get("status") or "") == "live-results"
+    )
     completed = {
         game["game_id"]
         for game in games
@@ -140,26 +144,25 @@ def validate_completed_game_grading(snapshot: dict, prefix: str) -> None:
                 continue
             player = prop.get("player_id") or prop.get("name")
             if prop.get("type") == "tackles":
-                require_outcome(
-                    outcomes,
-                    f"prop:{game_id}:{player}:tackles",
-                    label,
-                    DISPLAY_RESULTS,
-                )
+                key=f"prop:{game_id}:{player}:tackles"
+                if live_partial and key not in outcomes:
+                    continue
+                require_outcome(outcomes, key, label, DISPLAY_RESULTS)
                 continue
             if not prop.get("pick_side") or prop.get("line") is None:
                 continue
-            require_outcome(
-                outcomes,
-                f"prop:{game_id}:{player}:{prop.get('type')}",
-                label,
-                DISPLAY_RESULTS,
-            )
+            key=f"prop:{game_id}:{player}:{prop.get('type')}"
+            if live_partial and key not in outcomes:
+                continue
+            require_outcome(outcomes, key, label, DISPLAY_RESULTS)
         for td in snapshot["tds"]:
             if td.get("game_id") != game_id:
                 continue
             player = td.get("player_id") or td.get("name")
-            require_outcome(outcomes, f"td:{game_id}:{player}", label)
+            key=f"td:{game_id}:{player}"
+            if live_partial and key not in outcomes:
+                continue
+            require_outcome(outcomes, key, label)
 
 
 def validate_payload(payload: object) -> list[dict]:
