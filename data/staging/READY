@@ -1,8 +1,8 @@
 {
-  "version": "2026-10-09T100922-228009-0100",
+  "version": "2026-10-09T101006-802044-0100",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "530a9ba8990df0e985dba7c10a81d5cfd444d90da472a207d691b54d22591109",
+  "payload_sha256": "065dde31ae01d202e22771b24ea4e8953cc297ec3f87720b3a42f87992b6b4e8",
   "snapshot_parts": [
     "snapshot-001-part-001.json",
     "snapshot-001-part-002.json",
