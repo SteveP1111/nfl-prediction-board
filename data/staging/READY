@@ -2,7 +2,7 @@
   "version": "2026-10-12T033943-440191-0100",
   "model_version": "4.12",
   "mode": "upsert",
-  "payload_sha256": "15f60e9d325fe9535ad810cd17cc423b736fca5194afacb1dac3e3a7d975f21b",
+  "payload_sha256": "8a7af2ef7f7af82aa91b478a729b30b46e181f8619ee5129d9778ad6467e406e",
   "snapshot_parts": [
     "snapshot-001-part-001.json",
     "snapshot-001-part-002.json",
