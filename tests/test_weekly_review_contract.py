@@ -49,9 +49,18 @@ class WeeklyReviewContractTests(unittest.TestCase):
         self.assertEqual(len([k for k in normalised["game_outcomes"] if k.startswith("total:")]),15)
         self.assertNotIn("total:2026_02_A15_B15",normalised["game_outcomes"])
 
-    def test_refuses_partial_final_review(self):
+    def test_accepts_fifteen_game_bye_week_review(self):
         review=final_review()
         review["games"]=review["games"][:15]
+        review["authoritative_metrics"]["winner"]={"correct":9,"miss":6,"decisions":15}
+        review["authoritative_metrics"]["spread"]={"correct":9,"miss":6,"push":0,"decisions":15}
+        review["authoritative_metrics"]["total"]={"correct":7,"miss":8,"push":0,"decisions":15}
+        normalised=normalise_weekly_review(review)
+        self.assertEqual(len([k for k in normalised["game_outcomes"] if k.startswith("win:")]),15)
+
+    def test_refuses_twelve_game_final_review(self):
+        review=final_review()
+        review["games"]=review["games"][:12]
         with self.assertRaises(ValueError):
             normalise_weekly_review(review)
 
