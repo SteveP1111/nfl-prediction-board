@@ -53,8 +53,8 @@ def normalise_weekly_review(review: dict) -> dict:
     games = out.get("games")
 
     if isinstance(games, list) and games:
-        if len(games) != 16:
-            raise ValueError(f"{label} must contain exactly 16 graded games")
+        if not (13 <= len(games) <= 16):
+            raise ValueError(f"{label} must contain 13 to 16 graded games; found {len(games)}")
         seen: set[str] = set()
         for game in games:
             if not isinstance(game, dict):
@@ -87,14 +87,18 @@ def normalise_weekly_review(review: dict) -> dict:
                 raise ValueError(f"{label} game {gid} has invalid total_result")
 
     ids_by_prefix: dict[str, set[str]] = {}
+    expected_winners = len(games) if isinstance(games, list) and games else None
     for prefix in ("win", "spread", "total"):
         ids = {
             key.split(":", 1)[1]
             for key in outcomes
             if isinstance(key, str) and key.startswith(prefix + ":")
         }
-        if prefix == "win" and len(ids) != 16:
-            raise ValueError(f"{label} must contain 16 winner outcomes; found {len(ids)}")
+        if prefix == "win":
+            if expected_winners is not None and len(ids) != expected_winners:
+                raise ValueError(f"{label} must contain {expected_winners} winner outcomes; found {len(ids)}")
+            if expected_winners is None and not (13 <= len(ids) <= 16):
+                raise ValueError(f"{label} must contain 13 to 16 winner outcomes; found {len(ids)}")
         ids_by_prefix[prefix] = ids
         for gid in ids:
             _require_outcome(outcomes, f"{prefix}:{gid}", label)
