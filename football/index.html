@@ -98,7 +98,8 @@ $("result-title").textContent=state.model==="b31"?"Official B3.1 qualifying sele
 $("result-count").textContent=found+" matching matches";
 $("results").innerHTML=entries.length?entries.map((o,i)=>card(o.game,i,o.pick)).join(""):'<div class="panel muted">No matching saved predictions for this date. Try another market or league. Missing established B3.1 predictions are not estimated or invented.</div>';
 }
-function loadSnapshot(day){getJSON("data/snapshots/"+day+".json",null).then(s=>{if(s){snapshot=s;showView("today");$("date-pill").textContent="Viewing "+s.date;draw()}})}
+async function loadSnapshot(day){const s=await getJSON("data/snapshots/"+day+".json",null);if(s){snapshot=s;await applyBridge();showView("today");$("date-pill").textContent="Viewing "+s.date;draw()}}
+async function applyBridge(){const b=await getJSON("data/b31-snapshots/"+snapshot.date+".json",null);if(!b||!Array.isArray(b.fixtures))return;const byId=new Map(b.fixtures.map(x=>[x.id,x]));for(const g of snapshot.games||[]){const f=byId.get(g.id);if(f&&Array.isArray(f.qualifiers))g.b31={status:"frozen-nightly",qualifiers:f.qualifiers}}}
 function drawHistory(){
 $("history-list").innerHTML=history.length?history.slice().reverse().map(d=>'<div class="history-entry"><div><strong>'+esc(d.date)+'</strong><div class="muted tiny">'+d.games+' frozen fixtures · '+d.settled+' settled · '+d.markets+' market outcomes</div></div><button data-day="'+esc(d.date)+'">View</button></div>').join(""):'<div class="muted">No snapshots have been published yet.</div>';
 document.querySelectorAll("[data-day]").forEach(b=>b.addEventListener("click",()=>loadSnapshot(b.dataset.day)));
@@ -119,6 +120,7 @@ const [s,historyData,perf,settled,status,legacy]=await Promise.all([
 getJSON("data/latest.json",null),getJSON("data/history.json",[]),getJSON("data/performance.json",null),
 getJSON("data/settlements.json",{}),getJSON("data/status.json",null),getJSON("data/b31_historical.json",null)]);
 snapshot=s||{date:new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/London",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()),games:[],status:"not-refreshed"};
+await applyBridge();
 history=historyData;performance=perf;settlements=settled;b31history=legacy;
 $("k-games").textContent=(snapshot.games||[]).length;
 $("k-picks").textContent=(snapshot.games||[]).reduce((a,g)=>a+Object.values(g.scoreline?.markets||{}).filter(v=>v>=.60).length,0);
