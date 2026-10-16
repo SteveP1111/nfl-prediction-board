@@ -34,7 +34,7 @@ ALIASES = {
     "cheltenham":"cheltenham town","shrewsbury":"shrewsbury town",
     "accrington":"accrington stanley","crawley":"crawley town",
     "fleetwood":"fleetwood town","rotherham":"rotherham united",
-    "brighton":"brighton and hove albion","wolves":"wolverhampton wanderers"
+    "brighton":"brighton and hove albion","wolves":"wolverhampton wanderers","newport county afc":"newport county"
 }
 def canon(value):
     s = re.sub(r"\s+"," ", re.sub(r"[^\w\s]", " ",str(value or "").lower())).strip()
@@ -193,6 +193,7 @@ def run():
                 history.extend(result_rows(rows,div,status));state["sources"].append(url)
             except Exception as exc:failures.append("%s/%s: %s"%(season,div,exc))
     history=unique_results(history)
+    if failures:raise RuntimeError("Fail closed: missing required league CSV: "+"; ".join(failures))
     curr=[x for x in history if x["status"]=="current"]
     if len(curr)<150:raise RuntimeError("Fail closed: incomplete current-season training results (%s): %s"%(len(curr),failures))
     fixture_data,fixture_url=fetch_one(["https://www.football-data.co.uk/fixtures.csv","https://www.football-data.co.uk/matches/fixtures.csv"])
@@ -220,7 +221,8 @@ def run():
                   "b31Available":False}
         if ready:atomic_write(today_file,snapshot)
     # Snapshot results may be added later to a separate mutable settlement file.
-    settled={}
+    settlements_path=DATA/"settlements.json"
+    settled=json.loads(settlements_path.read_text(encoding="utf-8")) if settlements_path.exists() else {}
     summary=[]
     by_market=defaultdict(lambda:{"total":0,"wins":0,"brier":0.})
     by_div=defaultdict(lambda:{"total":0,"wins":0})
@@ -230,6 +232,11 @@ def run():
         daily={"date":shot.get("date"),"games":len(shot.get("games",[])),"settled":0,"wins":0,"markets":0}
         for f in shot.get("games",[]):
             r=completed.get(f["id"])
+            prior_settlement=settled.get(f["id"])
+            if prior_settlement:
+                original=tuple(int(x) for x in prior_settlement["score"].split("-"))
+                if r and r!=original:raise ValueError("Conflicting revised final score for "+f["id"])
+                r=r or original
             if not r:continue
             truth=settle(f,r)
             preds=f.get("scoreline",{}).get("markets",{})
