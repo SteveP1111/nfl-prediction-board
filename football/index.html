@@ -43,7 +43,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}th{text-align:left;colo
 (function(){
 "use strict";
 const $=id=>document.getElementById(id);
-let snapshot=null,settlements={},history=[],performance=null;
+let snapshot=null,settlements={},history=[],performance=null,b31history=null;
 let state={market:"home_win",league:"all",count:5,model:"scoreline",modal00:false,team:""};
 const title={home_win:"Home wins",away_win:"Away wins",draw:"Draws",btts:"BTTS Yes",no_btts:"BTTS No",over25:"Over 2.5 goals",under25:"Under 2.5 goals",over35:"Over 3.5 goals",modal00:"Exact 0–0 forecasts"};
 const pct=n=>(100*Number(n||0)).toFixed(1)+"%";
@@ -106,13 +106,20 @@ document.querySelectorAll("[data-day]").forEach(b=>b.addEventListener("click",()
 function drawPerformance(){
 let mp=performance?.markets||{},rows=Object.entries(mp).sort((a,b)=>b[1].predictions-a[1].predictions);
 $("perf-content").innerHTML=rows.length?'<div style="overflow-x:auto"><table><thead><tr><th>Market</th><th class="num">Graded</th><th class="num">Wins</th><th class="num">Hit rate</th><th class="num">Brier</th></tr></thead><tbody>'+rows.map(([k,v])=>'<tr><td>'+esc(title[k]||k)+'</td><td class="num">'+v.predictions+'</td><td class="num">'+v.hits+'</td><td class="num">'+pct(v.hitRate)+'</td><td class="num">'+Number(v.brier).toFixed(3)+'</td></tr>').join("")+'</tbody></table></div><p class="muted small">Grading includes every frozen experimental market probability, not only picks with a score above 60%. Market hit rate alone does not demonstrate a profitable system.</p>':'<p class="muted">Performance data will appear after the first frozen forecasts have settled.</p>';
+  const prior=b31history?.cumulative;
+  let extra='<h3 style="margin:18px 0 7px">Established B3.1 · corrected historical series</h3>';
+  if(prior)extra+='<p class="muted small">15 September to '+esc(b31history.through)+'. Earlier invalid-lineage B3.0 excluded. This is historical B3.1 performance, not Scoreline Model performance.</p><div class="kpis"><div class="kpi"><span>Corrected B3.1 settled</span><strong>'+prior.settled_picks+'</strong></div><div class="kpi"><span>B3.1 wins</span><strong>'+prior.wins+'</strong></div><div class="kpi"><span>B3.1 hit rate</span><strong>'+Number(prior.hit_rate).toFixed(1)+'%</strong></div><div class="kpi"><span>60+ accuracy</span><strong>'+Number(prior.hit_rate_60_plus).toFixed(1)+'%</strong></div></div>';
+  let frozen=Object.entries(performance?.b31FrozenMarkets||{});
+  if(frozen.length)extra+='<h3>Subsequent frozen B3.1 selections</h3><table><thead><tr><th>Market</th><th class="num">Graded</th><th class="num">Wins</th><th class="num">Hit rate</th></tr></thead><tbody>'+frozen.map(([k,v])=>'<tr><td>'+esc(title[k]||k)+'</td><td class="num">'+v.selections+'</td><td class="num">'+v.wins+'</td><td class="num">'+pct(v.hitRate)+'</td></tr>').join('')+'</tbody></table><p class="small muted">Graded only from actual pre-kickoff frozen B3.1 selections, and not added retrospectively to the legacy summary.</p>';
+  extra+='<h3 style="margin:24px 0 8px">Independent Scoreline Model · experimental markets</h3>';
+  $("perf-content").innerHTML=extra+$("perf-content").innerHTML;
 }
 async function init(){
-const [s,historyData,perf,settled,status]=await Promise.all([
+const [s,historyData,perf,settled,status,legacy]=await Promise.all([
 getJSON("data/latest.json",null),getJSON("data/history.json",[]),getJSON("data/performance.json",null),
-getJSON("data/settlements.json",{}),getJSON("data/status.json",null)]);
+getJSON("data/settlements.json",{}),getJSON("data/status.json",null),getJSON("data/b31_historical.json",null)]);
 snapshot=s||{date:new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/London",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()),games:[],status:"not-refreshed"};
-history=historyData;performance=perf;settlements=settled;
+history=historyData;performance=perf;settlements=settled;b31history=legacy;
 $("k-games").textContent=(snapshot.games||[]).length;
 $("k-picks").textContent=(snapshot.games||[]).reduce((a,g)=>a+Object.values(g.scoreline?.markets||{}).filter(v=>v>=.60).length,0);
 $("k-leagues").textContent=new Set((snapshot.games||[]).map(g=>g.division)).size;
