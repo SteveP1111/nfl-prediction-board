@@ -73,14 +73,14 @@ $("ask-form").addEventListener("submit",e=>{e.preventDefault();applyQuery($("ask
 document.querySelectorAll("[data-query]").forEach(b=>b.addEventListener("click",()=>{$("ask").value=b.dataset.query;applyQuery(b.dataset.query)}));
 for(const id of ["market","league","count","model"])$(id).addEventListener("change",()=>{
 state.market=$("market").value;state.modal00=state.market==="modal00";state.league=$("league").value;state.count=Number($("count").value);state.model=$("model").value;draw()});
-function card(g,index){
+function card(g,index,selectedPick){
 const k=state.market,sc=g.scoreline||{},value=prob(g,k),q=b31(g),s=settlements[g.id],modal=sc.modalScore||"—";
 const markets=sc.markets||{},goal=sc.goalBands||{};
 const explanation=Object.entries(markets).map(([name,p])=>'<div class="marketrow"><span>'+esc(title[name]||name)+'</span><strong>'+pct(p)+'</strong></div>').join("");
 const goalBars=Object.entries({"0–1 goals":goal["0-1"]||0,"Exactly 2":goal["2"]||0,"Exactly 3":goal["3"]||0,"4+ goals":goal["4+"]||0}).map(([name,p])=>'<div><strong>'+pct(p)+'</strong><small>'+name+'</small></div>').join("");
-const val=state.model==="b31" ? (Math.max(0,...q.map(x=>Number(x.score||0))).toFixed(1)) : pct(value);
+const val=state.model==="b31" ? Number(selectedPick?.score||0).toFixed(1) : pct(value);
 let outcome=s?'<span class="tag">Final '+esc(s.score)+'</span>':'';
-return '<article class="match"><div class="matchhead"><span>'+esc(g.league)+' · '+esc(g.kickoff||"TBC")+'</span><span class="pill">'+(state.model==="b31"?"B3.1 frozen":"Scoreline experimental")+'</span></div><div class="fixture">'+esc(g.home)+' <span>v</span> '+esc(g.away)+'</div><div class="overview"><div><div class="muted tiny">'+(state.model==="b31"?"Top B3.1 score":title[k]||"Selected market")+'</div><div class="prob">'+val+'</div></div><div class="right"><div class="muted tiny">Most likely score</div><div class="pred">'+esc(modal)+'</div><div class="muted tiny">'+pct(sc.modalProbability)+' exact chance</div></div></div>'+outcome+
+return '<article class="match"><div class="matchhead"><span>'+esc(g.league)+' · '+esc(g.kickoff||"TBC")+'</span><span class="pill">'+(state.model==="b31"?"B3.1 frozen":"Scoreline experimental")+'</span></div><div class="fixture">'+esc(g.home)+' <span>v</span> '+esc(g.away)+'</div><div class="overview"><div><div class="muted tiny">'+(state.model==="b31"?(selectedPick?.key||"B3.1 selection"):title[k]||"Selected market")+'</div><div class="prob">'+val+'</div></div><div class="right"><div class="muted tiny">Most likely score</div><div class="pred">'+esc(modal)+'</div><div class="muted tiny">'+pct(sc.modalProbability)+' exact chance</div></div></div>'+outcome+
 '<div class="muted small">Expected goals '+Number(sc.expectedHome||0).toFixed(2)+' – '+Number(sc.expectedAway||0).toFixed(2)+' · total '+Number(sc.expectedTotal||0).toFixed(2)+'</div>'+
 '<div style="margin-top:8px">'+(q.length?'<span class="tag">B3.1 '+q.map(z=>esc(z.key||z.name||"")+" "+Number(z.score||0).toFixed(1)).join(" · ")+'</span>':'<span class="tag">No B3.1 pick frozen for this fixture</span>')+(sc.cleanSheetRisk>=.36?'<span class="tag warning">Clean-sheet risk</span>':'')+'</div>'+
 '<details><summary>Why this ranking? All markets and goal distribution</summary><p class="muted small">Ranking uses the probability-weighted scoreline distribution; it does not count possible scores equally. This is an independent experimental model. Sample coverage: '+(sc.sampleHome||0)+' home matches / '+(sc.sampleAway||0)+' away matches this season.</p><div class="scoregrid">'+goalBars+'</div><p class="small muted">Raw goals probabilities. Over 2.5 = exactly 3 + 4 or more. Under 2.5 = 0–1 + exactly 2.</p>'+explanation+'</details></article>';
@@ -90,13 +90,13 @@ if(!snapshot){$("results").innerHTML='<div class="panel">Loading forecasts…</d
 let games=snapshot.games||[];
 if(state.league!=="all")games=games.filter(g=>g.division===state.league);
 if(state.modal00)games=games.filter(g=>g.scoreline?.modalScore==="0-0");
-if(state.model==="b31")games=games.filter(g=>b31(g).length);
-games=games.slice().sort((a,b)=>state.model==="b31"?Math.max(0,...b31(b).map(x=>x.score||0))-Math.max(0,...b31(a).map(x=>x.score||0)):prob(b,state.market)-prob(a,state.market));
-let found=games.length;
-games=games.slice(0,state.count);
+let entries=state.model==="b31"?games.flatMap(g=>b31(g).map(q=>({game:g,pick:q}))):games.map(g=>({game:g,pick:null}));
+entries.sort((a,b)=>state.model==="b31"?Number(b.pick?.score||0)-Number(a.pick?.score||0):prob(b.game,state.market)-prob(a.game,state.market));
+let found=entries.length;
+entries=entries.slice(0,state.count);
 $("result-title").textContent=state.model==="b31"?"Official B3.1 qualifying selections":state.modal00?"Exact 0–0 predictions":"Highest "+(title[state.market]||"market")+" probabilities";
 $("result-count").textContent=found+" matching matches";
-$("results").innerHTML=games.length?games.map(card).join(""):'<div class="panel muted">No matching saved predictions for this date. Try another market or league. Missing established B3.1 predictions are not estimated or invented.</div>';
+$("results").innerHTML=entries.length?entries.map((o,i)=>card(o.game,i,o.pick)).join(""):'<div class="panel muted">No matching saved predictions for this date. Try another market or league. Missing established B3.1 predictions are not estimated or invented.</div>';
 }
 function loadSnapshot(day){getJSON("data/snapshots/"+day+".json",null).then(s=>{if(s){snapshot=s;showView("today");$("date-pill").textContent="Viewing "+s.date;draw()}})}
 function drawHistory(){
