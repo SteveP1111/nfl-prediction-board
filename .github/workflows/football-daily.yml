@@ -1,0 +1,57 @@
+name: Daily English Football Board
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '11 5 * * *'
+    - cron: '41 21 * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/football-daily.yml'
+      - 'football/scripts/**'
+      - 'football/tests/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: isolated-football-board-daily
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check the forecast engine
+        run: python3 -m unittest discover -s football/tests -v
+      - name: Check the standalone board JavaScript
+        run: |
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          html=Path("football/index.html").read_text(encoding="utf-8")
+          blocks=re.findall(r"<script>(.*?)</script>",html,re.S)
+          assert len(blocks)==1, "Expected one inline board script"
+          Path("/tmp/football-board.js").write_text(blocks[0],encoding="utf-8")
+          PY
+          node --check /tmp/football-board.js
+      - name: Refresh fixtures, freeze predictions and settle results
+        run: python3 football/scripts/refresh.py
+      - name: Commit isolated football data only
+        run: |
+          git add -A -- football/data
+          if git diff --cached --quiet; then
+            echo "Football data unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh football snapshots and graded results"
+          git pull --rebase origin main
+          git push origin HEAD:main
