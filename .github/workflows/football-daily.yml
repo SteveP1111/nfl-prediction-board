@@ -54,5 +54,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Refresh football snapshots and graded results"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Main advanced while publishing, retrying safe fast-forward ($attempt/5)"
+            sleep 3
+          done
+          echo "Football publication could not fast-forward after five attempts"
+          exit 1
