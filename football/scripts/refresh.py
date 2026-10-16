@@ -230,6 +230,15 @@ def run():
     for p in sorted(SNAP.glob("????-??-??.json")):
         try:shot=json.loads(p.read_text(encoding="utf-8"))
         except (ValueError,OSError):continue
+        bridge_file=DATA/"b31-snapshots"/(str(shot.get("date"))+".json")
+        b31_overlay={}
+        if bridge_file.exists():
+            overlay=json.loads(bridge_file.read_text(encoding="utf-8"))
+            if overlay.get("date")!=shot.get("date") or overlay.get("status")!="frozen-prekickoff":
+                raise ValueError("Invalid B3.1 overlay date/status: "+str(bridge_file))
+            for item in overlay.get("fixtures",[]):
+                if item.get("id") and isinstance(item.get("qualifiers"),list):
+                    b31_overlay[item["id"]]=item["qualifiers"]
         daily={"date":shot.get("date"),"games":len(shot.get("games",[])),"settled":0,"wins":0,"markets":0}
         for f in shot.get("games",[]):
             r=completed.get(f["id"])
@@ -244,7 +253,7 @@ def run():
             daily["settled"]+=1
             b31_results=[]
             names={"BTTS":"btts","No BTTS":"no_btts","Over 2.5":"over25","Under 2.5":"under25","Over 3.5":"over35","Home Win":"home_win","Away Win":"away_win","Draw":"draw"}
-            for q in f.get("b31",{}).get("qualifiers",[]):
+            for q in b31_overlay.get(f["id"],f.get("b31",{}).get("qualifiers",[])):
                 market=names.get(q.get("key") or q.get("name"))
                 if not market:continue
                 win=bool(truth[market]);b31_results.append({"market":market,"score":q.get("score"),"likelihood":q.get("likelihood"),"confidence":q.get("confidence"),"outcome":"Win" if win else "Loss"})
