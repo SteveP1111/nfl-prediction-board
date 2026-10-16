@@ -225,6 +225,7 @@ def run():
     settled=json.loads(settlements_path.read_text(encoding="utf-8")) if settlements_path.exists() else {}
     summary=[]
     by_market=defaultdict(lambda:{"total":0,"wins":0,"brier":0.})
+    b31_market=defaultdict(lambda:{"total":0,"wins":0})
     by_div=defaultdict(lambda:{"total":0,"wins":0})
     for p in sorted(SNAP.glob("????-??-??.json")):
         try:shot=json.loads(p.read_text(encoding="utf-8"))
@@ -241,8 +242,15 @@ def run():
             truth=settle(f,r)
             preds=f.get("scoreline",{}).get("markets",{})
             daily["settled"]+=1
+            b31_results=[]
+            names={"BTTS":"btts","No BTTS":"no_btts","Over 2.5":"over25","Under 2.5":"under25","Over 3.5":"over35","Home Win":"home_win","Away Win":"away_win","Draw":"draw"}
+            for q in f.get("b31",{}).get("qualifiers",[]):
+                market=names.get(q.get("key") or q.get("name"))
+                if not market:continue
+                win=bool(truth[market]);b31_results.append({"market":market,"score":q.get("score"),"likelihood":q.get("likelihood"),"confidence":q.get("confidence"),"outcome":"Win" if win else "Loss"})
+                b31_market[market]["total"]+=1;b31_market[market]["wins"]+=int(win)
             settled[f["id"]]={"date":f["date"],"division":f["division"],"home":f["home"],"away":f["away"],"score":"%d-%d"%r,
-                "outcomes":truth,"probs":preds,"model":shot.get("model")}
+                "outcomes":truth,"probs":preds,"model":shot.get("model"),"b31Outcomes":b31_results}
             for k,prob in preds.items():
                 by_market[k]["total"]+=1;by_market[k]["wins"]+=int(truth[k])
                 by_market[k]["brier"]+=(prob-int(truth[k]))**2
@@ -261,9 +269,10 @@ def run():
     atomic_write(DATA/"latest.json",latest)
     atomic_write(DATA/"settlements.json",settled)
     atomic_write(DATA/"history.json",summary)
-    atomic_write(DATA/"performance.json",{"updated":now.isoformat(),"markets":market_perf,
+    b31_perf={k:{"selections":v["total"],"wins":v["wins"],"hitRate":round(v["wins"]/v["total"],4) if v["total"] else None} for k,v in b31_market.items()}
+    atomic_write(DATA/"performance.json",{"updated":now.isoformat(),"markets":market_perf,"b31FrozenMarkets":b31_perf,
         "byDivision":dict(by_div),"totalSnapshots":len(summary),"totalSettledGames":len(settled),
-        "model":"INDEPENDENT_SCORELINE_V1_GITHUB"})
+        "model":"INDEPENDENT_SCORELINE_V1_GITHUB","b31Note":"B3.1 records include only dated imported/frozen qualifiers; do not mix with independent model totals."})
     atomic_write(DATA/"status.json",state)
     print("Frozen daily games:",len(latest["games"]),"historical settlements:",len(settled),"results:",len(curr))
 if __name__=="__main__":
