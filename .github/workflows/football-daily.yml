@@ -11,6 +11,7 @@ on:
       - '.github/workflows/football-daily.yml'
       - 'football/scripts/**'
       - 'football/tests/**'
+      - 'football/index.html'
 
 permissions:
   contents: write
