@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-18",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-10-17T22:31:00+01:00",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-10-18|E0|bournemouth|sunderland",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-18|E0|brighton and hove albion|crystal palace",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-18|E0|leeds|manchester united",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-18|E0|nott m forest|arsenal",
+      "qualifiers": []
+    }
+  ]
+}
