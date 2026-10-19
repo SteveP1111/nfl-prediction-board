@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-20",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-10-19T22:28:56+01:00",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-10-20|E1|wolverhampton wanderers|portsmouth",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E2|afc wimbledon|mansfield town",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E2|blackpool|milton keynes dons",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 79.22,
+          "likelihood": 70.74,
+          "confidence": 90
+        },
+        {
+          "key": "Over 2.5",
+          "score": 77.51,
+          "likelihood": 69.89,
+          "confidence": 87
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20|E2|bromley|leicester city",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E2|burton|bradford city",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E2|cambridge united|wycombe wanderers",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E2|doncaster rovers|stockport county",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E2|huddersfield town|peterborough united",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E2|luton town|barnsley",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E2|notts county|sheffield wednesday",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 71.48,
+          "likelihood": 60.66,
+          "confidence": 87
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20|E2|oxford united|wigan athletic",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E2|stevenage|plymouth argyle",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E3|barnet|swindon town",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 73.4,
+          "likelihood": 64.59,
+          "confidence": 85
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20|E3|bristol rovers|salford city",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 72.16,
+          "likelihood": 60.67,
+          "confidence": 89
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20|E3|cheltenham town|fleetwood town",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E3|chesterfield|colchester united",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E3|crawley town|shrewsbury town",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E3|exeter city|crewe",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E3|gillingham|port vale",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E3|northampton town|tranmere rovers",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E3|rochdale|grimsby town",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E3|rotherham united|newport county",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E3|walsall|oldham",
+      "qualifiers": []
+    },
+    {
+      "id": "2026-10-20|E3|york city|accrington stanley",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 69.45,
+          "likelihood": 58.72,
+          "confidence": 85
+        }
+      ]
+    }
+  ]
+}
