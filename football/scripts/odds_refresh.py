@@ -118,7 +118,7 @@ def probabilities(game, kind):
     if not all(isinstance(markets.get(k), (int, float)) and 0 <= markets[k] <= 1 for k in keys.values()):
         return {}
     result = {selection: float(markets[key]) for selection, key in keys.items()}
-    if kind == "Over/Under 3.5": result["Under 3.5"] = 1.0 - result["Over 3.5"]
+    if kind == "Over/Under 3.5": result["Under 3.5"] = round(1.0 - result["Over 3.5"], 5)
     return result if abs(sum(result.values()) - 1) < .002 else {}
 
 def eligible_kickoff(game, now):
