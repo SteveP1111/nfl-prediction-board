@@ -7,6 +7,7 @@ from zoneinfo import ZoneInfo
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from edge_finder import assess_edge, no_vig
 from odds_refresh import same_book_groups, market_name, probabilities, event_for, eligible_kickoff
+from settle_edges import grade
 
 UK = ZoneInfo("Europe/London")
 
@@ -78,6 +79,18 @@ class EdgeFinderTests(unittest.TestCase):
         game={"scoreline":{"markets":{"over35":.42}}}
         self.assertEqual(probabilities(game,"Over/Under 3.5"),
                          {"Over 3.5":.42,"Under 3.5":.58})
+
+    def test_settlement_from_frozen_odds_and_result(self):
+        record={"fixtureId":"x", "market":"BTTS", "selection":"Yes",
+                "modelEventProbability":.65, "quotedDecimalOdds":1.8,
+                "observedAt":"2026-10-20T10:00:00+01:00",
+                "kickoffAt":"2026-10-20T19:45:00+01:00"}
+        result={"score":"2-1","outcomes":{"btts":True}}
+        g=grade(record,result)
+        self.assertEqual(g["outcome"],"Win")
+        self.assertAlmostEqual(g["flatUnitROI"],.8)
+        self.assertAlmostEqual(g["brier"],.1225)
+        self.assertIsNone(grade({**record,"observedAt":"2026-10-20T20:00:00+01:00"},result))
 
 if __name__ == "__main__":
     unittest.main()
