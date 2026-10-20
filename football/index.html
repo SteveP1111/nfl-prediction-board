@@ -51,7 +51,7 @@ const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&
 const prob=(g,k)=>k==="modal00"?(g.scoreline?.modalScore==="0-0"?g.scoreline.modalProbability:0):(g.scoreline?.markets?.[k]||0);
 const b31=(g)=>g.b31?.qualifiers||[];
 async function getJSON(path,fallback){try{const r=await fetch(path+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error(String(r.status));return await r.json()}catch(e){return fallback}}
-function showView(view){for(const v of ["today","history","performance"])$(v).hidden=v!==view;document.querySelectorAll("[data-view]").forEach(x=>x.classList.toggle("active",x.dataset.view===view))}
+function showView(view){for(const v of ["today","history","performance","edge"])$(v).hidden=v!==view;document.querySelectorAll("[data-view]").forEach(x=>x.classList.toggle("active",x.dataset.view===view))}
 document.querySelectorAll("[data-view]").forEach(x=>x.addEventListener("click",()=>showView(x.dataset.view)));
 function applyQuery(q){
 const x=q.toLowerCase().trim();state.modal00=/0\s*[-–]\s*0|goalless|nil.nil|zero.zero/.test(x);
