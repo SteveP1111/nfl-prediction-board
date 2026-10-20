@@ -43,7 +43,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}th{text-align:left;colo
 (function(){
 "use strict";
 const $=id=>document.getElementById(id);
-let snapshot=null,settlements={},history=[],performance=null,b31history=null;
+let snapshot=null,settlements={},history=[],performance=null,b31history=null,edgePerformance=null;
 let state={market:"home_win",league:"all",count:5,model:"scoreline",modal00:false,team:""};
 const title={home_win:"Home wins",away_win:"Away wins",draw:"Draws",btts:"BTTS Yes",no_btts:"BTTS No",over25:"Over 2.5 goals",under25:"Under 2.5 goals",over35:"Over 3.5 goals",modal00:"Exact 0–0 forecasts"};
 const pct=n=>(100*Number(n||0)).toFixed(1)+"%";
@@ -127,6 +127,9 @@ $("perf-content").innerHTML=rows.length?'<div style="overflow-x:auto"><table><th
   if(frozen.length)extra+='<h3>Subsequent frozen B3.1 selections</h3><table><thead><tr><th>Market</th><th class="num">Graded</th><th class="num">Wins</th><th class="num">Hit rate</th></tr></thead><tbody>'+frozen.map(([k,v])=>'<tr><td>'+esc(title[k]||k)+'</td><td class="num">'+v.selections+'</td><td class="num">'+v.wins+'</td><td class="num">'+pct(v.hitRate)+'</td></tr>').join('')+'</tbody></table><p class="small muted">Graded only from actual pre-kickoff frozen B3.1 selections, and not added retrospectively to the legacy summary.</p>';
   extra+='<h3 style="margin:24px 0 8px">Independent Scoreline Model · experimental markets</h3>';
   $("perf-content").innerHTML=extra+$("perf-content").innerHTML;
+  const edges=edgePerformance?.byGroup?.all;
+  if(edges){$("perf-content").innerHTML+='<h3 style="margin:24px 0 8px">Bookmaker Edge Finder · prospective research</h3><p class="muted small">Frozen quotes only. ROI assumes one equal unit per comparison, not actual betting. Multiple bookmakers/markets on one fixture are correlated. Raw probabilities remain uncalibrated.</p><div class="kpis"><div class="kpi"><span>Comparisons</span><strong>'+edges.graded+'</strong></div><div class="kpi"><span>Hit rate</span><strong>'+pct(edges.hitRate)+'</strong></div><div class="kpi"><span>Flat-unit ROI</span><strong>'+pct(edges.flatUnitROI)+'</strong></div><div class="kpi"><span>Brier</span><strong>'+Number(edges.brier).toFixed(3)+'</strong></div></div>';}
+
 }
 async function init(){
 const [s,historyData,perf,settled,status,legacy]=await Promise.all([
@@ -134,6 +137,7 @@ getJSON("data/latest.json",null),getJSON("data/history.json",[]),getJSON("data/p
 getJSON("data/settlements.json",{}),getJSON("data/status.json",null),getJSON("data/b31_historical.json",null)]);
 snapshot=s||{date:new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/London",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()),games:[],status:"not-refreshed"};
 await applyBridge();await loadEdge(snapshot.date);
+edgePerformance=await getJSON("data/edge-settlements.json",null);
 history=historyData;performance=perf;settlements=settled;b31history=legacy;
 $("k-games").textContent=(snapshot.games||[]).length;
 $("k-picks").textContent=(snapshot.games||[]).reduce((a,g)=>a+Object.values(g.scoreline?.markets||{}).filter(v=>v>=.60).length,0);
