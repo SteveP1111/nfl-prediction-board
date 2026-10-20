@@ -19,5 +19,12 @@
     "markets": 8,
     "settled": 1,
     "wins": 4
+  },
+  {
+    "date": "2026-10-20",
+    "games": 24,
+    "markets": 0,
+    "settled": 0,
+    "wins": 0
   }
 ]
