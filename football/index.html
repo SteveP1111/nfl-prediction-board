@@ -23,7 +23,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}th{text-align:left;colo
 @media(max-width:420px){main{padding:14px 11px 60px}.fixture{font-size:15px}.searchline button{padding:0 12px}}
 </style></head>
 <body><main>
-<header><div><div class="eyebrow">English Football · Prediction Intelligence</div><h1>Football Prediction Board</h1><p>Find the strongest markets, compare exact-score forecasts and track what the model got right and wrong. Five English leagues, updated through GitHub.</p><div class="meta"><span class="pill live" id="status-pill">Loading data</span><span class="pill" id="date-pill">Date —</span><span class="pill">No bookmaker odds used</span></div></div></header>
+<header><div><div class="eyebrow">English Football · Prediction Intelligence</div><h1>Football Prediction Board</h1><p>Find the strongest markets, compare exact-score forecasts and track what the model got right and wrong. Five English leagues, updated through GitHub.</p><div class="meta"><span class="pill live" id="status-pill">Loading data</span><span class="pill" id="date-pill">Date —</span><span class="pill">Bookmaker odds: comparison only</span></div></div></header>
 <nav class="nav"><button data-view="today" class="active">Today’s board</button><button data-view="history">History</button><button data-view="performance">Performance</button><button data-view="edge">Edge Finder</button></nav>
 <div id="notice" aria-live="polite"></div>
 <div id="today">
@@ -98,7 +98,19 @@ $("result-title").textContent=state.model==="b31"?"Official B3.1 qualifying sele
 $("result-count").textContent=found+" matching matches";
 $("results").innerHTML=entries.length?entries.map((o,i)=>card(o.game,i,o.pick)).join(""):'<div class="panel muted">No matching saved predictions for this date. Try another market or league. Missing established B3.1 predictions are not estimated or invented.</div>';
 }
-async function loadEdge(day){const d=await getJSON("data/edge-snapshots/"+day+".json",null);const el=$("edge-content");if(!el)return;if(!d||!Array.isArray(d.entries)||!d.entries.length){el.textContent="No verified pre-kickoff bookmaker odds snapshot for "+day+". We will not invent prices or claim an edge.";return}const rows=d.entries.slice().sort((a,b)=>Number(b.conservativeExpectedROI)-Number(a.conservativeExpectedROI));el.innerHTML="<p class=\"small muted\">"+rows.length+" frozen research comparisons · "+esc(d.capturedAt||"")+". Not executable live quotes.</p><div style=\"overflow-x:auto\"><table><thead><tr><th>Fixture ID</th><th>Market</th><th>Book</th><th class=\"num\">Odds</th><th class=\"num\">Model</th><th class=\"num\">Break-even</th><th class=\"num\">Edge pp</th><th class=\"num\">Expected ROI</th><th>Evidence</th></tr></thead><tbody>"+rows.map(x=>"<tr><td>"+esc(x.fixtureId)+"</td><td>"+esc(x.selection)+"</td><td>"+esc(x.bookmaker)+"</td><td class=\"num\">"+Number(x.quotedDecimalOdds).toFixed(2)+"</td><td class=\"num\">"+pct(x.modelEventProbability)+"</td><td class=\"num\">"+pct(x.rawBreakEven)+"</td><td class=\"num\">"+Number(x.edgePercentagePoints).toFixed(1)+"</td><td class=\"num\">"+pct(x.expectedROI)+"</td><td>"+esc(x.classification)+"</td></tr>").join("")+"</tbody></table></div><p class=\"muted small\">"+esc(rows[0].reason||"No candidate has a verified calibrated probability yet.")+"</p>"}
+async function loadEdge(day){
+const [d,status]=await Promise.all([getJSON("data/edge-snapshots/"+day+".json",null),
+  getJSON("data/edge-status.json",null)]);
+const el=$("edge-content");if(!el)return;
+if(!d||!Array.isArray(d.games)||!d.games.length){
+  el.innerHTML='<div class="alert">No verified pre-kickoff bookmaker comparison for '+esc(day)+'. '+esc(status?.detail||"The optional licensed feed is not configured or returned no safe prices.")+'</div>';return;
+}
+const rows=d.games.flatMap(g=>(g.comparisons||[]).map(c=>({g,c})))
+  .sort((a,b)=>Number(b.c.conservativeExpectedROI)-Number(a.c.conservativeExpectedROI));
+el.innerHTML='<p class="small muted">'+esc(d.date)+' · '+Number(d.pricedFixtureCount||0)+' priced fixtures · '+rows.length+' market comparisons. Source: '+esc(d.provider||"")+'; captured before kick-off. <strong>Watchlist research only:</strong> raw probabilities are uncalibrated, and quoted prices are not guaranteed executable now.</p>'+
+'<div style="overflow-x:auto"><table><thead><tr><th>Match</th><th>Market</th><th>Book</th><th class="num">Odds</th><th class="num">Model</th><th class="num">Break-even</th><th class="num">No-vig</th><th class="num">Edge</th><th class="num">ROI</th><th class="num">Haircut ROI</th><th>Why?</th></tr></thead><tbody>'+
+rows.slice(0,150).map(({g,c})=>'<tr><td>'+esc(g.home)+' v '+esc(g.away)+'<div class="muted tiny">'+esc(g.league)+'</div></td><td>'+esc(c.market)+' · '+esc(c.selection)+'</td><td>'+esc(c.bookmaker)+'</td><td class="num">'+Number(c.quotedDecimalOdds).toFixed(2)+'</td><td class="num">'+pct(c.modelEventProbability)+'</td><td class="num">'+pct(c.rawBreakEven)+'</td><td class="num">'+pct(c.noVigMarketProbability)+'</td><td class="num">'+Number(c.edgePercentagePoints).toFixed(1)+' pp</td><td class="num">'+pct(c.expectedROI)+'</td><td class="num">'+pct(c.conservativeExpectedROI)+'</td><td><span class="tag warning">Unverified</span><details><summary>Explanation</summary><span class="muted small">Independent raw event probability '+pct(c.modelEventProbability)+' versus break-even '+pct(c.rawBreakEven)+' and no-vig same-book market '+pct(c.noVigMarketProbability)+'. Fair odds '+Number(c.fairOdds||0).toFixed(2)+'. Applied '+pct(c.probabilityHaircut)+' illustrative uncertainty haircut. Neither strong evidence nor calibration is established. Price timestamp: '+esc(c.observedAt)+'. Not an official B3.1 pick.</span></details></td></tr>').join('')+'</tbody></table></div>';
+}
 async function loadSnapshot(day){const s=await getJSON("data/snapshots/"+day+".json",null);if(s){snapshot=s;await applyBridge();await loadEdge(s.date);showView("today");$("date-pill").textContent="Viewing "+s.date;draw()}}
 async function applyBridge(){const b=await getJSON("data/b31-snapshots/"+snapshot.date+".json",null);if(!b||!Array.isArray(b.fixtures))return;const byId=new Map(b.fixtures.map(x=>[x.id,x]));for(const g of snapshot.games||[]){const f=byId.get(g.id);if(f&&Array.isArray(f.qualifiers))g.b31={status:"frozen-nightly",qualifiers:f.qualifiers}}}
 function drawHistory(){
@@ -130,7 +142,7 @@ $("k-frozen").textContent=snapshot.status==="frozen-prekickoff"?"Yes":"No";
 $("date-pill").textContent=snapshot.date||"No date";
 $("status-pill").textContent=status?.refreshed?"Last refresh "+new Date(status.refreshed).toLocaleString("en-GB",{timeZone:"Europe/London",dateStyle:"short",timeStyle:"short"}):"Refresh not yet verified";
 if(!s||!(s.games||[]).length)$("notice").innerHTML='<div class="alert">No frozen pre-match forecast is available for this date. The scheduled workflow may not have run yet, fixtures may not be published, or the data source may be unavailable. Past results are not being presented as today’s picks.</div>';
-$("source-line").textContent="Sources: Football-Data.co.uk fixture/results CSV. Last source checks: "+(status?.refreshed||"not yet available")+". B3.1 must be separately calculated and frozen; missing B3.1 picks are not fabricated. No bookmaker odds are used.";
+$("source-line").textContent="Sources: Football-Data.co.uk fixture/results CSV. Last source checks: "+(status?.refreshed||"not yet available")+". B3.1 must be separately calculated and frozen; missing B3.1 picks are not fabricated. Bookmaker odds never enter the forecast engine; they are optional post-forecast comparisons.";
 draw();drawHistory();drawPerformance();
 }
 init();
