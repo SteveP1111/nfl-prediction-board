@@ -42,8 +42,7 @@ result = assess_edge(
 
 Freeze probability and quote **before kickoff**. In a separate mutable settlement record, track Win/Loss/Push, flat-unit realized ROI, hit rate, Brier score, by-market and by-league calibration, and closing-line value only when a legitimate closing quote is available. Compare research-edge candidates against ordinary B3.1 picks and bookmaker baseline, accounting for selection count and uncertainty. Never backfill old odds or rewrite frozen forecasts.
 
-**Integration status:** This is a safe standalone calculation library and methodology. Automated odds ingestion, board UI, snapshots, prospective settlement and GitHub Actions integration are **not implemented** by this module. They require a validated permissible feed and tests before enabling publication.
-
+**Integration status:** Optional authenticated automatic ingestion, immutable research snapshots, Edge Finder board view, prospective settlement, and validation tests are implemented. Live odds require a user-provided API key and provider approval for public display; no live odds have been fetched or verified here.
 
 ## Automatic GitHub odds feed (new optional integration)
 
