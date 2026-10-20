@@ -49,6 +49,8 @@ jobs:
           UKODDSAPI_KEY: ${{ secrets.UKODDSAPI_KEY }}
           FOOTBALL_ODDS_PUBLIC_DISPLAY_ALLOWED: ${{ vars.FOOTBALL_ODDS_PUBLIC_DISPLAY_ALLOWED }}
         run: python3 football/scripts/odds_refresh.py
+      - name: Grade previously frozen research prices (optional)
+        run: python3 football/scripts/settle_edges.py
       - name: Commit isolated football data only
         run: |
           git add -A -- football/data
