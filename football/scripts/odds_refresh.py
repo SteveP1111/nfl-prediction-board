@@ -169,8 +169,22 @@ def build_snapshot(today_snapshot, event_rows, api_key, now):
     for g in games:
         e = event_for(g, event_rows, now)
         if e: matched.append((g, e))
+    # Give priority to genuinely frozen B3.1 qualifiers without using their
+    # scores as event probabilities or changing either model's forecasts.
+    official = {}
+    bridge = DATA / "b31-snapshots" / (today_snapshot["date"] + ".json")
+    if bridge.exists():
+        try:
+            b = json.loads(bridge.read_text(encoding="utf-8"))
+            if b.get("date") == today_snapshot["date"] and b.get("status") == "frozen-prekickoff":
+                official = {x["id"]: x["qualifiers"] for x in b.get("fixtures", [])
+                            if isinstance(x.get("qualifiers"), list) and x.get("id")}
+        except (ValueError, OSError, KeyError): pass
     # Coverage is deliberately capped for the free 300-request/month plan.
-    matched.sort(key=lambda pair: -max(pair[0].get("scoreline", {}).get("markets", {}).values(), default=0))
+    matched.sort(key=lambda pair: (
+        1 if official.get(pair[0]["id"]) else 0,
+        max((float(q.get("score") or 0) for q in official.get(pair[0]["id"], [])), default=0),
+        max(pair[0].get("scoreline", {}).get("markets", {}).values(), default=0)), reverse=True)
     for g, e in matched[:MAX_EVENTS_PER_DAY]:
         try:
             data = request_json("/v1/football/events/" + urllib.parse.quote(e["event_id"], safe="") + "/odds",
@@ -185,7 +199,8 @@ def build_snapshot(today_snapshot, event_rows, api_key, now):
         stamp = data.get("captured_at")
         try:
             source_time = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
-            if source_time.tzinfo is None or source_time > observed or source_time >= kickoff:
+            if (source_time.tzinfo is None or source_time > observed or source_time >= kickoff
+                    or (observed - source_time).total_seconds() > 36 * 3600):
                 continue
         except (ValueError, TypeError, AttributeError): continue
         markets = []
@@ -213,11 +228,14 @@ def build_snapshot(today_snapshot, event_rows, api_key, now):
         if markets:
             markets.sort(key=lambda x: x["conservativeExpectedROI"], reverse=True)
             by_game.append({"id": g["id"], "league": g["league"], "division": g["division"],
+                            "officialB31Qualifiers": [q.get("key") for q in official.get(g["id"], [])],
                             "home": g["home"], "away": g["away"], "kickoff": kickoff.isoformat(),
                             "sourceCapturedAt": source_time.isoformat(), "comparisons": markets})
+    finish = datetime.now(TZ)
+    by_game = [item for item in by_game if datetime.fromisoformat(item["kickoff"]) > finish]
     return {
         "date": today_snapshot["date"], "status": "frozen-prekickoff",
-        "capturedAt": now.isoformat(), "provider": SOURCE, "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
+        "capturedAt": finish.isoformat(), "provider": SOURCE, "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
         "calibrated": False, "fixtureCount": len(games),
         "matchedEventCount": len(matched), "pricedFixtureCount": len(by_game),
         "requestCap": MAX_EVENTS_PER_DAY, "games": by_game,
