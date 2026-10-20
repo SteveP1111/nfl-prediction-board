@@ -34,6 +34,12 @@ On a successful run it validates the board, fetches and checks all five division
 
 Forecast history is frozen: past model probabilities never change after a result. Predictions and later settlements are stored separately.
 
+
+## Experimental Bookmaker Edge Finder
+The optional `Edge Finder` tab compares separately frozen, source-verified bookmaker prices against the independent Scoreline Model's raw market probabilities. It displays break-even probability, same-book no-vig probability, fair odds, model-market percentage-point gap, model-based expected ROI and a conservative haircut. **These raw probabilities are not calibrated and no displayed gap is a verified profitable edge.** This tool does not affect B3.1 or any scoreline projection. Prospective independent settlement and flat-unit return calculations are stored separately. No past odds are reconstructed.
+
+The GitHub Action only downloads prices using the official authenticated UK Odds API if a user supplies `UKODDSAPI_KEY` and explicitly confirms public-display rights via `FOOTBALL_ODDS_PUBLIC_DISPLAY_ALLOWED=true`. On the free tier it limits pricing to six matched fixtures per date. Without a key, licence approval or safely matched pre-kickoff prices, the page explains why the feed is unavailable and the regular football predictions continue unaffected. Setup, worked calculations and limitations: [EDGE_FINDER.md](EDGE_FINDER.md).
+
 ## Hosting
 The linked GitHub connector does not expose creation of a new repository. The project is therefore isolated under the existing public NFL repository without changing the NFL front page. Once the repository's existing GitHub Pages source includes its root, a standard project URL is https://stevep1111.github.io/nfl-prediction-board/football/ . This URL must be verified as deployed before it is advertised as live. If Pages is disabled, enable it in Repository Settings > Pages. Do not create a competing Pages deployment workflow that overwrites the NFL site.
 
