@@ -23,15 +23,15 @@
   {
     "date": "2026-10-20",
     "games": 24,
-    "markets": 0,
-    "settled": 0,
-    "wins": 0
+    "markets": 192,
+    "settled": 24,
+    "wins": 80
   },
   {
     "date": "2026-10-21",
     "games": 1,
-    "markets": 0,
-    "settled": 0,
-    "wins": 0
+    "markets": 8,
+    "settled": 1,
+    "wins": 3
   }
 ]
