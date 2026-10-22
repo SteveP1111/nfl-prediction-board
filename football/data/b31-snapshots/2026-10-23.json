@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-23",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-10-22T22:29:53+01:00",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-10-23|E0|ipswich|nottingham forest",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 69.51,
+          "likelihood": 59.79,
+          "confidence": 83
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23|E1|bolton|middlesbrough",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 73.07,
+          "likelihood": 61.97,
+          "confidence": 89
+        }
+      ]
+    }
+  ]
+}
