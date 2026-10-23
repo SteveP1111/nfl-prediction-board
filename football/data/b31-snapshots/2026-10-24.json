@@ -1,0 +1,236 @@
+{
+  "date": "2026-10-24",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-10-23T22:35:00+01:00",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-10-24|E1|lincoln city|burnley",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 80.23,
+          "likelihood": 69.97,
+          "confidence": 94
+        },
+        {
+          "key": "BTTS",
+          "score": 79.89,
+          "likelihood": 70.02,
+          "confidence": 93
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E1|west ham united|southampton",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 77.58,
+          "likelihood": 67.07,
+          "confidence": 92
+        },
+        {
+          "key": "BTTS",
+          "score": 77.31,
+          "likelihood": 66.15,
+          "confidence": 93
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E2|cambridge united|plymouth argyle",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 75.43,
+          "likelihood": 62.99,
+          "confidence": 94
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E1|stoke city|bristol city",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 75.15,
+          "likelihood": 63.51,
+          "confidence": 92
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E1|sheffield united|derby county",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 74.59,
+          "likelihood": 61.82,
+          "confidence": 94
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E1|portsmouth|millwall",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 74.55,
+          "likelihood": 61.77,
+          "confidence": 94
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E3|cheltenham town|newport county",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 74.2,
+          "likelihood": 61.29,
+          "confidence": 94
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E3|rotherham united|shrewsbury town",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 73.69,
+          "likelihood": 61.46,
+          "confidence": 92
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E2|huddersfield town|wigan athletic",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 73.67,
+          "likelihood": 64.44,
+          "confidence": 86
+        },
+        {
+          "key": "Over 2.5",
+          "score": 73.55,
+          "likelihood": 61.72,
+          "confidence": 91
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E1|queens park rangers|swansea city",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 73.54,
+          "likelihood": 60.81,
+          "confidence": 93
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|EC|boreham wood|afc fylde",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 72.96,
+          "likelihood": 70.15,
+          "confidence": 76
+        },
+        {
+          "key": "BTTS",
+          "score": 71.64,
+          "likelihood": 69.43,
+          "confidence": 74
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E2|blackpool|mansfield town",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 72.79,
+          "likelihood": 60.22,
+          "confidence": 92
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E3|barnet|oldham",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 70.38,
+          "likelihood": 60.06,
+          "confidence": 85
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E0|chelsea|tottenham hotspur",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 70.1,
+          "likelihood": 60.15,
+          "confidence": 84
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|EC|eastleigh|boston united",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 69.93,
+          "likelihood": 65.5,
+          "confidence": 75
+        },
+        {
+          "key": "Over 2.5",
+          "score": 69.13,
+          "likelihood": 63.39,
+          "confidence": 76
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|EC|aldershot town|wealdstone",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 68.11,
+          "likelihood": 63.09,
+          "confidence": 74
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|E3|york city|port vale",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 67.05,
+          "likelihood": 57.2,
+          "confidence": 81
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24|EC|scunthorpe united|woking",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 66.34,
+          "likelihood": 60.8,
+          "confidence": 73
+        }
+      ]
+    }
+  ]
+}
