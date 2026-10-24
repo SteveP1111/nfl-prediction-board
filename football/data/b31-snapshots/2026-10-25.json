@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-25",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-10-24T22:30:15+01:00",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-10-25|E0|crystal palace|newcastle united",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 71.63,
+          "likelihood": 61.9,
+          "confidence": 85
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25|E0|manchester united|bournemouth",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 71.62,
+          "likelihood": 64.83,
+          "confidence": 80
+        },
+        {
+          "key": "Over 2.5",
+          "score": 71.54,
+          "likelihood": 66.06,
+          "confidence": 78
+        }
+      ]
+    }
+  ]
+}
