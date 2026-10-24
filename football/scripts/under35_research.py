@@ -34,9 +34,7 @@ def report(data=DATA):
                 exclusions["not_settled"] += 1
                 continue
             try:
-                kickoff = datetime.fromisoformat(game["date"] + "T" + game["kickoff"][:5] + ":00+00:00")
-                # Local UK kickoff cannot be safely inferred from naive UTC. Instead require
-                # pre-kickoff evidence from a correctly timezone-aware separate source.
+                # Resolve fixture kickoff in the UK timezone, including BST/GMT.
                 from zoneinfo import ZoneInfo
                 kickoff = datetime.fromisoformat(game["date"] + "T" + game["kickoff"][:5]).replace(tzinfo=ZoneInfo("Europe/London"))
                 if captured.tzinfo is None or captured >= kickoff:
