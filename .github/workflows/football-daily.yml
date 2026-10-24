@@ -51,6 +51,8 @@ jobs:
         run: python3 football/scripts/odds_refresh.py
       - name: Grade previously frozen research prices (optional)
         run: python3 football/scripts/settle_edges.py
+      - name: Audit prospective Under 3.5 research separately
+        run: python3 football/scripts/under35_research.py
       - name: Commit isolated football data only
         run: |
           git add -A -- football/data
