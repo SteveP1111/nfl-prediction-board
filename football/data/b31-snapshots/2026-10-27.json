@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-27",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-10-26T22:30:33+00:00",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-10-27|E3|barnet|york city",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 72.72,
+          "likelihood": 61.48,
+          "confidence": 89
+        }
+      ]
+    },
+    {
+      "id": "2026-10-27|E2|milton keynes dons|bromley",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 72.46,
+          "likelihood": 60.19,
+          "confidence": 91
+        }
+      ]
+    },
+    {
+      "id": "2026-10-27|EC|wealdstone|solihull moors",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 72.31,
+          "likelihood": 73.67,
+          "confidence": 71
+        },
+        {
+          "key": "BTTS",
+          "score": 71.18,
+          "likelihood": 72.4,
+          "confidence": 70
+        }
+      ]
+    },
+    {
+      "id": "2026-10-27|EC|fc halifax town|barrow",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 71,
+          "likelihood": 65.87,
+          "confidence": 77
+        },
+        {
+          "key": "Over 2.5",
+          "score": 70.46,
+          "likelihood": 65.67,
+          "confidence": 76
+        }
+      ]
+    },
+    {
+      "id": "2026-10-27|EC|worthing|southend united",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 70.27,
+          "likelihood": 65.34,
+          "confidence": 76
+        },
+        {
+          "key": "BTTS",
+          "score": 68.43,
+          "likelihood": 65.2,
+          "confidence": 72
+        }
+      ]
+    },
+    {
+      "id": "2026-10-27|EC|woking|boreham wood",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 69.77,
+          "likelihood": 65.22,
+          "confidence": 75
+        }
+      ]
+    },
+    {
+      "id": "2026-10-27|EC|tamworth|scunthorpe united",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 63.15,
+          "likelihood": 55.08,
+          "confidence": 74
+        }
+      ]
+    }
+  ]
+}
