@@ -3,8 +3,8 @@
   "model_version": "4.13",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "257d0b38658696ee542e91cf69ad33ebb042c399b295cc4f8778261c034d6ee6",
-    "snapshot_count": 7,
+    "last_staging_sha256": "0e2af54ac893c39ea50d122c33583112a294ca31f76337edab9f5c3035bfc702",
+    "snapshot_count": 8,
     "snapshots": [
       {
         "id": "2026-W1-05:00-2026-09-15T05:00:00+01:00",
@@ -91,17 +91,31 @@
         "tds": 100
       },
       {
-        "id": "2026-W7-dry-run-2026-10-26T21:33:15.439055+00:00",
+        "id": "2026-W7-Manual-2026-10-26T21:33:15.439055+00:00",
         "season": 2026,
         "week": 7,
-        "slot": "dry-run",
+        "slot": "Manual",
         "capturedAt": "2026-10-26T21:33:15.439055+00:00",
-        "path": "data/snapshots/443b4fa54ca7172011cd4c497685a91b3ea507ddc6c3c458fa833ee3902bae35.txt",
-        "sha256": "443b4fa54ca7172011cd4c497685a91b3ea507ddc6c3c458fa833ee3902bae35",
-        "uncompressed_bytes": 601573,
-        "encoded_bytes": 77840,
+        "path": "data/snapshots/b72d6b0732e3848711cab6f661df0321e3932aa67b0bb5f21199fcaa51604207.txt",
+        "sha256": "b72d6b0732e3848711cab6f661df0321e3932aa67b0bb5f21199fcaa51604207",
+        "uncompressed_bytes": 612286,
+        "encoded_bytes": 79120,
         "games": 14,
         "props": 571,
+        "tds": 100
+      },
+      {
+        "id": "2026-W8-dry-run-2026-10-27T21:12:57.741405+00:00",
+        "season": 2026,
+        "week": 8,
+        "slot": "dry-run",
+        "capturedAt": "2026-10-27T21:12:57.741405+00:00",
+        "path": "data/snapshots/bfcdf92817251e15b1c27cd02dc29ae631de06042e489b47ae23899d0e2729d9.txt",
+        "sha256": "bfcdf92817251e15b1c27cd02dc29ae631de06042e489b47ae23899d0e2729d9",
+        "uncompressed_bytes": 358037,
+        "encoded_bytes": 52632,
+        "games": 14,
+        "props": 432,
         "tds": 100
       }
     ]
@@ -113,7 +127,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "2026-10-26T213315-439055-0000",
+  "published_version": "2026-10-27T211257-741405-0000",
   "weekly_reviews": [
     {
       "as_of": "2026-09-10T15:00:00+01:00",
@@ -10965,6 +10979,377 @@
           "total_pick": "No meaningful edge",
           "total_result": null,
           "projected_total": 51.8
+        }
+      ]
+    },
+    {
+      "type": "weekly_model_review",
+      "review_scope": "game_lines_final",
+      "status": "final",
+      "season": 2026,
+      "week": 7,
+      "as_of": "2026-10-26T21:33:15.439055+00:00",
+      "model_version": "4.13",
+      "authoritative_snapshot_id": "2026-W7-Manual-2026-10-26T21:33:15.439055+00:00",
+      "forecast_policy": "Frozen pregame projections graded without revision.",
+      "summary": "Automatic final game-line review for 2026 Week 7. Winner, spread and total outcomes are graded from the frozen predictions once all scheduled game scores are available.",
+      "authoritative_metrics": {
+        "winner": {
+          "correct": 6,
+          "miss": 8,
+          "push": 0,
+          "decisions": 14,
+          "hit_rate_pct": 42.9
+        },
+        "spread": {
+          "correct": 3,
+          "miss": 11,
+          "push": 0,
+          "decisions": 14,
+          "hit_rate_pct": 21.4
+        },
+        "total": {
+          "correct": 3,
+          "miss": 3,
+          "push": 0,
+          "decisions": 6,
+          "hit_rate_pct": 50.0
+        }
+      },
+      "game_outcomes": {
+        "win:2026_07_NE_CHI": {
+          "result": "Miss",
+          "actual": "NE 24 · CHI 30"
+        },
+        "spread:2026_07_NE_CHI": {
+          "result": "Miss",
+          "actual": "NE 24 · CHI 30"
+        },
+        "total:2026_07_NE_CHI": {
+          "result": "Miss",
+          "actual": "54 points"
+        },
+        "win:2026_07_PIT_NO": {
+          "result": "Correct",
+          "actual": "PIT 16 · NO 10"
+        },
+        "spread:2026_07_PIT_NO": {
+          "result": "Correct",
+          "actual": "PIT 16 · NO 10"
+        },
+        "total:2026_07_PIT_NO": {
+          "result": "Miss",
+          "actual": "26 points"
+        },
+        "win:2026_07_CIN_BAL": {
+          "result": "Correct",
+          "actual": "CIN 35 · BAL 13"
+        },
+        "spread:2026_07_CIN_BAL": {
+          "result": "Miss",
+          "actual": "CIN 35 · BAL 13"
+        },
+        "win:2026_07_CLE_TEN": {
+          "result": "Correct",
+          "actual": "CLE 27 · TEN 24"
+        },
+        "spread:2026_07_CLE_TEN": {
+          "result": "Miss",
+          "actual": "CLE 27 · TEN 24"
+        },
+        "total:2026_07_CLE_TEN": {
+          "result": "Miss",
+          "actual": "51 points"
+        },
+        "win:2026_07_IND_MIN": {
+          "result": "Correct",
+          "actual": "IND 10 · MIN 16"
+        },
+        "spread:2026_07_IND_MIN": {
+          "result": "Miss",
+          "actual": "IND 10 · MIN 16"
+        },
+        "win:2026_07_MIA_NYJ": {
+          "result": "Miss",
+          "actual": "MIA 28 · NYJ 25"
+        },
+        "spread:2026_07_MIA_NYJ": {
+          "result": "Miss",
+          "actual": "MIA 28 · NYJ 25"
+        },
+        "win:2026_07_NYG_HOU": {
+          "result": "Miss",
+          "actual": "NYG 27 · HOU 21"
+        },
+        "spread:2026_07_NYG_HOU": {
+          "result": "Correct",
+          "actual": "NYG 27 · HOU 21"
+        },
+        "total:2026_07_NYG_HOU": {
+          "result": "Correct",
+          "actual": "48 points"
+        },
+        "win:2026_07_SF_ATL": {
+          "result": "Miss",
+          "actual": "SF 20 · ATL 29"
+        },
+        "spread:2026_07_SF_ATL": {
+          "result": "Miss",
+          "actual": "SF 20 · ATL 29"
+        },
+        "total:2026_07_SF_ATL": {
+          "result": "Correct",
+          "actual": "49 points"
+        },
+        "win:2026_07_TB_CAR": {
+          "result": "Miss",
+          "actual": "TB 43 · CAR 13"
+        },
+        "spread:2026_07_TB_CAR": {
+          "result": "Miss",
+          "actual": "TB 43 · CAR 13"
+        },
+        "win:2026_07_DEN_ARI": {
+          "result": "Correct",
+          "actual": "DEN 30 · ARI 16"
+        },
+        "spread:2026_07_DEN_ARI": {
+          "result": "Miss",
+          "actual": "DEN 30 · ARI 16"
+        },
+        "win:2026_07_GB_DET": {
+          "result": "Correct",
+          "actual": "GB 17 · DET 20"
+        },
+        "spread:2026_07_GB_DET": {
+          "result": "Correct",
+          "actual": "GB 17 · DET 20"
+        },
+        "win:2026_07_LA_LV": {
+          "result": "Miss",
+          "actual": "LA 35 · LV 21"
+        },
+        "spread:2026_07_LA_LV": {
+          "result": "Miss",
+          "actual": "LA 35 · LV 21"
+        },
+        "total:2026_07_LA_LV": {
+          "result": "Correct",
+          "actual": "56 points"
+        },
+        "win:2026_07_KC_SEA": {
+          "result": "Miss",
+          "actual": "KC 3 · SEA 20"
+        },
+        "spread:2026_07_KC_SEA": {
+          "result": "Miss",
+          "actual": "KC 3 · SEA 20"
+        },
+        "win:2026_07_DAL_PHI": {
+          "result": "Miss",
+          "actual": "DAL 38 · PHI 21"
+        },
+        "spread:2026_07_DAL_PHI": {
+          "result": "Miss",
+          "actual": "DAL 38 · PHI 21"
+        }
+      },
+      "games": [
+        {
+          "game_id": "2026_07_NE_CHI",
+          "away": "NE",
+          "home": "CHI",
+          "final": "NE 24 · CHI 30",
+          "actual_total": 54,
+          "winner_pick": "NE",
+          "winner_result": "Miss",
+          "spread_pick": "NE +3.0",
+          "spread_result": "Miss",
+          "total_pick": "UNDER 50.5",
+          "total_result": "Miss",
+          "projected_total": 46.7
+        },
+        {
+          "game_id": "2026_07_PIT_NO",
+          "away": "PIT",
+          "home": "NO",
+          "final": "PIT 16 · NO 10",
+          "actual_total": 26,
+          "winner_pick": "PIT",
+          "winner_result": "Correct",
+          "spread_pick": "PIT -3.0",
+          "spread_result": "Correct",
+          "total_pick": "OVER 43.5",
+          "total_result": "Miss",
+          "projected_total": 49.1
+        },
+        {
+          "game_id": "2026_07_CIN_BAL",
+          "away": "CIN",
+          "home": "BAL",
+          "final": "CIN 35 · BAL 13",
+          "actual_total": 48,
+          "winner_pick": "CIN",
+          "winner_result": "Correct",
+          "spread_pick": "BAL +3.0",
+          "spread_result": "Miss",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 44.1
+        },
+        {
+          "game_id": "2026_07_CLE_TEN",
+          "away": "CLE",
+          "home": "TEN",
+          "final": "CLE 27 · TEN 24",
+          "actual_total": 51,
+          "winner_pick": "CLE",
+          "winner_result": "Correct",
+          "spread_pick": "TEN +2.5",
+          "spread_result": "Miss",
+          "total_pick": "UNDER 36.5",
+          "total_result": "Miss",
+          "projected_total": 33.1
+        },
+        {
+          "game_id": "2026_07_IND_MIN",
+          "away": "IND",
+          "home": "MIN",
+          "final": "IND 10 · MIN 16",
+          "actual_total": 26,
+          "winner_pick": "MIN",
+          "winner_result": "Correct",
+          "spread_pick": "MIN -6.5",
+          "spread_result": "Miss",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 40.1
+        },
+        {
+          "game_id": "2026_07_MIA_NYJ",
+          "away": "MIA",
+          "home": "NYJ",
+          "final": "MIA 28 · NYJ 25",
+          "actual_total": 53,
+          "winner_pick": "NYJ",
+          "winner_result": "Miss",
+          "spread_pick": "NYJ -4.5",
+          "spread_result": "Miss",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 38.5
+        },
+        {
+          "game_id": "2026_07_NYG_HOU",
+          "away": "NYG",
+          "home": "HOU",
+          "final": "NYG 27 · HOU 21",
+          "actual_total": 48,
+          "winner_pick": "HOU",
+          "winner_result": "Miss",
+          "spread_pick": "NYG +10.0",
+          "spread_result": "Correct",
+          "total_pick": "OVER 42.5",
+          "total_result": "Correct",
+          "projected_total": 51.7
+        },
+        {
+          "game_id": "2026_07_SF_ATL",
+          "away": "SF",
+          "home": "ATL",
+          "final": "SF 20 · ATL 29",
+          "actual_total": 49,
+          "winner_pick": "SF",
+          "winner_result": "Miss",
+          "spread_pick": "SF -2.5",
+          "spread_result": "Miss",
+          "total_pick": "UNDER 50.5",
+          "total_result": "Correct",
+          "projected_total": 47.9
+        },
+        {
+          "game_id": "2026_07_TB_CAR",
+          "away": "TB",
+          "home": "CAR",
+          "final": "TB 43 · CAR 13",
+          "actual_total": 56,
+          "winner_pick": "CAR",
+          "winner_result": "Miss",
+          "spread_pick": "CAR -3.0",
+          "spread_result": "Miss",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 44.4
+        },
+        {
+          "game_id": "2026_07_DEN_ARI",
+          "away": "DEN",
+          "home": "ARI",
+          "final": "DEN 30 · ARI 16",
+          "actual_total": 46,
+          "winner_pick": "DEN",
+          "winner_result": "Correct",
+          "spread_pick": "ARI +4.5",
+          "spread_result": "Miss",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 43.3
+        },
+        {
+          "game_id": "2026_07_GB_DET",
+          "away": "GB",
+          "home": "DET",
+          "final": "GB 17 · DET 20",
+          "actual_total": 37,
+          "winner_pick": "DET",
+          "winner_result": "Correct",
+          "spread_pick": "GB +3.5",
+          "spread_result": "Correct",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 54.6
+        },
+        {
+          "game_id": "2026_07_LA_LV",
+          "away": "LA",
+          "home": "LV",
+          "final": "LA 35 · LV 21",
+          "actual_total": 56,
+          "winner_pick": "LV",
+          "winner_result": "Miss",
+          "spread_pick": "LV +3.5",
+          "spread_result": "Miss",
+          "total_pick": "OVER 48.5",
+          "total_result": "Correct",
+          "projected_total": 52.6
+        },
+        {
+          "game_id": "2026_07_KC_SEA",
+          "away": "KC",
+          "home": "SEA",
+          "final": "KC 3 · SEA 20",
+          "actual_total": 23,
+          "winner_pick": "KC",
+          "winner_result": "Miss",
+          "spread_pick": "KC +3.0",
+          "spread_result": "Miss",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 42.5
+        },
+        {
+          "game_id": "2026_07_DAL_PHI",
+          "away": "DAL",
+          "home": "PHI",
+          "final": "DAL 38 · PHI 21",
+          "actual_total": 59,
+          "winner_pick": "PHI",
+          "winner_result": "Miss",
+          "spread_pick": "PHI +4.5",
+          "spread_result": "Miss",
+          "total_pick": "No meaningful edge",
+          "total_result": null,
+          "projected_total": 45.3
         }
       ]
     }
