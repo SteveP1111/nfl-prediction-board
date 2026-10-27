@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-28",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-10-27T22:30:46+00:00",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-10-28|EC|carlisle united|harrogate town",
+      "qualifiers": [
+        {"key": "Over 2.5", "score": 70.3, "likelihood": 64.68, "confidence": 77},
+        {"key": "BTTS", "score": 70.28, "likelihood": 66.12, "confidence": 75}
+      ]
+    },
+    {
+      "id": "2026-10-28|EC|forest green rovers|eastleigh",
+      "qualifiers": [
+        {"key": "BTTS", "score": 67.44, "likelihood": 61.26, "confidence": 75}
+      ]
+    }
+  ]
+}
