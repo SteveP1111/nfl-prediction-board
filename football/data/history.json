@@ -37,22 +37,22 @@
   {
     "date": "2026-10-24",
     "games": 49,
-    "markets": 0,
-    "settled": 0,
-    "wins": 0
+    "markets": 384,
+    "settled": 48,
+    "wins": 159
   },
   {
     "date": "2026-10-25",
     "games": 5,
-    "markets": 0,
-    "settled": 0,
-    "wins": 0
+    "markets": 40,
+    "settled": 5,
+    "wins": 15
   },
   {
     "date": "2026-10-26",
     "games": 1,
-    "markets": 0,
-    "settled": 0,
-    "wins": 0
+    "markets": 8,
+    "settled": 1,
+    "wins": 4
   }
 ]

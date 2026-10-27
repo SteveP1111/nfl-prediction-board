@@ -1,43 +1,43 @@
 {
   "byLeague": {
     "E0": {
-      "brier": 0.22009,
-      "hitRate": 0.625,
-      "hits": 5,
-      "meanPredicted": 0.6632,
-      "n": 8,
+      "brier": 0.16198,
+      "hitRate": 0.8235,
+      "hits": 14,
+      "meanPredicted": 0.6673,
+      "n": 17,
       "pricedFixtures": 0
     },
     "E1": {
-      "brier": 0.23777,
-      "hitRate": 0.75,
-      "hits": 3,
-      "meanPredicted": 0.677,
-      "n": 4,
+      "brier": 0.23384,
+      "hitRate": 0.6667,
+      "hits": 10,
+      "meanPredicted": 0.6747,
+      "n": 15,
       "pricedFixtures": 0
     },
     "E2": {
-      "brier": 0.19551,
-      "hitRate": 0.7778,
-      "hits": 14,
-      "meanPredicted": 0.6683,
-      "n": 18,
+      "brier": 0.17421,
+      "hitRate": 0.8,
+      "hits": 24,
+      "meanPredicted": 0.6816,
+      "n": 30,
       "pricedFixtures": 0
     },
     "E3": {
-      "brier": 0.25333,
-      "hitRate": 0.619,
-      "hits": 13,
-      "meanPredicted": 0.7373,
-      "n": 21,
+      "brier": 0.25894,
+      "hitRate": 0.6061,
+      "hits": 20,
+      "meanPredicted": 0.7388,
+      "n": 33,
       "pricedFixtures": 0
     },
     "EC": {
-      "brier": null,
-      "hitRate": null,
-      "hits": 0,
-      "meanPredicted": null,
-      "n": 0,
+      "brier": 0.2463,
+      "hitRate": 0.5,
+      "hits": 5,
+      "meanPredicted": 0.6384,
+      "n": 10,
       "pricedFixtures": 0
     }
   },
@@ -47,65 +47,65 @@
     "verifiedResearchEdges": null
   },
   "exclusions": {
-    "not_settled": 73
+    "not_settled": 19
   },
   "minimumProbabilityThresholds": {
     "55": {
-      "brier": 0.22575,
-      "hitRate": 0.6939,
-      "hits": 34,
-      "meanPredicted": 0.7053,
-      "n": 49,
+      "brier": 0.21366,
+      "hitRate": 0.699,
+      "hits": 72,
+      "meanPredicted": 0.6962,
+      "n": 103,
       "pricedFixtures": 0
     },
     "60": {
-      "brier": 0.22824,
-      "hitRate": 0.6739,
-      "hits": 31,
-      "meanPredicted": 0.7144,
-      "n": 46,
+      "brier": 0.21391,
+      "hitRate": 0.6939,
+      "hits": 68,
+      "meanPredicted": 0.7027,
+      "n": 98,
       "pricedFixtures": 0
     },
     "65": {
-      "brier": 0.23857,
-      "hitRate": 0.6341,
-      "hits": 26,
-      "meanPredicted": 0.7257,
-      "n": 41,
+      "brier": 0.21294,
+      "hitRate": 0.6951,
+      "hits": 57,
+      "meanPredicted": 0.7176,
+      "n": 82,
       "pricedFixtures": 0
     },
     "70": {
-      "brier": 0.24425,
-      "hitRate": 0.6296,
-      "hits": 17,
-      "meanPredicted": 0.7508,
-      "n": 27,
+      "brier": 0.222,
+      "hitRate": 0.6809,
+      "hits": 32,
+      "meanPredicted": 0.7481,
+      "n": 47,
       "pricedFixtures": 0
     },
     "75": {
-      "brier": 0.23891,
-      "hitRate": 0.6364,
-      "hits": 7,
-      "meanPredicted": 0.7902,
-      "n": 11,
+      "brier": 0.24583,
+      "hitRate": 0.625,
+      "hits": 10,
+      "meanPredicted": 0.7885,
+      "n": 16,
       "pricedFixtures": 0
     },
     "80": {
-      "brier": 0.03008,
+      "brier": 0.0324,
       "hitRate": 1.0,
-      "hits": 3,
-      "meanPredicted": 0.8293,
-      "n": 3,
+      "hits": 5,
+      "meanPredicted": 0.8219,
+      "n": 5,
       "pricedFixtures": 0
     }
   },
   "model": "independent-scoreline-only",
   "overall": {
-    "brier": 0.22649,
-    "hitRate": 0.6863,
-    "hits": 35,
-    "meanPredicted": 0.6966,
-    "n": 51,
+    "brier": 0.21424,
+    "hitRate": 0.6952,
+    "hits": 73,
+    "meanPredicted": 0.6922,
+    "n": 105,
     "pricedFixtures": 0
   },
   "status": "research_not_verified_edge",
