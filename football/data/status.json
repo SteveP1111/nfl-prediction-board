@@ -3,15 +3,15 @@
     "2026-10-27",
     "2026-10-28"
   ],
-  "refreshed": "2026-10-29T01:11:59.005543+00:00",
+  "refreshed": "2026-10-29T11:28:43.311184+00:00",
   "resultsByLeague": {
     "E0": 80,
     "E1": 144,
-    "E2": 138,
-    "E3": 150,
-    "EC": 165
+    "E2": 143,
+    "E3": 151,
+    "EC": 177
   },
-  "resultsCount": 677,
+  "resultsCount": 695,
   "sources": [
     "https://www.football-data.co.uk/mmz4281/2526/E0.csv",
     "https://www.football-data.co.uk/mmz4281/2526/E1.csv",

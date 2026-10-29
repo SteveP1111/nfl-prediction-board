@@ -3219,5 +3219,92 @@
       "under25": 0.52708
     },
     "score": "2-4"
+  },
+  "2026-10-28|EC|carlisle|harrogate": {
+    "away": "Harrogate",
+    "b31Outcomes": [],
+    "date": "2026-10-28",
+    "division": "EC",
+    "home": "Carlisle",
+    "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
+    "outcomes": {
+      "away_win": false,
+      "btts": false,
+      "draw": false,
+      "home_win": true,
+      "no_btts": true,
+      "over25": true,
+      "over35": false,
+      "under25": false
+    },
+    "probs": {
+      "away_win": 0.35242,
+      "btts": 0.63064,
+      "draw": 0.23504,
+      "home_win": 0.41254,
+      "no_btts": 0.36936,
+      "over25": 0.61321,
+      "over35": 0.39017,
+      "under25": 0.38679
+    },
+    "score": "3-0"
+  },
+  "2026-10-28|EC|forest green|eastleigh": {
+    "away": "Eastleigh",
+    "b31Outcomes": [],
+    "date": "2026-10-28",
+    "division": "EC",
+    "home": "Forest Green",
+    "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
+    "outcomes": {
+      "away_win": false,
+      "btts": false,
+      "draw": false,
+      "home_win": true,
+      "no_btts": true,
+      "over25": false,
+      "over35": false,
+      "under25": true
+    },
+    "probs": {
+      "away_win": 0.29179,
+      "btts": 0.62505,
+      "draw": 0.22893,
+      "home_win": 0.47928,
+      "no_btts": 0.37495,
+      "over25": 0.61751,
+      "over35": 0.39473,
+      "under25": 0.38249
+    },
+    "score": "2-0"
+  },
+  "2026-10-28|EC|sutton|aldershot": {
+    "away": "Aldershot",
+    "b31Outcomes": [],
+    "date": "2026-10-28",
+    "division": "EC",
+    "home": "Sutton",
+    "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
+    "outcomes": {
+      "away_win": false,
+      "btts": false,
+      "draw": false,
+      "home_win": true,
+      "no_btts": true,
+      "over25": false,
+      "over35": false,
+      "under25": true
+    },
+    "probs": {
+      "away_win": 0.35947,
+      "btts": 0.58549,
+      "draw": 0.24758,
+      "home_win": 0.39295,
+      "no_btts": 0.41451,
+      "over25": 0.55395,
+      "over35": 0.33029,
+      "under25": 0.44605
+    },
+    "score": "2-0"
   }
 }

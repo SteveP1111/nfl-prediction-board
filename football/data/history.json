@@ -58,8 +58,8 @@
   {
     "date": "2026-10-28",
     "games": 3,
-    "markets": 0,
-    "settled": 0,
-    "wins": 0
+    "markets": 24,
+    "settled": 3,
+    "wins": 9
   }
 ]
