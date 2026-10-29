@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-30",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-10-29T22:31:57+00:00",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-10-30|EC|afc fylde|hornchurch",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 60.33,
+          "likelihood": 55.56,
+          "confidence": 66
+        }
+      ]
+    }
+  ]
+}
