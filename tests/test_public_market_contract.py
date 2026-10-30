@@ -104,6 +104,7 @@ class PublicMarketContractTests(unittest.TestCase):
 
     def test_final_snapshot_still_rejects_missing_player_outcomes(self):
         snap=valid_snapshot()
+        snap["review"]={"status":"final","review_scope":"game_lines_final"}
         game=snap["games"][0]
         gid=game["game_id"]
         snap["outcomes"]={
