@@ -118,10 +118,16 @@ def validate_completed_game_grading(snapshot: dict, prefix: str) -> None:
     if not isinstance(outcomes, dict):
         fail(f"{prefix}.outcomes must be an object")
     games = snapshot["games"]
-    live_partial = (
-        str((snapshot.get("review") or {}).get("scope") or "") == "current_week_completed_games"
-        and str((snapshot.get("review") or {}).get("status") or "") == "live-results"
+    review = snapshot.get("review") or {}
+    is_final = (
+        str(review.get("review_scope") or "") == "game_lines_final"
+        or str(review.get("status") or "").strip().lower() == "final"
     )
+    # Current-week snapshots may have the final score before every fringe
+    # player box row is available. Publish every verified outcome now and
+    # leave only the unavailable individual rows pending. Archived final
+    # reviews remain strict.
+    live_partial = not is_final
     completed = {
         game["game_id"]
         for game in games
@@ -321,7 +327,16 @@ def publish_snapshot(snapshot: dict) -> dict:
     encoded = base64.b64encode(gzip.compress(raw, compresslevel=9, mtime=0)).decode("ascii")
     path = SNAPSHOT_DIR / f"{snapshot_sha}.txt"
     if path.exists():
-        if path.read_text(encoding="ascii") != encoded:
+        # The filename hashes the uncompressed JSON. Gzip container bytes can
+        # legitimately differ between Python/zlib versions, so validate the
+        # decoded content rather than requiring byte-identical compression.
+        try:
+            existing_raw = gzip.decompress(
+                base64.b64decode(path.read_text(encoding="ascii"), validate=True)
+            )
+        except Exception as exc:
+            fail(f"existing snapshot file cannot be reconstructed: {path.name}: {exc}")
+        if existing_raw != raw or hashlib.sha256(existing_raw).hexdigest() != snapshot_sha:
             fail(f"existing snapshot file does not match its content hash: {path.name}")
     else:
         path.write_text(encoded, encoding="ascii")
