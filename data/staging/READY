@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-30T120732-382368-0000",
+  "version": "2026-10-30T120732-382368-0000-retry",
   "model_version": "4.13",
   "mode": "upsert",
   "payload_sha256": "41f54739a04402a418c518dfb337bf0156cb2ee461061def3ad6b825b39f1a11",
