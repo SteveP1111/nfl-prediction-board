@@ -91,15 +91,11 @@ class PublicMarketContractTests(unittest.TestCase):
         snap["tds"]=[t for t in snap["tds"] if t["game_id"] in game_ids]
         publish_staging.validate_payload({"snapshots":[snap]})
 
-    def test_live_results_allow_pending_individual_player_rows(self):
+    def test_nonfinal_live_snapshot_allows_pending_individual_player_rows(self):
         snap=valid_snapshot()
         game=snap["games"][0]
         gid=game["game_id"]
-        snap["review"]={
-            "status":"live-results",
-            "scope":"current_week_completed_games",
-            "forecast_policy":"Frozen predictions preserved; only completed-game outcomes are attached.",
-        }
+        snap["review"]={}
         snap["outcomes"]={
             f"win:{gid}":{"actual":"ARI 24 · ATL 17","result":"Correct"},
             f"spread:{gid}":{"actual":"ARI 24 · ATL 17","result":"Correct"},
