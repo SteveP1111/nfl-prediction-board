@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-03",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-11-02T22:31:00+00:00",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-11-03|E1|queens park rangers|burnley",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 80.59,
+          "likelihood": 74.33,
+          "confidence": 88
+        },
+        {
+          "key": "BTTS",
+          "score": 76.92,
+          "likelihood": 67.16,
+          "confidence": 90
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03|E1|birmingham city|millwall",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 76.37,
+          "likelihood": 64.31,
+          "confidence": 94
+        },
+        {
+          "key": "BTTS",
+          "score": 74.71,
+          "likelihood": 62.43,
+          "confidence": 93
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03|E2|huddersfield town|luton town",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 78.24,
+          "likelihood": 70.43,
+          "confidence": 88
+        },
+        {
+          "key": "Over 2.5",
+          "score": 77.28,
+          "likelihood": 71.55,
+          "confidence": 84
+        }
+      ]
+    }
+  ]
+}
