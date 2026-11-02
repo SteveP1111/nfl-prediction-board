@@ -65,23 +65,23 @@
   {
     "date": "2026-10-30",
     "games": 3,
-    "markets": 0,
-    "settled": 0,
-    "wins": 0
+    "markets": 24,
+    "settled": 3,
+    "wins": 11
   },
   {
     "date": "2026-10-31",
     "games": 52,
-    "markets": 0,
-    "settled": 0,
-    "wins": 0
+    "markets": 416,
+    "settled": 52,
+    "wins": 177
   },
   {
     "date": "2026-11-01",
     "games": 2,
-    "markets": 0,
-    "settled": 0,
-    "wins": 0
+    "markets": 16,
+    "settled": 2,
+    "wins": 6
   },
   {
     "date": "2026-11-02",
