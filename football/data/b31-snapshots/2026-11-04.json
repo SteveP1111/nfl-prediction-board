@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-04",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-11-03T22:31:00+00:00",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-11-04|E1|cardiff city|west ham united",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 77.42,
+          "likelihood": 67.93,
+          "confidence": 90
+        },
+        {
+          "key": "Over 2.5",
+          "score": 76.48,
+          "likelihood": 67.05,
+          "confidence": 89
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04|E1|wrexham|middlesbrough",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 79,
+          "likelihood": 69.23,
+          "confidence": 92
+        },
+        {
+          "key": "BTTS",
+          "score": 77.39,
+          "likelihood": 67.89,
+          "confidence": 90
+        }
+      ]
+    }
+  ]
+}
