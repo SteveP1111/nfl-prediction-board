@@ -19,7 +19,7 @@
   "b31Note": "B3.1 records include only dated imported/frozen qualifiers; do not mix with independent model totals.",
   "byDivision": {
     "E0": {
-      "total": 26,
+      "total": 27,
       "wins": 0
     },
     "E1": {
@@ -41,56 +41,56 @@
   },
   "markets": {
     "away_win": {
-      "brier": 0.1986,
-      "hitRate": 0.2788,
-      "hits": 46,
-      "predictions": 165
+      "brier": 0.2002,
+      "hitRate": 0.2831,
+      "hits": 47,
+      "predictions": 166
     },
     "btts": {
-      "brier": 0.2537,
-      "hitRate": 0.5576,
+      "brier": 0.2539,
+      "hitRate": 0.5542,
       "hits": 92,
-      "predictions": 165
+      "predictions": 166
     },
     "draw": {
-      "brier": 0.1682,
-      "hitRate": 0.2121,
+      "brier": 0.1676,
+      "hitRate": 0.2108,
       "hits": 35,
-      "predictions": 165
+      "predictions": 166
     },
     "home_win": {
-      "brier": 0.2489,
-      "hitRate": 0.5091,
+      "brier": 0.2486,
+      "hitRate": 0.506,
       "hits": 84,
-      "predictions": 165
+      "predictions": 166
     },
     "no_btts": {
-      "brier": 0.2537,
-      "hitRate": 0.4424,
-      "hits": 73,
-      "predictions": 165
+      "brier": 0.2539,
+      "hitRate": 0.4458,
+      "hits": 74,
+      "predictions": 166
     },
     "over25": {
       "brier": 0.2512,
-      "hitRate": 0.5455,
+      "hitRate": 0.5422,
       "hits": 90,
-      "predictions": 165
+      "predictions": 166
     },
     "over35": {
-      "brier": 0.2255,
-      "hitRate": 0.3333,
+      "brier": 0.2246,
+      "hitRate": 0.3313,
       "hits": 55,
-      "predictions": 165
+      "predictions": 166
     },
     "under25": {
       "brier": 0.2512,
-      "hitRate": 0.4545,
-      "hits": 75,
-      "predictions": 165
+      "hitRate": 0.4578,
+      "hits": 76,
+      "predictions": 166
     }
   },
   "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
-  "totalSettledGames": 165,
-  "totalSnapshots": 13,
-  "updated": "2026-11-03T03:02:24.200059+00:00"
+  "totalSettledGames": 166,
+  "totalSnapshots": 14,
+  "updated": "2026-11-03T12:44:55.767413+00:00"
 }
