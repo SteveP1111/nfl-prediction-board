@@ -47,7 +47,7 @@
     "verifiedResearchEdges": null
   },
   "exclusions": {
-    "not_settled": 31
+    "not_settled": 35
   },
   "minimumProbabilityThresholds": {
     "55": {
