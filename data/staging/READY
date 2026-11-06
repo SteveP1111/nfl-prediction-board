@@ -1,10 +1,20 @@
 {
-  "version": "2026-11-06T072745-795838-0000",
+  "version": "2026-11-06T220029-524019-0000",
   "model_version": "4.13",
   "mode": "upsert",
-  "payload_sha256": "0e808f62a9dfb002baebb5e35759f7232eac8b2ef5d3df88ee30df4e6e6c628f",
+  "payload_sha256": "5d61354452ed11f69c5633f421d7aff40b6cf1e6cb5406c8c45fa12086457466",
   "snapshot_parts": [
-    "snapshot-001.json",
-    "snapshot-002.json"
+    "snapshot-001-part-001.json",
+    "snapshot-001-part-002.json",
+    "snapshot-001-part-003.json",
+    "snapshot-001-part-004.json",
+    "snapshot-001-part-005.json",
+    "snapshot-001-part-006.json",
+    "snapshot-002-part-001.json",
+    "snapshot-002-part-002.json",
+    "snapshot-002-part-003.json",
+    "snapshot-002-part-004.json",
+    "snapshot-002-part-005.json",
+    "snapshot-002-part-006.json"
   ]
 }
