@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-07",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-11-06T22:35:01+00:00",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-11-07|E0|arsenal|hull city",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 71.81,
+          "likelihood": 62.71,
+          "confidence": 84
+        }
+      ]
+    },
+    {
+      "id": "2026-11-07|E1|wrexham|wolverhampton wanderers",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 71.66,
+          "likelihood": 61.93,
+          "confidence": 85
+        }
+      ]
+    },
+    {
+      "id": "2026-11-07|E1|birmingham city|swansea city",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 75.36,
+          "likelihood": 64.81,
+          "confidence": 90
+        }
+      ]
+    },
+    {
+      "id": "2026-11-07|E1|blackburn rovers|west ham united",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 74.12,
+          "likelihood": 63.51,
+          "confidence": 89
+        },
+        {
+          "key": "BTTS",
+          "score": 73.33,
+          "likelihood": 63.92,
+          "confidence": 86
+        }
+      ]
+    },
+    {
+      "id": "2026-11-07|E1|cardiff city|burnley",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 79.18,
+          "likelihood": 74.89,
+          "confidence": 84
+        },
+        {
+          "key": "BTTS",
+          "score": 77.84,
+          "likelihood": 68.58,
+          "confidence": 90
+        }
+      ]
+    }
+  ]
+}
