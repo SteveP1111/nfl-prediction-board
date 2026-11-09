@@ -1,19 +1,19 @@
 {
   "byLeague": {
     "E0": {
-      "brier": 0.16164,
-      "hitRate": 0.8148,
-      "hits": 22,
-      "meanPredicted": 0.6765,
-      "n": 27,
+      "brier": 0.18784,
+      "hitRate": 0.7568,
+      "hits": 28,
+      "meanPredicted": 0.6892,
+      "n": 37,
       "pricedFixtures": 0
     },
     "E1": {
-      "brier": 0.2568,
-      "hitRate": 0.5897,
-      "hits": 23,
-      "meanPredicted": 0.6758,
-      "n": 39,
+      "brier": 0.24116,
+      "hitRate": 0.6275,
+      "hits": 32,
+      "meanPredicted": 0.6735,
+      "n": 51,
       "pricedFixtures": 0
     },
     "E2": {
@@ -47,47 +47,47 @@
     "verifiedResearchEdges": null
   },
   "exclusions": {
-    "not_settled": 41
+    "not_settled": 19
   },
   "minimumProbabilityThresholds": {
     "55": {
-      "brier": 0.22076,
-      "hitRate": 0.6854,
-      "hits": 122,
+      "brier": 0.22083,
+      "hitRate": 0.685,
+      "hits": 137,
       "meanPredicted": 0.6923,
-      "n": 178,
+      "n": 200,
       "pricedFixtures": 0
     },
     "60": {
-      "brier": 0.22233,
-      "hitRate": 0.6746,
-      "hits": 114,
-      "meanPredicted": 0.6984,
-      "n": 169,
+      "brier": 0.22163,
+      "hitRate": 0.6789,
+      "hits": 129,
+      "meanPredicted": 0.6983,
+      "n": 190,
       "pricedFixtures": 0
     },
     "65": {
-      "brier": 0.22339,
-      "hitRate": 0.6691,
-      "hits": 93,
-      "meanPredicted": 0.7143,
-      "n": 139,
+      "brier": 0.22344,
+      "hitRate": 0.6709,
+      "hits": 106,
+      "meanPredicted": 0.7132,
+      "n": 158,
       "pricedFixtures": 0
     },
     "70": {
-      "brier": 0.23004,
-      "hitRate": 0.6625,
-      "hits": 53,
-      "meanPredicted": 0.7437,
-      "n": 80,
+      "brier": 0.22889,
+      "hitRate": 0.6667,
+      "hits": 58,
+      "meanPredicted": 0.7442,
+      "n": 87,
       "pricedFixtures": 0
     },
     "75": {
-      "brier": 0.24255,
-      "hitRate": 0.6429,
-      "hits": 18,
-      "meanPredicted": 0.7855,
-      "n": 28,
+      "brier": 0.2427,
+      "hitRate": 0.6452,
+      "hits": 20,
+      "meanPredicted": 0.7847,
+      "n": 31,
       "pricedFixtures": 0
     },
     "80": {
@@ -101,11 +101,11 @@
   },
   "model": "independent-scoreline-only",
   "overall": {
-    "brier": 0.22161,
-    "hitRate": 0.6758,
-    "hits": 123,
-    "meanPredicted": 0.6882,
-    "n": 182,
+    "brier": 0.22158,
+    "hitRate": 0.6765,
+    "hits": 138,
+    "meanPredicted": 0.6886,
+    "n": 204,
     "pricedFixtures": 0
   },
   "status": "research_not_verified_edge",

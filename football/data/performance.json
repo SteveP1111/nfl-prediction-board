@@ -1,9 +1,9 @@
 {
   "b31FrozenMarkets": {
     "btts": {
-      "hitRate": 0.5217,
-      "selections": 23,
-      "wins": 12
+      "hitRate": 0.56,
+      "selections": 25,
+      "wins": 14
     },
     "home_win": {
       "hitRate": 0.5714,
@@ -11,19 +11,19 @@
       "wins": 4
     },
     "over25": {
-      "hitRate": 0.4615,
-      "selections": 13,
-      "wins": 6
+      "hitRate": 0.5,
+      "selections": 14,
+      "wins": 7
     }
   },
   "b31Note": "B3.1 records include only dated imported/frozen qualifiers; do not mix with independent model totals.",
   "byDivision": {
     "E0": {
-      "total": 27,
+      "total": 37,
       "wins": 0
     },
     "E1": {
-      "total": 39,
+      "total": 51,
       "wins": 0
     },
     "E2": {
@@ -41,56 +41,56 @@
   },
   "markets": {
     "away_win": {
-      "brier": 0.2034,
-      "hitRate": 0.2912,
-      "hits": 53,
-      "predictions": 182
+      "brier": 0.1986,
+      "hitRate": 0.2794,
+      "hits": 57,
+      "predictions": 204
     },
     "btts": {
-      "brier": 0.2532,
-      "hitRate": 0.5495,
-      "hits": 100,
-      "predictions": 182
+      "brier": 0.2503,
+      "hitRate": 0.5588,
+      "hits": 114,
+      "predictions": 204
     },
     "draw": {
-      "brier": 0.1727,
-      "hitRate": 0.2198,
-      "hits": 40,
-      "predictions": 182
+      "brier": 0.1707,
+      "hitRate": 0.2157,
+      "hits": 44,
+      "predictions": 204
     },
     "home_win": {
-      "brier": 0.2469,
-      "hitRate": 0.489,
-      "hits": 89,
-      "predictions": 182
+      "brier": 0.2487,
+      "hitRate": 0.5049,
+      "hits": 103,
+      "predictions": 204
     },
     "no_btts": {
-      "brier": 0.2532,
-      "hitRate": 0.4505,
-      "hits": 82,
-      "predictions": 182
+      "brier": 0.2503,
+      "hitRate": 0.4412,
+      "hits": 90,
+      "predictions": 204
     },
     "over25": {
-      "brier": 0.252,
-      "hitRate": 0.533,
-      "hits": 97,
-      "predictions": 182
+      "brier": 0.2502,
+      "hitRate": 0.5441,
+      "hits": 111,
+      "predictions": 204
     },
     "over35": {
       "brier": 0.2216,
-      "hitRate": 0.3242,
-      "hits": 59,
-      "predictions": 182
+      "hitRate": 0.3235,
+      "hits": 66,
+      "predictions": 204
     },
     "under25": {
-      "brier": 0.252,
-      "hitRate": 0.467,
-      "hits": 85,
-      "predictions": 182
+      "brier": 0.2502,
+      "hitRate": 0.4559,
+      "hits": 93,
+      "predictions": 204
     }
   },
   "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
-  "totalSettledGames": 182,
+  "totalSettledGames": 204,
   "totalSnapshots": 18,
-  "updated": "2026-11-09T01:10:51.333515+00:00"
+  "updated": "2026-11-09T13:50:05.540238+00:00"
 }
