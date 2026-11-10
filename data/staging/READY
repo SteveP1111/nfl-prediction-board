@@ -4,17 +4,7 @@
   "mode": "upsert",
   "payload_sha256": "75c3484fb9e52f80c418d9aed09ed4dccce183de2a9aec70289e07799c673530",
   "snapshot_parts": [
-    "snapshot-001-part-001.json",
-    "snapshot-001-part-002.json",
-    "snapshot-001-part-003.json",
-    "snapshot-001-part-004.json",
-    "snapshot-001-part-005.json",
-    "snapshot-001-part-006.json",
-    "snapshot-001-part-007.json",
-    "snapshot-002-part-001.json",
-    "snapshot-002-part-002.json",
-    "snapshot-002-part-003.json",
-    "snapshot-002-part-004.json",
-    "snapshot-002-part-005.json"
+    "snapshot-001.json",
+    "snapshot-002.json"
   ]
 }

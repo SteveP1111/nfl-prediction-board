@@ -3,7 +3,7 @@
   "model_version": "4.13",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "1f00237fa9cb6182a1a745a664948a6ffdb8761505dbe623133099873d67ca14",
+    "last_staging_sha256": "75c3484fb9e52f80c418d9aed09ed4dccce183de2a9aec70289e07799c673530",
     "snapshot_count": 10,
     "snapshots": [
       {
@@ -119,15 +119,15 @@
         "tds": 100
       },
       {
-        "id": "2026-W9-dry-run-2026-11-10T00:39:05.114041+00:00",
+        "id": "2026-W9-05:00-2026-11-10T00:39:05.114041+00:00",
         "season": 2026,
         "week": 9,
-        "slot": "dry-run",
+        "slot": "05:00",
         "capturedAt": "2026-11-10T00:39:05.114041+00:00",
-        "path": "data/snapshots/d61a5ce2568fdc9d39d9ecf7f6f9c4ccefcb06a18d00910f46233d0848bd77b8.txt",
-        "sha256": "d61a5ce2568fdc9d39d9ecf7f6f9c4ccefcb06a18d00910f46233d0848bd77b8",
-        "uncompressed_bytes": 649793,
-        "encoded_bytes": 84696,
+        "path": "data/snapshots/c5383a013c381f775b4e013208ff2303fe4aa338d743e278864ffd5f82ee45bc.txt",
+        "sha256": "c5383a013c381f775b4e013208ff2303fe4aa338d743e278864ffd5f82ee45bc",
+        "uncompressed_bytes": 659691,
+        "encoded_bytes": 85984,
         "games": 15,
         "props": 606,
         "tds": 100
