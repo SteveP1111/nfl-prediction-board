@@ -3,7 +3,7 @@
   "model_version": "4.13",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "75c3484fb9e52f80c418d9aed09ed4dccce183de2a9aec70289e07799c673530",
+    "last_staging_sha256": "a145c9eccd5ea7b83adb78421677670595df9810050680324a59bc0f79e31ad4",
     "snapshot_count": 10,
     "snapshots": [
       {
@@ -124,26 +124,26 @@
         "week": 9,
         "slot": "05:00",
         "capturedAt": "2026-11-10T00:39:05.114041+00:00",
-        "path": "data/snapshots/c5383a013c381f775b4e013208ff2303fe4aa338d743e278864ffd5f82ee45bc.txt",
-        "sha256": "c5383a013c381f775b4e013208ff2303fe4aa338d743e278864ffd5f82ee45bc",
+        "path": "data/snapshots/9544eb06e86a1ff29212bfaa0afff097c1a8e950ba7d63933897e2e294be9ae1.txt",
+        "sha256": "9544eb06e86a1ff29212bfaa0afff097c1a8e950ba7d63933897e2e294be9ae1",
         "uncompressed_bytes": 659691,
-        "encoded_bytes": 85984,
+        "encoded_bytes": 85952,
         "games": 15,
         "props": 606,
         "tds": 100
       },
       {
-        "id": "2026-W10-dry-run-2026-11-10T07:48:31.324931+00:00",
+        "id": "2026-W10-dry-run-2026-11-10T22:15:55.585202+00:00",
         "season": 2026,
         "week": 10,
         "slot": "dry-run",
-        "capturedAt": "2026-11-10T07:48:31.324931+00:00",
-        "path": "data/snapshots/c4f391c4a6854b47be60c43428817f41c788d96b852f194c2c8a0e006b9aefee.txt",
-        "sha256": "c4f391c4a6854b47be60c43428817f41c788d96b852f194c2c8a0e006b9aefee",
-        "uncompressed_bytes": 350648,
-        "encoded_bytes": 51396,
+        "capturedAt": "2026-11-10T22:15:55.585202+00:00",
+        "path": "data/snapshots/1e87ba3c0cde3842800ca364d19983f722d178831885905dafab372c598dbc78.txt",
+        "sha256": "1e87ba3c0cde3842800ca364d19983f722d178831885905dafab372c598dbc78",
+        "uncompressed_bytes": 364550,
+        "encoded_bytes": 53564,
         "games": 14,
-        "props": 420,
+        "props": 436,
         "tds": 100
       }
     ]
@@ -155,7 +155,7 @@
   ],
   "market_policy": "Sportsbook lines are comparison-only and do not influence model projections.",
   "publication_filter": "All games; top 50 rated player props; every market-lined prop; all Tackles + assists projections; all touchdown candidates per snapshot. Remaining unfiltered model history retained privately.",
-  "published_version": "2026-11-10T074831-324931-0000",
+  "published_version": "2026-11-10T221555-585202-0000",
   "weekly_reviews": [
     {
       "as_of": "2026-09-10T15:00:00+01:00",
