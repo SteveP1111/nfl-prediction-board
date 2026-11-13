@@ -1,0 +1,210 @@
+{
+  "date": "2026-11-14",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-11-13T22:36:26Z",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-11-14|EC|carlisle united|boston united",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 74.68,
+          "likelihood": 74.36,
+          "confidence": 75
+        },
+        {
+          "key": "BTTS",
+          "score": 74.01,
+          "likelihood": 72.12,
+          "confidence": 76
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|EC|yeovil town|boreham wood",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 73.05,
+          "likelihood": 68.7,
+          "confidence": 78
+        },
+        {
+          "key": "BTTS",
+          "score": 70.8,
+          "likelihood": 65.53,
+          "confidence": 77
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|EC|scunthorpe united|worthing",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 72.56,
+          "likelihood": 68.6,
+          "confidence": 77
+        },
+        {
+          "key": "BTTS",
+          "score": 71.39,
+          "likelihood": 68.96,
+          "confidence": 74
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|E3|swindon town|grimsby town",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 72.47,
+          "likelihood": 61.12,
+          "confidence": 89
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|E2|sheffield wednesday|plymouth argyle",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 71.98,
+          "likelihood": 63.55,
+          "confidence": 83
+        },
+        {
+          "key": "Over 2.5",
+          "score": 70.03,
+          "likelihood": 61.11,
+          "confidence": 82
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|E3|rochdale|york city",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 71.86,
+          "likelihood": 63.95,
+          "confidence": 82
+        },
+        {
+          "key": "Over 2.5",
+          "score": 68.26,
+          "likelihood": 59.52,
+          "confidence": 80
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|EC|eastleigh|afc fylde",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 71.79,
+          "likelihood": 67.25,
+          "confidence": 77
+        },
+        {
+          "key": "BTTS",
+          "score": 70.81,
+          "likelihood": 67.89,
+          "confidence": 74
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|EC|sutton united|solihull moors",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 71.36,
+          "likelihood": 68.89,
+          "confidence": 74
+        },
+        {
+          "key": "BTTS",
+          "score": 71.31,
+          "likelihood": 68.81,
+          "confidence": 74
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|E3|salford city|northampton town",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 71.35,
+          "likelihood": 63.15,
+          "confidence": 82
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|EC|gateshead|barrow",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 69.53,
+          "likelihood": 64.07,
+          "confidence": 76
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|EC|southend united|aldershot town",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 69.29,
+          "likelihood": 62.99,
+          "confidence": 77
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|EC|hornchurch|tamworth",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 69.03,
+          "likelihood": 62.55,
+          "confidence": 77
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|E3|exeter city|cheltenham town",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 68.86,
+          "likelihood": 57.88,
+          "confidence": 85
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14|EC|harrogate town|altrincham",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 68.34,
+          "likelihood": 62.08,
+          "confidence": 76
+        },
+        {
+          "key": "Over 2.5",
+          "score": 68.32,
+          "likelihood": 62.72,
+          "confidence": 75
+        }
+      ]
+    }
+  ]
+}
