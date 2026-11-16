@@ -17,27 +17,27 @@
       "pricedFixtures": 0
     },
     "E2": {
-      "brier": 0.17498,
-      "hitRate": 0.8,
-      "hits": 36,
-      "meanPredicted": 0.6819,
-      "n": 45,
+      "brier": 0.18069,
+      "hitRate": 0.78,
+      "hits": 39,
+      "meanPredicted": 0.6844,
+      "n": 50,
       "pricedFixtures": 0
     },
     "E3": {
-      "brier": 0.27145,
-      "hitRate": 0.587,
-      "hits": 27,
-      "meanPredicted": 0.7437,
-      "n": 46,
+      "brier": 0.26077,
+      "hitRate": 0.6071,
+      "hits": 34,
+      "meanPredicted": 0.7417,
+      "n": 56,
       "pricedFixtures": 0
     },
     "EC": {
-      "brier": 0.22372,
-      "hitRate": 0.6,
-      "hits": 15,
-      "meanPredicted": 0.6293,
-      "n": 25,
+      "brier": 0.21262,
+      "hitRate": 0.6667,
+      "hits": 24,
+      "meanPredicted": 0.6236,
+      "n": 36,
       "pricedFixtures": 0
     }
   },
@@ -47,65 +47,65 @@
     "verifiedResearchEdges": null
   },
   "exclusions": {
-    "not_settled": 45
+    "not_settled": 19
   },
   "minimumProbabilityThresholds": {
     "55": {
-      "brier": 0.22083,
-      "hitRate": 0.685,
-      "hits": 137,
-      "meanPredicted": 0.6923,
-      "n": 200,
+      "brier": 0.21902,
+      "hitRate": 0.6889,
+      "hits": 155,
+      "meanPredicted": 0.6912,
+      "n": 225,
       "pricedFixtures": 0
     },
     "60": {
-      "brier": 0.22163,
-      "hitRate": 0.6789,
-      "hits": 129,
-      "meanPredicted": 0.6983,
-      "n": 190,
+      "brier": 0.21896,
+      "hitRate": 0.6857,
+      "hits": 144,
+      "meanPredicted": 0.6992,
+      "n": 210,
       "pricedFixtures": 0
     },
     "65": {
-      "brier": 0.22344,
-      "hitRate": 0.6709,
-      "hits": 106,
-      "meanPredicted": 0.7132,
-      "n": 158,
+      "brier": 0.22185,
+      "hitRate": 0.6724,
+      "hits": 117,
+      "meanPredicted": 0.7147,
+      "n": 174,
       "pricedFixtures": 0
     },
     "70": {
-      "brier": 0.22889,
-      "hitRate": 0.6667,
-      "hits": 58,
-      "meanPredicted": 0.7442,
-      "n": 87,
+      "brier": 0.22178,
+      "hitRate": 0.68,
+      "hits": 68,
+      "meanPredicted": 0.744,
+      "n": 100,
       "pricedFixtures": 0
     },
     "75": {
-      "brier": 0.2427,
-      "hitRate": 0.6452,
-      "hits": 20,
-      "meanPredicted": 0.7847,
-      "n": 31,
+      "brier": 0.23513,
+      "hitRate": 0.6571,
+      "hits": 23,
+      "meanPredicted": 0.7839,
+      "n": 35,
       "pricedFixtures": 0
     },
     "80": {
-      "brier": 0.171,
-      "hitRate": 0.7778,
-      "hits": 7,
-      "meanPredicted": 0.8207,
-      "n": 9,
+      "brier": 0.15785,
+      "hitRate": 0.8,
+      "hits": 8,
+      "meanPredicted": 0.8188,
+      "n": 10,
       "pricedFixtures": 0
     }
   },
   "model": "independent-scoreline-only",
   "overall": {
-    "brier": 0.22158,
-    "hitRate": 0.6765,
-    "hits": 138,
-    "meanPredicted": 0.6886,
-    "n": 204,
+    "brier": 0.21974,
+    "hitRate": 0.6826,
+    "hits": 157,
+    "meanPredicted": 0.6872,
+    "n": 230,
     "pricedFixtures": 0
   },
   "status": "research_not_verified_edge",
