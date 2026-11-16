@@ -3,7 +3,7 @@
   "model_version": "4.13",
   "history": {
     "encoding": "per-snapshot-base64+gzip",
-    "last_staging_sha256": "f6cafa3995346aab540653df9a635f83507dbdad9155c0f5ca5a2cccf0a1ed40",
+    "last_staging_sha256": "669bbe851f598395e5bb7ac9cfead2ad9408350c872fb6a4e164240bad82eeb1",
     "snapshot_count": 10,
     "snapshots": [
       {
