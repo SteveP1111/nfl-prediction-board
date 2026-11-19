@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-20",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-11-19T22:31:23Z",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-11-20|EC|southend united|boreham wood",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 73.93,
+          "likelihood": 68.71,
+          "confidence": 80
+        },
+        {
+          "key": "BTTS",
+          "score": 71.43,
+          "likelihood": 66.6,
+          "confidence": 77
+        }
+      ]
+    },
+    {
+      "id": "2026-11-20|E2|barnsley|sheffield wednesday",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 71.57,
+          "likelihood": 61.81,
+          "confidence": 85
+        }
+      ]
+    }
+  ]
+}
