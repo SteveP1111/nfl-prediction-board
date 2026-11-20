@@ -1,0 +1,328 @@
+{
+  "date": "2026-11-21",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-11-20T22:27:43Z",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-11-21|E0|tottenham|ipswich",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 72.06,
+          "likelihood": 63.67,
+          "confidence": 83
+        },
+        {
+          "key": "Over 2.5",
+          "score": 71.36,
+          "likelihood": 62.59,
+          "confidence": 83
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E1|middlesbrough|bristol city",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 72.83,
+          "likelihood": 62.63,
+          "confidence": 87
+        },
+        {
+          "key": "BTTS",
+          "score": 72.22,
+          "likelihood": 62.78,
+          "confidence": 85
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E1|norwich|cardiff",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 73.06,
+          "likelihood": 63.51,
+          "confidence": 86
+        },
+        {
+          "key": "Over 2.5",
+          "score": 72.72,
+          "likelihood": 62.47,
+          "confidence": 87
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E1|sheffield united|watford",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 69.34,
+          "likelihood": 58.56,
+          "confidence": 85
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E1|southampton|derby",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 74.93,
+          "likelihood": 65.23,
+          "confidence": 88
+        },
+        {
+          "key": "Home Win",
+          "score": 70.1,
+          "likelihood": 61.78,
+          "confidence": 81
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E1|west ham|preston",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 77.27,
+          "likelihood": 70.15,
+          "confidence": 86
+        },
+        {
+          "key": "BTTS",
+          "score": 72.44,
+          "likelihood": 62.57,
+          "confidence": 86
+        },
+        {
+          "key": "Home Win",
+          "score": 68.21,
+          "likelihood": 60.6,
+          "confidence": 78
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E2|blackpool|wigan",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 70.36,
+          "likelihood": 60.02,
+          "confidence": 85
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E2|bradford|doncaster",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 66.28,
+          "likelihood": 56.57,
+          "confidence": 80
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E2|burton|luton",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 74.65,
+          "likelihood": 66.54,
+          "confidence": 85
+        },
+        {
+          "key": "Over 2.5",
+          "score": 72.52,
+          "likelihood": 64.39,
+          "confidence": 83
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E2|huddersfield|leicester",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 73.1,
+          "likelihood": 62.51,
+          "confidence": 88
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E2|mansfield|milton keynes",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 69.59,
+          "likelihood": 59.91,
+          "confidence": 83
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E2|reading|bromley",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 73.04,
+          "likelihood": 66.51,
+          "confidence": 81
+        },
+        {
+          "key": "BTTS",
+          "score": 70.36,
+          "likelihood": 60.53,
+          "confidence": 84
+        },
+        {
+          "key": "Home Win",
+          "score": 70.04,
+          "likelihood": 62.9,
+          "confidence": 79
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E3|accrington|salford",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 71.67,
+          "likelihood": 61.95,
+          "confidence": 85
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E3|barnet|port vale",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 65.92,
+          "likelihood": 56.56,
+          "confidence": 79
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E3|chesterfield|shrewsbury",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 72.31,
+          "likelihood": 61.87,
+          "confidence": 87
+        },
+        {
+          "key": "Over 2.5",
+          "score": 69.96,
+          "likelihood": 62.78,
+          "confidence": 79
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E3|grimsby|rotherham",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 66.66,
+          "likelihood": 58.76,
+          "confidence": 77
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|E3|newport|swindon",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 68.48,
+          "likelihood": 58.28,
+          "confidence": 83
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|EC|halifax|woking",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 67.87,
+          "likelihood": 61.98,
+          "confidence": 75
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|EC|sutton|boston",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 68.6,
+          "likelihood": 63.93,
+          "confidence": 74
+        },
+        {
+          "key": "Over 2.5",
+          "score": 68.29,
+          "likelihood": 62.68,
+          "confidence": 75
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|EC|wealdstone|hornchurch",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 72.1,
+          "likelihood": 68.58,
+          "confidence": 76
+        },
+        {
+          "key": "BTTS",
+          "score": 70.08,
+          "likelihood": 67.38,
+          "confidence": 73
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|EC|worthing|harrogate",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 67.38,
+          "likelihood": 62.56,
+          "confidence": 73
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21|EC|yeovil|forest green",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 69.6,
+          "likelihood": 62.84,
+          "confidence": 78
+        },
+        {
+          "key": "BTTS",
+          "score": 69.48,
+          "likelihood": 64.72,
+          "confidence": 75
+        }
+      ]
+    }
+  ]
+}
