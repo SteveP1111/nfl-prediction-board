@@ -5,7 +5,7 @@
   "model": "B3.1-model-b-lineage",
   "fixtures": [
     {
-      "id": "2026-11-21|E0|tottenham|ipswich",
+      "id": "2026-11-21|E0|tottenham hotspur|ipswich town",
       "qualifiers": [
         {
           "key": "BTTS",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E1|norwich|cardiff",
+      "id": "2026-11-21|E1|norwich city|cardiff city",
       "qualifiers": [
         {
           "key": "BTTS",
@@ -67,7 +67,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E1|southampton|derby",
+      "id": "2026-11-21|E1|southampton|derby county",
       "qualifiers": [
         {
           "key": "Over 2.5",
@@ -84,7 +84,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E1|west ham|preston",
+      "id": "2026-11-21|E1|west ham united|preston north end",
       "qualifiers": [
         {
           "key": "Over 2.5",
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E2|blackpool|wigan",
+      "id": "2026-11-21|E2|blackpool|wigan athletic",
       "qualifiers": [
         {
           "key": "BTTS",
@@ -118,7 +118,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E2|bradford|doncaster",
+      "id": "2026-11-21|E2|bradford city|doncaster rovers",
       "qualifiers": [
         {
           "key": "Home Win",
@@ -129,7 +129,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E2|burton|luton",
+      "id": "2026-11-21|E2|burton|luton town",
       "qualifiers": [
         {
           "key": "BTTS",
@@ -146,7 +146,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E2|huddersfield|leicester",
+      "id": "2026-11-21|E2|huddersfield town|leicester city",
       "qualifiers": [
         {
           "key": "BTTS",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E2|mansfield|milton keynes",
+      "id": "2026-11-21|E2|mansfield town|milton keynes dons",
       "qualifiers": [
         {
           "key": "BTTS",
@@ -191,7 +191,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E3|accrington|salford",
+      "id": "2026-11-21|E3|accrington stanley|salford city",
       "qualifiers": [
         {
           "key": "BTTS",
@@ -213,7 +213,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E3|chesterfield|shrewsbury",
+      "id": "2026-11-21|E3|chesterfield|shrewsbury town",
       "qualifiers": [
         {
           "key": "BTTS",
@@ -230,7 +230,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E3|grimsby|rotherham",
+      "id": "2026-11-21|E3|grimsby town|rotherham united",
       "qualifiers": [
         {
           "key": "Home Win",
@@ -241,7 +241,7 @@
       ]
     },
     {
-      "id": "2026-11-21|E3|newport|swindon",
+      "id": "2026-11-21|E3|newport county|swindon town",
       "qualifiers": [
         {
           "key": "Home Win",
@@ -252,7 +252,7 @@
       ]
     },
     {
-      "id": "2026-11-21|EC|halifax|woking",
+      "id": "2026-11-21|EC|fc halifax town|woking",
       "qualifiers": [
         {
           "key": "BTTS",
@@ -263,7 +263,7 @@
       ]
     },
     {
-      "id": "2026-11-21|EC|sutton|boston",
+      "id": "2026-11-21|EC|sutton united|boston united",
       "qualifiers": [
         {
           "key": "BTTS",
@@ -297,7 +297,7 @@
       ]
     },
     {
-      "id": "2026-11-21|EC|worthing|harrogate",
+      "id": "2026-11-21|EC|worthing|harrogate town",
       "qualifiers": [
         {
           "key": "BTTS",
@@ -308,7 +308,7 @@
       ]
     },
     {
-      "id": "2026-11-21|EC|yeovil|forest green",
+      "id": "2026-11-21|EC|yeovil town|forest green rovers",
       "qualifiers": [
         {
           "key": "Over 2.5",
