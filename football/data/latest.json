@@ -1,8 +1,141 @@
 {
   "b31Available": false,
-  "capturedAt": "2026-11-20T02:33:17.390788+00:00",
+  "capturedAt": "2026-11-20T13:57:49.047048+00:00",
   "date": "2026-11-20",
-  "games": [],
+  "fixtureSource": "https://www.football-data.co.uk/fixtures.csv",
+  "games": [
+    {
+      "away": "Sheffield Weds",
+      "awayKey": "sheffield wednesday",
+      "b31": {
+        "qualifiers": [],
+        "status": "not-calculated"
+      },
+      "date": "2026-11-20",
+      "division": "E2",
+      "home": "Barnsley",
+      "homeKey": "barnsley",
+      "id": "2026-11-20|E2|barnsley|sheffield wednesday",
+      "kickoff": "20:00",
+      "league": "League One",
+      "scoreline": {
+        "calibrated": false,
+        "cleanSheetRisk": 0.25476,
+        "expectedAway": 1.367,
+        "expectedHome": 1.432,
+        "expectedTotal": 2.8,
+        "goalBands": {
+          "0-1": 0.23116,
+          "2": 0.23841,
+          "3": 0.22248,
+          "4+": 0.30796
+        },
+        "markets": {
+          "away_win": 0.35899,
+          "btts": 0.56727,
+          "draw": 0.25268,
+          "home_win": 0.38833,
+          "no_btts": 0.43273,
+          "over25": 0.53043,
+          "over35": 0.30796,
+          "under25": 0.46957
+        },
+        "modalProbability": 0.11914,
+        "modalScore": "1-1",
+        "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
+        "sampleAway": 6,
+        "sampleHome": 6,
+        "topScores": [
+          {
+            "p": 0.11914,
+            "score": "1-1"
+          },
+          {
+            "p": 0.08713,
+            "score": "1-0"
+          },
+          {
+            "p": 0.08531,
+            "score": "2-1"
+          },
+          {
+            "p": 0.08319,
+            "score": "0-1"
+          },
+          {
+            "p": 0.08146,
+            "score": "1-2"
+          }
+        ]
+      }
+    },
+    {
+      "away": "Boreham Wood",
+      "awayKey": "boreham wood",
+      "b31": {
+        "qualifiers": [],
+        "status": "not-calculated"
+      },
+      "date": "2026-11-20",
+      "division": "EC",
+      "home": "Southend",
+      "homeKey": "southend united",
+      "id": "2026-11-20|EC|southend united|boreham wood",
+      "kickoff": "19:45",
+      "league": "National League",
+      "scoreline": {
+        "calibrated": false,
+        "cleanSheetRisk": 0.19971,
+        "expectedAway": 1.699,
+        "expectedHome": 1.611,
+        "expectedTotal": 3.309,
+        "goalBands": {
+          "0-1": 0.15745,
+          "2": 0.20008,
+          "3": 0.22072,
+          "4+": 0.42174
+        },
+        "markets": {
+          "away_win": 0.4036,
+          "btts": 0.65388,
+          "draw": 0.22966,
+          "home_win": 0.36674,
+          "no_btts": 0.34612,
+          "over25": 0.64246,
+          "over35": 0.42174,
+          "under25": 0.35754
+        },
+        "modalProbability": 0.09997,
+        "modalScore": "1-1",
+        "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
+        "sampleAway": 9,
+        "sampleHome": 8,
+        "topScores": [
+          {
+            "p": 0.09997,
+            "score": "1-1"
+          },
+          {
+            "p": 0.0849,
+            "score": "1-2"
+          },
+          {
+            "p": 0.08052,
+            "score": "2-1"
+          },
+          {
+            "p": 0.06838,
+            "score": "2-2"
+          },
+          {
+            "p": 0.06206,
+            "score": "0-1"
+          }
+        ]
+      }
+    }
+  ],
   "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
-  "status": "no-frozen-matches"
+  "status": "frozen-prekickoff",
+  "trainingCurrentCount": 817
 }
