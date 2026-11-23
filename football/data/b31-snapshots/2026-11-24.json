@@ -1,0 +1,212 @@
+{
+  "date": "2026-11-24",
+  "status": "frozen-prekickoff",
+  "capturedAt": "2026-11-23T22:29:59Z",
+  "model": "B3.1-model-b-lineage",
+  "fixtures": [
+    {
+      "id": "2026-11-24|E1|cardiff|preston",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 75.2,
+          "likelihood": 70.95,
+          "confidence": 80
+        },
+        {
+          "key": "BTTS",
+          "score": 72.93,
+          "likelihood": 64.43,
+          "confidence": 84
+        },
+        {
+          "key": "Home Win",
+          "score": 67.92,
+          "likelihood": 59.02,
+          "confidence": 80
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24|E1|middlesbrough|swansea",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 71.93,
+          "likelihood": 62.34,
+          "confidence": 85
+        },
+        {
+          "key": "Home Win",
+          "score": 67.75,
+          "likelihood": 58.75,
+          "confidence": 80
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24|E1|portsmouth|west ham",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 74.1,
+          "likelihood": 66.92,
+          "confidence": 83
+        },
+        {
+          "key": "BTTS",
+          "score": 73.88,
+          "likelihood": 67.22,
+          "confidence": 82
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24|E1|wolverhampton|derby",
+      "qualifiers": [
+        {
+          "key": "Home Win",
+          "score": 64.93,
+          "likelihood": 59.81,
+          "confidence": 71
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24|E2|blackpool|leicester",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 72.15,
+          "likelihood": 62.68,
+          "confidence": 85
+        },
+        {
+          "key": "Over 2.5",
+          "score": 70.82,
+          "likelihood": 61.75,
+          "confidence": 83
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24|E2|bromley|wycombe",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 72.16,
+          "likelihood": 62.69,
+          "confidence": 85
+        },
+        {
+          "key": "Over 2.5",
+          "score": 69.9,
+          "likelihood": 60.92,
+          "confidence": 82
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24|E3|crawley|barnet",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 70.43,
+          "likelihood": 60.64,
+          "confidence": 84
+        },
+        {
+          "key": "Over 2.5",
+          "score": 69.62,
+          "likelihood": 59.96,
+          "confidence": 83
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24|EC|carlisle|tamworth",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 74.07,
+          "likelihood": 75.17,
+          "confidence": 73
+        },
+        {
+          "key": "BTTS",
+          "score": 72.04,
+          "likelihood": 68.47,
+          "confidence": 76
+        },
+        {
+          "key": "Home Win",
+          "score": 66.46,
+          "likelihood": 64.1,
+          "confidence": 69
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24|EC|eastleigh|yeovil",
+      "qualifiers": [
+        {
+          "key": "BTTS",
+          "score": 66.4,
+          "likelihood": 61.61,
+          "confidence": 72
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24|EC|forest green|southend",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 73.94,
+          "likelihood": 73.89,
+          "confidence": 74
+        },
+        {
+          "key": "BTTS",
+          "score": 73.28,
+          "likelihood": 71.64,
+          "confidence": 75
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24|EC|scunthorpe|gateshead",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 68.77,
+          "likelihood": 62.8,
+          "confidence": 76
+        },
+        {
+          "key": "Home Win",
+          "score": 64.65,
+          "likelihood": 58.02,
+          "confidence": 73
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24|EC|woking|worthing",
+      "qualifiers": [
+        {
+          "key": "Over 2.5",
+          "score": 69.01,
+          "likelihood": 63.9,
+          "confidence": 75
+        },
+        {
+          "key": "BTTS",
+          "score": 67.14,
+          "likelihood": 64.5,
+          "confidence": 70
+        }
+      ]
+    }
+  ]
+}
