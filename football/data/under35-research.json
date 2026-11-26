@@ -9,35 +9,35 @@
       "pricedFixtures": 0
     },
     "E1": {
-      "brier": 0.23622,
-      "hitRate": 0.6508,
-      "hits": 41,
-      "meanPredicted": 0.6721,
-      "n": 63,
+      "brier": 0.22832,
+      "hitRate": 0.6667,
+      "hits": 50,
+      "meanPredicted": 0.6731,
+      "n": 75,
       "pricedFixtures": 0
     },
     "E2": {
-      "brier": 0.1845,
-      "hitRate": 0.7742,
-      "hits": 48,
-      "meanPredicted": 0.6846,
-      "n": 62,
+      "brier": 0.17964,
+      "hitRate": 0.7879,
+      "hits": 52,
+      "meanPredicted": 0.6844,
+      "n": 66,
       "pricedFixtures": 0
     },
     "E3": {
-      "brier": 0.24834,
-      "hitRate": 0.6324,
-      "hits": 43,
-      "meanPredicted": 0.7372,
-      "n": 68,
+      "brier": 0.24372,
+      "hitRate": 0.6429,
+      "hits": 45,
+      "meanPredicted": 0.7364,
+      "n": 70,
       "pricedFixtures": 0
     },
     "EC": {
-      "brier": 0.22412,
-      "hitRate": 0.625,
-      "hits": 30,
-      "meanPredicted": 0.6234,
-      "n": 48,
+      "brier": 0.22343,
+      "hitRate": 0.6333,
+      "hits": 38,
+      "meanPredicted": 0.6225,
+      "n": 60,
       "pricedFixtures": 0
     }
   },
@@ -47,47 +47,47 @@
     "verifiedResearchEdges": null
   },
   "exclusions": {
-    "not_settled": 50
+    "not_settled": 20
   },
   "minimumProbabilityThresholds": {
     "55": {
-      "brier": 0.22208,
-      "hitRate": 0.682,
-      "hits": 193,
-      "meanPredicted": 0.6888,
-      "n": 283,
+      "brier": 0.21825,
+      "hitRate": 0.6891,
+      "hits": 215,
+      "meanPredicted": 0.6863,
+      "n": 312,
       "pricedFixtures": 0
     },
     "60": {
-      "brier": 0.22158,
-      "hitRate": 0.6832,
-      "hits": 179,
-      "meanPredicted": 0.6975,
-      "n": 262,
+      "brier": 0.21704,
+      "hitRate": 0.6934,
+      "hits": 199,
+      "meanPredicted": 0.6956,
+      "n": 287,
       "pricedFixtures": 0
     },
     "65": {
-      "brier": 0.22591,
-      "hitRate": 0.6667,
-      "hits": 144,
-      "meanPredicted": 0.7129,
-      "n": 216,
+      "brier": 0.21971,
+      "hitRate": 0.6824,
+      "hits": 159,
+      "meanPredicted": 0.7119,
+      "n": 233,
       "pricedFixtures": 0
     },
     "70": {
-      "brier": 0.22791,
-      "hitRate": 0.6694,
-      "hits": 83,
-      "meanPredicted": 0.7415,
-      "n": 124,
+      "brier": 0.22146,
+      "hitRate": 0.6842,
+      "hits": 91,
+      "meanPredicted": 0.7407,
+      "n": 133,
       "pricedFixtures": 0
     },
     "75": {
-      "brier": 0.2603,
-      "hitRate": 0.6098,
-      "hits": 25,
-      "meanPredicted": 0.7814,
-      "n": 41,
+      "brier": 0.25863,
+      "hitRate": 0.6136,
+      "hits": 27,
+      "meanPredicted": 0.7799,
+      "n": 44,
       "pricedFixtures": 0
     },
     "80": {
@@ -101,11 +101,11 @@
   },
   "model": "independent-scoreline-only",
   "overall": {
-    "brier": 0.2226,
-    "hitRate": 0.6771,
-    "hits": 195,
-    "meanPredicted": 0.6856,
-    "n": 288,
+    "brier": 0.21884,
+    "hitRate": 0.6855,
+    "hits": 218,
+    "meanPredicted": 0.6829,
+    "n": 318,
     "pricedFixtures": 0
   },
   "status": "research_not_verified_edge",
