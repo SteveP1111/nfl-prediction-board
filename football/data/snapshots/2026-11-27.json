@@ -1,0 +1,206 @@
+{
+  "b31Available": false,
+  "capturedAt": "2026-11-27T14:57:58.463745+00:00",
+  "date": "2026-11-27",
+  "fixtureSource": "https://www.football-data.co.uk/fixtures.csv",
+  "games": [
+    {
+      "away": "Chelsea",
+      "awayKey": "chelsea",
+      "b31": {
+        "qualifiers": [],
+        "status": "not-calculated"
+      },
+      "date": "2026-11-27",
+      "division": "E0",
+      "home": "Nott'm Forest",
+      "homeKey": "nott m forest",
+      "id": "2026-11-27|E0|nott m forest|chelsea",
+      "kickoff": "20:00",
+      "league": "Premier League",
+      "scoreline": {
+        "calibrated": false,
+        "cleanSheetRisk": 0.34018,
+        "expectedAway": 1.078,
+        "expectedHome": 1.376,
+        "expectedTotal": 2.454,
+        "goalBands": {
+          "0-1": 0.29679,
+          "2": 0.25878,
+          "3": 0.21171,
+          "4+": 0.23271
+        },
+        "markets": {
+          "away_win": 0.29412,
+          "btts": 0.49317,
+          "draw": 0.26926,
+          "home_win": 0.43662,
+          "no_btts": 0.50683,
+          "over25": 0.44443,
+          "over35": 0.23271,
+          "under25": 0.55557
+        },
+        "modalProbability": 0.12749,
+        "modalScore": "1-1",
+        "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
+        "sampleAway": 5,
+        "sampleHome": 5,
+        "topScores": [
+          {
+            "p": 0.12749,
+            "score": "1-1"
+          },
+          {
+            "p": 0.11823,
+            "score": "1-0"
+          },
+          {
+            "p": 0.09265,
+            "score": "0-1"
+          },
+          {
+            "p": 0.08771,
+            "score": "2-1"
+          },
+          {
+            "p": 0.08592,
+            "score": "0-0"
+          }
+        ]
+      }
+    },
+    {
+      "away": "Middlesbrough",
+      "awayKey": "middlesbrough",
+      "b31": {
+        "qualifiers": [],
+        "status": "not-calculated"
+      },
+      "date": "2026-11-27",
+      "division": "E1",
+      "home": "Southampton",
+      "homeKey": "southampton",
+      "id": "2026-11-27|E1|southampton|middlesbrough",
+      "kickoff": "20:00",
+      "league": "Championship",
+      "scoreline": {
+        "calibrated": false,
+        "cleanSheetRisk": 0.31814,
+        "expectedAway": 1.145,
+        "expectedHome": 1.727,
+        "expectedTotal": 2.872,
+        "goalBands": {
+          "0-1": 0.21908,
+          "2": 0.23336,
+          "3": 0.22341,
+          "4+": 0.32415
+        },
+        "markets": {
+          "away_win": 0.25255,
+          "btts": 0.5606,
+          "draw": 0.23758,
+          "home_win": 0.50987,
+          "no_btts": 0.4394,
+          "over25": 0.54756,
+          "over35": 0.32415,
+          "under25": 0.45244
+        },
+        "modalProbability": 0.1119,
+        "modalScore": "1-1",
+        "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
+        "sampleAway": 8,
+        "sampleHome": 8,
+        "topScores": [
+          {
+            "p": 0.1119,
+            "score": "1-1"
+          },
+          {
+            "p": 0.0977,
+            "score": "1-0"
+          },
+          {
+            "p": 0.09661,
+            "score": "2-1"
+          },
+          {
+            "p": 0.08436,
+            "score": "2-0"
+          },
+          {
+            "p": 0.0648,
+            "score": "0-1"
+          }
+        ]
+      }
+    },
+    {
+      "away": "Wealdstone",
+      "awayKey": "wealdstone",
+      "b31": {
+        "qualifiers": [],
+        "status": "not-calculated"
+      },
+      "date": "2026-11-27",
+      "division": "EC",
+      "home": "Scunthorpe",
+      "homeKey": "scunthorpe",
+      "id": "2026-11-27|EC|scunthorpe|wealdstone",
+      "kickoff": "19:45",
+      "league": "National League",
+      "scoreline": {
+        "calibrated": false,
+        "cleanSheetRisk": 0.25547,
+        "expectedAway": 1.365,
+        "expectedHome": 1.603,
+        "expectedTotal": 2.968,
+        "goalBands": {
+          "0-1": 0.20401,
+          "2": 0.22643,
+          "3": 0.224,
+          "4+": 0.34556
+        },
+        "markets": {
+          "away_win": 0.32611,
+          "btts": 0.59469,
+          "draw": 0.24261,
+          "home_win": 0.43128,
+          "no_btts": 0.40531,
+          "over25": 0.56956,
+          "over35": 0.34556,
+          "under25": 0.43044
+        },
+        "modalProbability": 0.11248,
+        "modalScore": "1-1",
+        "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
+        "sampleAway": 10,
+        "sampleHome": 8,
+        "topScores": [
+          {
+            "p": 0.11248,
+            "score": "1-1"
+          },
+          {
+            "p": 0.09017,
+            "score": "2-1"
+          },
+          {
+            "p": 0.08243,
+            "score": "1-0"
+          },
+          {
+            "p": 0.07675,
+            "score": "1-2"
+          },
+          {
+            "p": 0.07016,
+            "score": "0-1"
+          }
+        ]
+      }
+    }
+  ],
+  "model": "INDEPENDENT_SCORELINE_V1_GITHUB",
+  "status": "frozen-prekickoff",
+  "trainingCurrentCount": 905
+}
